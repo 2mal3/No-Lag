@@ -17,4 +17,5 @@ Installation:
  - Unzip the file.
  - Move the folder in the file to a Datapack folder in a world of your choice.
  
- To uninstall, enter /function #nld:uninstall
+ To uninstall, enter /function #nld:uninstall and drag the Datapack folder from the Datapacks Order of the World.
+
