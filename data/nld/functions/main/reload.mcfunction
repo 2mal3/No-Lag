@@ -3,7 +3,7 @@
 # Datapack by 2mal3
 
 # Info
-say The No Lag Datapack v.1.4 by 2mal3 was reloaded!
+say The No Lag Datapack v.1.5 by 2mal3 was reloaded!
 
 # Info
 advancement grant @a from main:root

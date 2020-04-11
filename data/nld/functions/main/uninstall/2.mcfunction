@@ -12,4 +12,4 @@ gamerule maxEntityCramming 24
 execute as @e[tag=nld.NoAI] run data merge entity @s {NoAI:0b}
 
 
-say The No Lag Datapack v.1.4 by 2mal3 has been successfully uninstalled!
+say The No Lag Datapack v.1.5 by 2mal3 has been successfully uninstalled!
