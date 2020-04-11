@@ -2,11 +2,6 @@
 # From: #tick
 # Datapack by 2mal3
 
-# Datapack Info
-scoreboard players enable @r info
-execute as @a[scores={info=1..}] run function nld:main/info/1
-execute as @a[scores={nld.info=1..}] run function nld:main/info/2
-
 
 # start commends from config
 execute if score nld.start nld.data matches 1 run scoreboard players set nld.start nld.data 0
