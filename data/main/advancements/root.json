@@ -18,8 +18,8 @@
         "background": "minecraft:textures/block/bedrock.png"
     },
     "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
+        "tick": {
+            "trigger": "minecraft:tick"
         }
     }
 }
