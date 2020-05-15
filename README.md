@@ -13,9 +13,4 @@ Methods (Most of them can be changed under data > nld > functions > config.mcfun
  - Above a certain number of entitys in the world, certain actions are performed.
  - Entitys that are far away from the player are deactivated.
 
-Installation:
- - Download the file.
- - Unzip the file.
- - Move the folder in the file to a Datapack folder in a world of your choice.
-
  To uninstall, enter /function #nld:uninstall and drag the Datapack folder from the Datapacks Order of the World.
