@@ -19,3 +19,6 @@ gamerule maxEntityCramming 24
 execute as @e[tag=nld.NoAI] run data merge entity @s {NoAI:0b}
 schedule clear nld:clear_team
 schedule clear nld:main/tick/2
+
+# disable Datapack
+datapack disable "file/No-Lag-Datapack"

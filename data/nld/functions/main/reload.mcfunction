@@ -8,7 +8,7 @@ scoreboard objectives add nld.xp dummy
 
 scoreboard players set V1 nld.data 1
 scoreboard players set V2 nld.data 6
-scoreboard players set V3 nld.data 3
+scoreboard players set V3 nld.data 4
 
 scoreboard players set nld.start nld.data 1
 scoreboard players set nld.entitys nld.data 0

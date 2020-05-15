@@ -10,7 +10,7 @@
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "main:root",
+  "parent": "global:2mal3",
   "criteria": {
     "tick": {
       "trigger": "minecraft:tick"

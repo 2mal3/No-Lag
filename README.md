@@ -1,6 +1,6 @@
-# No-Lag-Datapack v.1.6.3
+# No-Lag-Datapack v.1.6.4
 
-The No Lag Datapack v.1.6.3 is designed to reduce the lag in the world. This is done with 7 different, efficient and adjustable methods (other similar datapacks use only 1-2 methods). Furthermore the whole datapack has been programmed to use very little resources itself.
+The No Lag Datapack v.1.6.4 is designed to reduce the lag in the world. This is done with 7 different, efficient and adjustable methods (other similar datapacks use only 1-2 methods). Furthermore the whole datapack has been programmed to use very little resources itself.
 
 With a few of these methods, this datapack can render some farms and other datapacks unusable. For a lower risk and lag reduction you can use my No Lag Light Datapack.
 
