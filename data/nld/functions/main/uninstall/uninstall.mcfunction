@@ -3,7 +3,7 @@
 # Datapack by 2mal3
 
 # send uninstall message
-tellraw @a ["",{"text":"[Server] The No Lag Datapack v."},{"score":{"name":"V1","objective":"nld.data"}},{"text":"."},{"score":{"name":"V2","objective":"nld.data"}},{"text":"."},{"score":{"name":"V3","objective":"nld.data"}},{"text":" by 2mal3 was successfully uninstalled."}]
+tellraw @a ["",{"translate":"[Server] No Lag Datapack v."},{"score":{"name":"V1","objective":"nld.data"}},{"text":"."},{"score":{"name":"V2","objective":"nld.data"}},{"text":"."},{"score":{"name":"V3","objective":"nld.data"}},{"translate":" by 2mal3 was successfully uninstalled."}]
 
 # remove scoreboards
 scoreboard objectives remove nld.data
@@ -22,3 +22,4 @@ schedule clear nld:main/tick/2
 
 # disable Datapack
 datapack disable "file/No-Lag-Datapack"
+datapack disable "file/No-Lag-Datapack.zip"

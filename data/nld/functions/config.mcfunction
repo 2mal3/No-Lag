@@ -29,14 +29,14 @@ kill @e[type=item,nbt={Age:3600s}]
 #                             |
 #                                                                                                 |
 # Number of entities from which the lag is increased                                              V
-execute if score nld.start nld.data matches 1 run scoreboard players set nld.max_entitys nld.data 400
+execute if score nld.start nld.data matches 1 run scoreboard players set nld.max_entitys nld.data 500
 
 
 # Measures for too much lag
-# When the measures are taken: execute if score nld.lag nld.data matches <lag> if score nld.entitys nld.data > nld.max_entitys nld.data run <command>
-# When resolving measures: execute if score nld.lag nld.data matches 999 if score nld.entitys nld.data < nld.max_entitys nld.data run <command>
-execute if score nld.lag nld.data matches 1000 if score nld.entitys nld.data > nld.max_entitys nld.data run gamerule doMobSpawning false
-execute if score nld.lag nld.data matches 1000 if score nld.lag nld.data matches 1000 if score nld.entitys nld.data > nld.max_entitys nld.data run say Mob Spawnig was switched off
+# When the measures are taken: execute if score nld.entitys nld.data matches <max entity numer>... run <command>
+# When resolving measures: execute if score nld.entitys nld.data matches ..<min enity numer> run <command>
+execute if score nld.entitys nld.data matches 500.. run gamerule doMobSpawning false
+execute if score nld.entitys nld.data matches 500.. run say Mob Spawnig was switched off
 
-execute if score nld.lag nld.data matches 999 if score nld.entitys nld.data < nld.max_entitys nld.data run gamerule doMobSpawning true
-execute if score nld.lag nld.data matches 999 if score nld.entitys nld.data < nld.max_entitys nld.data run say Mob Spawnig was switched on
+execute if score nld.entitys nld.data matches ..500 run gamerule doMobSpawning true
+execute if score nld.entitys nld.data matches ..500 run say Mob Spawnig was switched on
