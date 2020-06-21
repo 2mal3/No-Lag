@@ -1,12 +1,6 @@
-# Description: Main
+# Description: datapack tick
 # From: #tick
 # Datapack by 2mal3
-
-# config data
-function nld:config
-
-# start commends from config
-execute if score nld.start nld.data matches 1 run scoreboard players set nld.start nld.data 0
 
 
 # remove tnt

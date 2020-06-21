@@ -8,6 +8,7 @@ tellraw @a ["",{"translate":"[Server] No Lag Datapack v."},{"score":{"name":"V1"
 # remove scoreboards
 scoreboard objectives remove nld.data
 scoreboard objectives remove nld.xp
+scoreboard objectives remove nld.age
 
 # remove teams
 team remove nld.no_collision
