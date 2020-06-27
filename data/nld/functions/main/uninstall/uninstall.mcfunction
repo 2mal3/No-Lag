@@ -1,5 +1,5 @@
-# Description: Deleting the Datapack
-# From: main/uninstall/unistall_ask
+# Description: Deleting the datapack
+# Called from: main/uninstall/unistall_ask
 # Datapack by 2mal3
 
 # send uninstall message
@@ -9,6 +9,8 @@ tellraw @a ["",{"translate":"[Server] No Lag Datapack v."},{"score":{"name":"V1"
 scoreboard objectives remove nld.data
 scoreboard objectives remove nld.xp
 scoreboard objectives remove nld.age
+scoreboard objectives remove nld.config
+scoreboard objectives remove nld.math
 
 # remove teams
 team remove nld.no_collision
@@ -19,7 +21,7 @@ gamerule maxEntityCramming 24
 # other
 execute as @e[tag=nld.NoAI] run data merge entity @s {NoAI:0b}
 schedule clear nld:clear_team
-schedule clear nld:main/tick/2
+schedule clear nld:main/tick/second
 
 # disable Datapack
 datapack disable "file/No-Lag-Datapack"

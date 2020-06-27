@@ -1,5 +1,5 @@
 # Description: Count the entities and recover the lag
-# From: main/tick/2
+# From: main/tick/second
 # Datapack by 2mal3
 
 scoreboard players set nld.entitys nld.data 0

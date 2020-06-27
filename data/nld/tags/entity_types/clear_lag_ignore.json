@@ -1,0 +1,37 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:armor_stand",
+    "minecraft:area_effect_cloud",
+    "minecraft:item_frame",
+    "minecraft:end_crystal",
+    "minecraft:painting",
+
+    "minecraft:minecart",
+    "minecraft:tnt_minecart",
+    "minecraft:hopper_minecart",
+
+    "minecraft:experience_orb",
+    "minecraft:experience_bottle",
+
+    "minecraft:player",
+
+    "minecraft:wither",
+    "minecraft:ender_dragon",
+    "minecraft:elder_guardian",
+
+    "minecraft:villager",
+    "minecraft:cat",
+    "minecraft:wolf",
+    "minecraft:bee",
+    "minecraft:donkey",
+    "minecraft:horse",
+    "minecraft:parrot",
+
+    "minecraft:pig",
+    "minecraft:sheep",
+    "minecraft:chicken",
+    "minecraft:cow",
+    "minecraft:mooshroom"
+  ]
+}

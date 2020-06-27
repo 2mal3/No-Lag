@@ -1,5 +1,5 @@
 # Description: Combinates the xp
-# From: main/tick
+# From: main/tick/tick
 # Datapack by 2mal3
 
 tag @e[type=minecraft:experience_orb,sort=nearest,limit=1,distance=0.01..2] add nld.combine
