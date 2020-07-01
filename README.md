@@ -1,6 +1,6 @@
 # No-Lag-Datapack v.1.11.9
 
-The No Lag Datapack v.1.11.8 is designed to reduce the lag in the world. This is done with 8 different, efficient and adjustable methods (other similar datapacks use only 1-2 methods). Furthermore the whole datapack has been programmed to use very little resources itself.
+The No Lag Datapack v.1.11.9 is designed to reduce the lag in the world. This is done with 8 different, efficient and adjustable methods (other similar datapacks use only 1-2 methods). Furthermore the whole datapack has been programmed to use very little resources itself.
 This datapack supports with my [Language Pack](http://adfoc.us/51488274991099) the languages German, Spanish and French.             
 
 With a few of these methods, this datapack can render some farms and other datapacks unusable. For a lower risk and lag reduction you can use my [No Lag Datapack Light](https://www.planetminecraft.com/data-pack/no-lag-datapack-lite/).
@@ -23,7 +23,7 @@ With a few of these methods, this datapack can render some farms and other datap
  - Only a specific number of entitys can be on one block.
  - Above a certain number of entitys in the world, certain actions are performed.
  - Entitys that are far away from the player are deactivated.
- - In a certain time interval, all unneeded entitys are deleted. 
+ - In a certain time interval, all unneeded entitys are deleted.
 
  ***
 

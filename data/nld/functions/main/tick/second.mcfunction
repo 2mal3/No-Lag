@@ -9,7 +9,7 @@ function nld:max_entitys
 execute as @e[type=#nld:no_collision,sort=random,limit=1,team=!nld.no_collision,tag=!global.ignore] run team join nld.no_collision @s
 
 # item despawn
-execute as @e[type=minecraft:item,,tag=!global.ignore] store result score @s nld.age run data get entity @s Age
+execute as @e[type=minecraft:item,tag=!global.ignore] store result score @s nld.age run data get entity @s Age
 
 # config data
 function nld:config

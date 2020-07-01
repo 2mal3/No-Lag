@@ -11,7 +11,7 @@ scoreboard objectives add nld.math dummy
 
 scoreboard players set V1 nld.data 1
 scoreboard players set V2 nld.data 11
-scoreboard players set V3 nld.data 8
+scoreboard players set V3 nld.data 9
 
 scoreboard players set nld.start nld.data 1
 scoreboard players set nld.entitys nld.data 0
@@ -42,6 +42,4 @@ schedule function nld:clear_team 1d
 execute if score nld.clear_lag_on nld.config matches 1 run function nld:clear_lag/init
 
 
-# easyer config  file 1.9.8
-# clear lag 1.10.8
-# better global.ignore 1.11.8
+# bug fixes 1.11.9

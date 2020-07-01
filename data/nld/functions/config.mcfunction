@@ -16,7 +16,7 @@ execute if score nld.start nld.data matches 1 run scoreboard players set nld.max
 ### Shoud be clear lag be activated ###                                                              V
 execute if score nld.start nld.data matches 1 run scoreboard players set nld.clear_lag_on nld.config 1
 ### Time betwen lag clears (in seconds) ###                                                             V
-execute if score nld.start nld.data matches 1 run scoreboard players set nld.clear_lag_time nld.config 100
+execute if score nld.start nld.data matches 1 run scoreboard players set nld.clear_lag_time nld.config 600
 
 
 

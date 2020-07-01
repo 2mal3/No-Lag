@@ -3,8 +3,8 @@
     "icon": {
       "item": "minecraft:barrier"
     },
-    "title": "No Lag v.1.11.8",
-    "description": [{"translate":"With the "},{"text":"No Lag Datapack v.1.11.8"},{"translate":" from 2mal3, the lag in the world is destroyed with over 7 different and adjustable methods."}],
+    "title": "No Lag v.1.11.9",
+    "description": [{"translate":"With the "},{"text":"No Lag Datapack v.1.11.9"},{"translate":" from 2mal3, the lag in the world is destroyed with over 7 different and adjustable methods."}],
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": false,
