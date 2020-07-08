@@ -4,12 +4,19 @@
     "minecraft:minecart",
     "minecraft:tnt_minecart",
     "minecraft:hopper_minecart",
+
     "minecraft:armor_stand",
     "minecraft:area_effect_cloud",
+
     "minecraft:item",
-    "minecraft:item_frame",
-    "minecraft:player",
     "minecraft:experience_orb",
-    "minecraft:painting"
+    "minecraft:experience_bottle",
+
+    "minecraft:ender_dragon",
+    "minecraft:player",
+
+    "minecraft:painting",
+    "minecraft:end_crystal",
+    "minecraft:item_frame"
   ]
 }

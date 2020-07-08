@@ -10,8 +10,8 @@ scoreboard objectives add nld.config dummy
 scoreboard objectives add nld.math dummy
 
 scoreboard players set V1 nld.data 1
-scoreboard players set V2 nld.data 11
-scoreboard players set V3 nld.data 9
+scoreboard players set V2 nld.data 12
+scoreboard players set V3 nld.data 10
 
 scoreboard players set nld.start nld.data 1
 scoreboard players set nld.entitys nld.data 0

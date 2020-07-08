@@ -20,12 +20,12 @@ execute if score nld.start nld.data matches 1 run scoreboard players set nld.cle
 
 
 
-### Range in which mobs are switched off ###                                                   V
-execute as @e[type=!#nld:ignore,tag=nld.NoAI,tag=!global.ignore] at @s if entity @a[distance=..41] run data merge entity @s {NoAI:0b}
-execute as @e[type=!#nld:ignore,tag=nld.NoAI,tag=!global.ignore] at @s if entity @a[distance=..41] run tag @s remove nld.NoAI
-execute as @e[type=!#nld:ignore,tag=!nld.NoAI,tag=!global.ignore] at @s unless entity @a[distance=..41] run data merge entity @s {NoAI:1b}
-execute as @e[type=!#nld:ignore,tag=!nld.NoAI,tag=!global.ignore] at @s unless entity @a[distance=..41] run tag @s add nld.NoAI
-#                                                                                                   A
+### Range in which mobs are switched off ###                                                                        V
+execute as @e[type=!#nld:ignore,tag=nld.NoAI,tag=!global.ignore,predicate=!nld:ignore] at @s if entity @a[distance=..41] run data merge entity @s {NoAI:0b}
+execute as @e[type=!#nld:ignore,tag=nld.NoAI,tag=!global.ignore,predicate=!nld:ignore] at @s if entity @a[distance=..41] run tag @s remove nld.NoAI
+execute as @e[type=!#nld:ignore,tag=!nld.NoAI,tag=!global.ignore,predicate=!nld:ignore] at @s unless entity @a[distance=..41] run data merge entity @s {NoAI:1b}
+execute as @e[type=!#nld:ignore,tag=!nld.NoAI,tag=!global.ignore,predicate=!nld:ignore] at @s unless entity @a[distance=..41] run tag @s add nld.NoAI
+#                                                                                                                         A
 
 
 
