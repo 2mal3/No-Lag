@@ -1,24 +1,17 @@
 {
     "display": {
-        "title": {
-            "text": "2mal3s Datapacks",
-            "color": "gold"
-        },
-        "description": {
-            "translate": "All Datapacks by 2mal3!"
-        },
+        "title": "2mal3",
+        "description": "",
         "icon": {
             "item": "minecraft:player_head",
-            "nbt": "{SkullOwner:{Name: \"2mal3\", Properties: {textures: [{Value: \"eyJ0aW1lc3RhbXAiOjE1ODY1MTU5NDQ5OTgsInByb2ZpbGVJZCI6Ijk2ODdiNTZlODNhNjRjOTdhMzdiNmM5MDVhMDE1ZDA1IiwicHJvZmlsZU5hbWUiOiIybWFsMyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82OThmNTYwOWIyMjc1MWM2MjIwOWU5ZTg1Yjg2NGY1OGUxZDdiY2M3NDI1NjYyN2E4MTE3MmI1YTg4MjExYmM2In19fQ==\"}]}}}"
+            "nbt": "{SkullOwner: '2mal3'}"
         },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": false
+        "show_toast": false,
+        "announce_to_chat": false
     },
     "parent": "global:root",
     "criteria": {
-        "tick": {
+        "trigger": {
             "trigger": "minecraft:tick"
         }
     }

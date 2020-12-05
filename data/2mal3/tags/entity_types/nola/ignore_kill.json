@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:evoker",
+    "minecraft:elder_guardian",
+
+    "minecraft:piglin_brute",
+    "minecraft:shulker",
+
+    "minecraft:snow_golem",
+    "minecraft:giant",
+    "minecraft:zombie_horse",
+    "minecraft:skeleton_horse",
+
+    "minecraft:villager",
+    
+    "minecraft:hopper_minecart",
+    "minecraft:chest_minecart"
+  ]
+}

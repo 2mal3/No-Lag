@@ -1,0 +1,21 @@
+Update v2.0.0
+
+Added:
+- In-game gui
+    > Information about the world / server
+    > Easy configuration of the datapack
+- Ignore important entitys
+- Update check (in the in-game gui)
+- Setting that the lag clear is automatically turned off overnight
+- Experimental debug mode
+
+Changed:
+- Completely new and 20x more efficient code
+- Improved compatibility with other Datapacks 
+- Improved Xp combine
+- Less annoying lag clear messages
+
+Removed:
+- Methods that are triggered by too much lag
+- Limitation for ignited tnts 
+- Language pack
