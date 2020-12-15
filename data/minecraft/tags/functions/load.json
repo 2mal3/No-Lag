@@ -1,5 +1,5 @@
 {
- "values": [
- "2mal3:nola/core/reload"
- ]
+    "values": [
+        "#load:__init"
+    ]
 }

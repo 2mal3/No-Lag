@@ -2,11 +2,11 @@
 # Called from function: 2mal3:nola/core/tick/minute
 # Datapack by 2mal3
 
-# remove tags
+# Remove the ignore kill tag
 tag @s remove nola.ignore_kill
 
 
-# add tags
+# Gives all entities that should be ignored to kill the tag
 execute unless entity @s[name=!] run tag @s add nola.ignore_kill
 
 execute if entity @s[type=#2mal3:nola/farm_animal] run tag @s add nola.ignore_kill

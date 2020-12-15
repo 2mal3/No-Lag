@@ -1,4 +1,17 @@
-Update v2.0.0
+Update v2.0.1 (15.12.2020)
+
+Changed:
+- Different reloading of the datapack for better compatibility with other datapacks
+- Better comments
+
+Bug fixes:
+- Cats as pets were not ignored
+- When disabling entity freezing, frozen entities were not reactivated
+- The datapack was not deactivated during uninstallation
+
+----------------------------------------------------------------
+
+Update v2.0.0 (5.12.2020)
 
 Added:
 - In-game gui
@@ -19,3 +32,5 @@ Removed:
 - Methods that are triggered by too much lag
 - Limitation for ignited tnts 
 - Language pack
+
+----------------------------------------------------------------

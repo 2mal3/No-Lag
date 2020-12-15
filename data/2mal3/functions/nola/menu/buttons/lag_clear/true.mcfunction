@@ -2,7 +2,7 @@
 # Called from function: 2mal3:nola/menu/display
 # Datapack by 2mal3
 
-# Set config variable
+# Saves the setting
 scoreboard players set $nola.lag_clear nola.config 1
 
 # Reset lag clear time
