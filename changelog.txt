@@ -1,3 +1,10 @@
+Update v2.0.2 (3.1.2021)
+
+Bug fixes:
+- Entities with names were sometimes deleted during lag clears.
+
+----------------------------------------------------------------
+
 Update v2.0.1 (15.12.2020)
 
 Changed:

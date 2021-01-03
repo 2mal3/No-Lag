@@ -1,4 +1,4 @@
-# No-Lag-Datapack v2.0.1
+# No-Lag-Datapack v2.0.2
 by 2mal3
 
 This datapack is designed to minimize the lag in the Minecraft world in a efficient way to ensure a good gaming experience.             
