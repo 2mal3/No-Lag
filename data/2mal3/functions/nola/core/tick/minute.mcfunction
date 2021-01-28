@@ -9,7 +9,7 @@ function 2mal3:nola/get_variables
 execute as @e at @s run function 2mal3:nola/ignore_kill
 
 # item despawn
-execute if score $nola.item_despawn nola.config matches 1 as @e[type=minecraft:item] run function 2mal3:nola/modules/item_despawn
+execute if score $nola.item_despawn nola.config matches 1 as @e[type=minecraft:item,tag=!global.ignore.kill] run function 2mal3:nola/modules/item_despawn
 
 # no collision
 team join nola.no_collision @e[type=#2mal3:nola/farm_animal]
