@@ -1,4 +1,4 @@
-# No-Lag-Datapack v2.0.2
+# No-Lag-Datapack v2.1.0
 by 2mal3
 
 This datapack is designed to minimize the lag in the Minecraft world in a efficient way to ensure a good gaming experience.             
@@ -7,6 +7,7 @@ These can be easily configured via the in game gui, which provides additional in
 Thereby the datapack was designed with performance in mind, so that it has almost no effect on the game performance itself.             
 
 By default, all farm animals, bosses, decorative entities, pets, near entities and entities with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
+Additionally, all entitys that are within 64 blocks of an armor stand named **ignore** will not be frozen.                       
 
 All settings and actions can be done via the in game gui. To open it you just have to type command `function #2mal3:nola/menu` into the chat (only works with command permissions).
 

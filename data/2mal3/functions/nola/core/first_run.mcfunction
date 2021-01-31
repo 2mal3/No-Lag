@@ -7,7 +7,7 @@ tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"N
 
 
 # Sends Insatlations message
-tellraw @a [{"text":"No Lag Datapack v2.0.2 by 2mal3 was installed!","color":"blue"}]
+tellraw @a [{"text":"No Lag Datapack v2.1.0 by 2mal3 was installed!","color":"blue"}]
 
 
 # Sets the configuration to a start level

@@ -1,7 +1,23 @@
+
+Update v2.1.0 (31.1.2021)
+
+Added:
+- Ability to mass-ignore entities in certain areas
+- Icons in the datapack menu and config
+
+Changed:
+- Different order of actions in the datapack menu
+
+Bug fixes:
+- Items with the global.ignore.kill were killed
+- Entitys ignored by the datapack were frozen
+
+----------------------------------------------------------------
+
 Update v2.0.2 (3.1.2021)
 
 Bug fixes:
-- Entities with names were sometimes deleted during lag clears.
+- Entities with names were sometimes deleted during lag clears
 
 ----------------------------------------------------------------
 

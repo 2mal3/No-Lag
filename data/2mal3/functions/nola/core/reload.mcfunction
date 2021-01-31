@@ -17,13 +17,13 @@ team add nola.no_collision
 team modify nola.no_collision collisionRule pushOtherTeams
 
 # Set version variable in format xx.xx.xx
-scoreboard players set $nola.version nola.data 020001
+scoreboard players set $nola.version nola.data 020100
 
 # Send installation massage after 4 sekonds
 execute unless score $nola.first_run nola.data matches 1 run schedule function 2mal3:nola/core/first_run 4s
 
 
-# start datapack loops
+# datapack loops
 function 2mal3:nola/core/tick/second
 function 2mal3:nola/core/tick/minute
 function 2mal3:nola/core/tick/day
