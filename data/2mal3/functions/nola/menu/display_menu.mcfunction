@@ -23,16 +23,16 @@ tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 
 tellraw @s [{"text":"No Lag Datapack v2.0.1","bold":true,"color":"gold"},{"text":"\n------------------------\n","color":"gold"}]
 
-tellraw @s [{"text":"Online Players: ","color":"gold"},{"score":{"name":"$nola.players","objective":"nola.data"},"color":"red"}]
-tellraw @s [{"text":"Entitys in the world: ","color":"gold"},{"score":{"name":"$nola.entitys","objective":"nola.data"},"color":"red"}]
-tellraw @s [{"text":"Frozen entitys: ","color":"gold"},{"score":{"name":"$nola.frozen_entitys","objective":"nola.data"},"color":"red"}]
-tellraw @s [{"text":"Unneeded entitys: ","color":"gold"},{"score":{"name":"$nola.unneeded_entitys","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u263a Online Players: ","color":"gold"},{"score":{"name":"$nola.players","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u2666 Entitys in the world: ","color":"gold"},{"score":{"name":"$nola.entitys","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u2744 Frozen entitys: ","color":"gold"},{"score":{"name":"$nola.frozen_entitys","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u26a1 Unneeded entitys: ","color":"gold"},{"score":{"name":"$nola.unneeded_entitys","objective":"nola.data"},"color":"red"}]
 
 tellraw @s {"text":""}
 
-tellraw @s {"text":"Configure the Datapack","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_config"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
-tellraw @s {"text":"Delete all unused entitys","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/manual_lag_clear"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
-tellraw @s {"text":"Check for updates","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/core/wiki/No-Lag-Update-Check-v2.0.1"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+tellraw @s {"text":"\u2699 Configure the Datapack","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_config"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
+tellraw @s {"text":"\u26a1 Delete all unused entitys","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/manual_lag_clear"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+tellraw @s {"text":"\u267b Check for updates","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/core/wiki/No-Lag-Update-Check-v2.0.1"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
 
 tellraw @s {"text":""}
 
