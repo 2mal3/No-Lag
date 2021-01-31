@@ -11,6 +11,8 @@ tellraw @a [{"text":"No Lag Datapack v2.0.2 by 2mal3 was installed!","color":"bl
 
 
 # Sets the configuration to a start level
+scoreboard players set $nola.area_ignorer nola.config 1
+
 gamerule maxEntityCramming 12
 
 scoreboard players set $nola.item_despawn nola.config 1
