@@ -23,17 +23,22 @@ tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 
 tellraw @s [{"text":"No Lag Datapack v2.1.0","bold":true,"color":"gold"},{"text":"\n------------------------\n","color":"gold"}]
 
-tellraw @s [{"text":"\u263a Online Players: ","color":"gold"},{"score":{"name":"$nola.players","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u263a Online players: ","color":"gold"},{"score":{"name":"$nola.players","objective":"nola.data"},"color":"red"}]
 tellraw @s [{"text":"\u2666 Entitys in the world: ","color":"gold"},{"score":{"name":"$nola.entitys","objective":"nola.data"},"color":"red"}]
 tellraw @s [{"text":"\u2744 Frozen entitys: ","color":"gold"},{"score":{"name":"$nola.frozen_entitys","objective":"nola.data"},"color":"red"}]
 tellraw @s [{"text":"\u26a1 Unneeded entitys: ","color":"gold"},{"score":{"name":"$nola.unneeded_entitys","objective":"nola.data"},"color":"red"}]
 
 tellraw @s {"text":""}
 
-tellraw @s {"text":"\u2699 Configure the Datapack","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_config"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
-tellraw @s {"text":"\u26a1 Delete all unused entitys","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/manual_lag_clear"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
-tellraw @s {"text":"\u231a Check for updates","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/core/wiki/No-Lag-Update-Check-v2.1.0"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+tellraw @s {"text":"\u2699 Configure the datapack \u25b6","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_config"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
+tellraw @s {"text":"\u26a1 Delete all unused entitys \u25b6","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/manual_lag_clear"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+tellraw @s {"text":"\u231a Check for updates","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/core/wiki/No-Lag-Update-Check-v2.1.0"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
 
 tellraw @s {"text":""}
 
-tellraw @s {"text":"\u267b Uninstall the Datapack","color":"dark_red","clickEvent":{"action":"run_command","value":"/function #2mal3:nola/uninstall"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+tellraw @s {"text":"\u2b24 Planet Minecraft Website","color":"blue","clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/data-pack/no-lag-datapack/"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
+tellraw @s {"text":"\u2709 GitHub Website","color":"blue","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/No-Lag-Datapack"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
+
+tellraw @s {"text":""}
+
+tellraw @s {"text":"\u267b Uninstall the datapack \u25b6","color":"dark_red","clickEvent":{"action":"run_command","value":"/function #2mal3:nola/uninstall"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
