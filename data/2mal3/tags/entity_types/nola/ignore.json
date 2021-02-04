@@ -1,18 +1,10 @@
 {
   "replace": false,
   "values": [
-    "minecraft:ender_dragon",
-    "minecraft:wither",
-
+    "#2mal3:nola/bosses",
+    "#2mal3:nola/aligned",
     "minecraft:player",
-
     "minecraft:area_effect_cloud",
-    "minecraft:armor_stand",
-    "minecraft:command_block_minecart",
-
-    "minecraft:end_crystal",
-    "minecraft:item_frame",
-    "minecraft:leash_knot",
-    "minecraft:painting"
+    "minecraft:command_block_minecart"
   ]
 }

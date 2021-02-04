@@ -1,0 +1,11 @@
+{
+	"required":false,
+	"values": [
+		"minecraft:piglin_brute",
+		"minecraft:painting",
+		"minecraft:item_frame",
+		"minecraft:leash_knot",
+		"minecraft:end_crystal",
+		"minecraft:armor_stand"
+	]
+} 

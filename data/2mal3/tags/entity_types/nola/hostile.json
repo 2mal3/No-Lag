@@ -1,0 +1,19 @@
+{
+	"required":false,
+	"values": [
+		"#2mal3:nola/undead",
+		"#2mal3:nola/illagers",
+		"#2mal3:nola/nether",
+		"minecraft:creeper",
+		"minecraft:elder_guardian",
+		"minecraft:guardian",
+		"minecraft:shulker",
+		"minecraft:silverfish",
+		"minecraft:slime",
+		"minecraft:vex",
+		"minecraft:witch",
+		"minecraft:piglin",
+		"minecraft:piglin_brute",
+		"minecraft:wither"
+	]
+} 

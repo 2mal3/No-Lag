@@ -1,20 +1,12 @@
 {
   "replace": false,
   "values": [
-    "minecraft:evoker",
-    "minecraft:elder_guardian",
-
-    "minecraft:piglin_brute",
-    "minecraft:shulker",
-
+    "#2mal3:nola/mini_bosses",
+    "#2mal3:nola/minecarts",
     "minecraft:snow_golem",
     "minecraft:giant",
     "minecraft:zombie_horse",
     "minecraft:skeleton_horse",
-
-    "minecraft:villager",
-    
-    "minecraft:hopper_minecart",
-    "minecraft:chest_minecart"
+    "minecraft:villager"
   ]
 }

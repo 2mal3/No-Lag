@@ -1,0 +1,11 @@
+{
+	"required":false,
+	"values": [
+		"#2mal3:nola/zombies",
+		"#2mal3:nola/skeletons",
+		"minecraft:phantom",
+		"minecraft:zombified_piglin",
+		"minecraft:zoglin",
+		"minecraft:wither"
+	]
+} 

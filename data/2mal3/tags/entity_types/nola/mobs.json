@@ -1,0 +1,8 @@
+{
+	"required":false,
+	"values": [
+		"#2mal3:nola/passive",
+		"#2mal3:nola/neutral",
+		"#2mal3:nola/hostile"
+	]
+} 

@@ -1,0 +1,8 @@
+{
+	"required":false,
+	"values": [
+		"minecraft:skeleton",
+		"minecraft:wither_skeleton",
+		"minecraft:stray"
+	]
+} 
