@@ -19,7 +19,7 @@ scoreboard players set $nola.item_despawn nola.config 1
 scoreboard players set $nola.item_despawn_time nola.config 3
 
 scoreboard players set $nola.no_ai nola.config 1
-scoreboard players set $nola.no_ai_distance nola.config 35
+scoreboard players set $nola.no_ai_distance nola.config 42
 
 scoreboard players set $nola.xp_merge nola.config 1
 

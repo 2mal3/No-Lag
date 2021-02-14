@@ -1,4 +1,4 @@
-# Description: Enables the 64 block freezing distance
+# Description: Sets the block freezing distance to 64
 # Called from function: 2mal3:nola/menu/display_config
 # Datapack by 2mal3
 
