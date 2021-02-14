@@ -6,7 +6,7 @@ To achieve this, this datapack uses over 6 different and efficient methods, unli
 These can be easily configured via the in game gui, which provides additional information and special actions.                          
 Thereby the datapack was designed with performance in mind, so that it has almost no effect on the game performance itself.             
 
-## Features:
+### Features:
 - Over 6 different methods to reduce lag
 - Does not affect important entitys
 - Simple in-game gui with many settings
@@ -19,7 +19,7 @@ Additionally, all entitys that are within 64 blocks of an armor stand named **ig
 
 All settings and actions can be done via the in game gui. To open it you just have to type command `function #2mal3:nola/menu` into the chat (only works with command permissions).
 
-## Methods to reduce lag:
+### Methods to reduce lag:
 - Entities that are too far away from a player are frozen
 - In certain intervals all unimportant entitys are deleted
 - Multiple Xp Orbs are combined
@@ -28,12 +28,12 @@ All settings and actions can be done via the in game gui. To open it you just ha
 - Les entitys can stand together on one block
 - If too many entitys of the same type are too close to each other, all other entitys of the species will be deleted.
 
-## Limitations:
+### Limitations:
 This datapack reduces the lag percentage. This means that it is most effective when you already have heavy lag. If there are only few lag, the datapack is less useful and you should consider if you need it at all.                                                       
 In general this datapack is only suitable for survival worlds and only improves the performance of world / server. It does not improve the performance of mods, shaders, datapacks and FPS.                                                                                 
 It is tried to make this datapack compatible with other datapacks, but it cannot be guaranteed that problems can occur in combination with other datapacks.
 
-## Technical Information:
+### Technical Information:
 In general no entitys with the tag global.ignore_kill are deleted and entitys with the tag global.ignore are not affected.              
 The datapack collects some information about the world and stores it.                                                                   
 - _$nola.players_ in _nola.data_: Number of players in the world
