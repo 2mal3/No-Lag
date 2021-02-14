@@ -26,6 +26,7 @@ All settings and actions can be done via the in game gui. To open it you just ha
 - Collision of farm animals are deactivated
 - Items despawn earlier
 - Les entitys can stand together on one block
+- If too many entitys of the same type are too close to each other, all other entitys of the species will be deleted.
 
 ## Limitations:
 This datapack reduces the lag percentage. This means that it is most effective when you already have heavy lag. If there are only few lag, the datapack is less useful and you should consider if you need it at all.                                                       

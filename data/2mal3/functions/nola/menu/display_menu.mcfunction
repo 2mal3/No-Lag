@@ -32,7 +32,7 @@ tellraw @s {"text":""}
 
 tellraw @s {"text":"\u2699 Configure the datapack \u25b6","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_config/page_1"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
 tellraw @s {"text":"\u26a1 Delete all unused entitys \u25b6","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/manual_lag_clear"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
-tellraw @s {"text":"\u231a Check for updates","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/core/wiki/No-Lag-Update-Check-v2.1.0"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
+tellraw @s {"text":"\u231a Check for updates","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/core/wiki/No-Lag-Update-Check-v2.2.0"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
 
 tellraw @s {"text":""}
 

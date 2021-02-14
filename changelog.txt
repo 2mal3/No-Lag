@@ -1,4 +1,27 @@
 
+Update v2.2.0 (14.2.2021)
+
+This update mainly brings a new method to reduce lag. If too many entitys of the same type are too close to each other, all other entitys of the species will be deleted. In short: No more laggy mass farming!
+Also the datapack menu with the config has been improved and more options for the range of entity freezing have been added.
+
+Added:
+- Method to reduce lag: Entity that have too many entity of the same type in the near will be deleted
+- More options for the distance of entity freeze (Now additionally 42 and 72)
+- Important links in the datapack menu
+- Second page in the datapack config
+
+Changed:
+- Better icons in the datapack menu
+- Datapack menu improved
+- Internal entity types lists increased and extended
+- Small internal code embellishments
+
+Bug fixes:
+- In the datapack config the current value of the max entity craming was not displayed
+- At the setting to distance of entity freezing could be set only 64
+
+----------------------------------------------------------------
+
 Update v2.1.0 (31.1.2021)
 
 Added:
