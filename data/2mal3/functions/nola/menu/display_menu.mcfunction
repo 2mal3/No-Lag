@@ -21,7 +21,7 @@ function 2mal3:nola/get_variables
 # Display menu
 tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 
-tellraw @s [{"text":"No Lag Datapack v2.1.0","bold":true,"color":"gold"},{"text":"\n------------------------\n","color":"gold"}]
+tellraw @s [{"text":"No Lag Datapack v2.2.0","bold":true,"color":"gold"},{"text":"\n------------------------\n","color":"gold"}]
 
 tellraw @s [{"text":"\u263a Online players: ","color":"gold"},{"score":{"name":"$nola.players","objective":"nola.data"},"color":"red"}]
 tellraw @s [{"text":"\u2666 Entitys in the world: ","color":"gold"},{"score":{"name":"$nola.entitys","objective":"nola.data"},"color":"red"}]
