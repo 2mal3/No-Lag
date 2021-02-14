@@ -6,11 +6,6 @@ To achieve this, this datapack uses over 6 different and efficient methods, unli
 These can be easily configured via the in game gui, which provides additional information and special actions.                          
 Thereby the datapack was designed with performance in mind, so that it has almost no effect on the game performance itself.             
 
-By default, all farm animals, bosses, decorative entities, pets, near entities and entities with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
-Additionally, all entitys that are within 64 blocks of an armor stand named **ignore** will not be frozen.                       
-
-All settings and actions can be done via the in game gui. To open it you just have to type command `function #2mal3:nola/menu` into the chat (only works with command permissions).
-
 ## Features:
 - Over 6 different methods to reduce lag
 - Does not affect important entitys
@@ -18,6 +13,11 @@ All settings and actions can be done via the in game gui. To open it you just ha
 - Additional information about the world
 - Easy testing for new updates
 - Does not create lag itself
+
+By default, all farm animals, bosses, decorative entities, pets, near entities and entities with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
+Additionally, all entitys that are within 64 blocks of an armor stand named **ignore** will not be frozen.                       
+
+All settings and actions can be done via the in game gui. To open it you just have to type command `function #2mal3:nola/menu` into the chat (only works with command permissions).
 
 ## Methods to reduce lag:
 - Entities that are too far away from a player are frozen
