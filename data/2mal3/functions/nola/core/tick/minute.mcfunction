@@ -19,6 +19,9 @@ team join nola.no_collision @e[type=#2mal3:nola/breedable]
 execute if score $nola.lag_clear nola.config matches 1 if score $nola.lag_clear_not_at_night nola.config matches 0 run function 2mal3:nola/modules/lag_clear/main
 execute if score $nola.lag_clear nola.config matches 1 if score $nola.lag_clear_not_at_night nola.config matches 1 if predicate 2mal3:nola/is_day run function 2mal3:nola/modules/lag_clear/main
 
+# Automatically deletes new entitys if there are too many of the same type nearby
+execute if score $nola.entity_limiter nola.config matches 1 as @e[type=!#2mal3:nola/ignore,type=!#2mal3:nola/ignore_kill,tag=!nola.ignore_kill,tag=!nola.entity_limiter.processed] at @s run function 2mal3:nola/modules/entity_limiter/main
+
 
 # call the function next minute
 schedule function 2mal3:nola/core/tick/minute 60s

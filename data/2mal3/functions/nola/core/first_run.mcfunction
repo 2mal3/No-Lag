@@ -28,6 +28,11 @@ scoreboard players set $nola.lag_clear_time nola.config 10
 scoreboard players set $nola.lag_clear_not_at_night nola.config 0
 scoreboard players set $nola.lag_clear_time nola.data 10
 
+scoreboard players set $nola.entity_limiter nola.config 0
+scoreboard players set $nola.entity_limiter.max_hostile nola.config 16
+scoreboard players set $nola.entity_limiter.max_neutral nola.config 16
+scoreboard players set $nola.entity_limiter.max_passive nola.config 16
+
 
 # Saves that the datapack was installed
 scoreboard players set $nola.first_run nola.data 1

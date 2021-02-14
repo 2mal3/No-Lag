@@ -6,4 +6,4 @@
 scoreboard players set $nola.no_ai_distance nola.config 35
 
 # Displays the updated config menu
-function 2mal3:nola/menu/display_config
+function 2mal3:nola/menu/display_config/page_1

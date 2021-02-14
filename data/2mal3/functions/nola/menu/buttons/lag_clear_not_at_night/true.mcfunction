@@ -6,4 +6,4 @@
 scoreboard players set $nola.lag_clear_not_at_night nola.config 1
 
 # Displays the updated config menu
-function 2mal3:nola/menu/display_config
+function 2mal3:nola/menu/display_config/page_1

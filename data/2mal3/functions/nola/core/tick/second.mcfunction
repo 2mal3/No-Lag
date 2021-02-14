@@ -14,5 +14,6 @@ execute if score $nola.xp_merge nola.config matches 1 run function 2mal3:nola/mo
 # Shows all area ignorer, if activated
 execute if score $nola.area_ignorer nola.config matches 1 as @e[type=minecraft:armor_stand,name=ignore] at @s run particle minecraft:happy_villager ~ ~ ~ 0.2 1 0.2 1 5
 
+
 # call the function next second
 schedule function 2mal3:nola/core/tick/second 1s

@@ -9,4 +9,4 @@ scoreboard players set $nola.no_ai nola.config 0
 execute as @e[tag=nola.no_ai] run function 2mal3:nola/modules/no_ai/disable
 
 # Displays the updated config menu
-function 2mal3:nola/menu/display_config
+function 2mal3:nola/menu/display_config/page_1

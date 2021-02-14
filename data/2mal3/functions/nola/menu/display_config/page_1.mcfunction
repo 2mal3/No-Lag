@@ -18,17 +18,15 @@ function 2mal3:nola/get_variables
 # Display config menu
 tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 
-tellraw @s [{"text":"No Lag Datapack Config","bold":true,"color":"gold"},{"text":"\n------------------------\n","color":"gold"}]
-
-
-# Displays area ignorer
-execute if score $nola.area_ignorer nola.config matches 0 run tellraw @s [{"text":"[\u274c]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/area_ignorer/true"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Area ignorer","color":"gold","hoverEvent":{"action":"show_text","contents":"Armor stands renamed to ignore block the freezing of all entities near them."}}]
-execute if score $nola.area_ignorer nola.config matches 1 run tellraw @s [{"text":"[\u2714]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/area_ignorer/false"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Area ignorer","color":"gold","hoverEvent":{"action":"show_text","contents":"Armor stands renamed to ignore block the freezing of all entities near them."}}]
+tellraw @s [{"text":"No Lag Datapack Config","bold":true,"color":"gold"}]
+tellraw @s [{"text":"< -------- ","color":"yellow","hoverEvent":{"action":"show_text","contents":""}},{"text":"1 / 2","color":"gold","hoverEvent":{"action":"show_text","contents":""}},{"text":" -------- ","color":"yellow","hoverEvent":{"action":"show_text","contents":""}},{"text":">","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_config/page_2"},"hoverEvent":{"action":"show_text","contents":"*click*"}}]
+# tellraw @s [{"text":"<","color":"gold","clickEvent":{"action":"run_command","value":"/say 1"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" -------- ","color":"yellow","hoverEvent":{"action":"show_text","contents":""}},{"text":"1 / 2","color":"gold","hoverEvent":{"action":"show_text","contents":""}},{"text":" -------- ","color":"yellow","hoverEvent":{"action":"show_text","contents":""}},{"text":">","color":"gold","clickEvent":{"action":"run_command","value":"/say 2"},"hoverEvent":{"action":"show_text","contents":"*click*"}}]
 
 tellraw @s {"text":""}
 
+
 # Displays Config for maximum entitys on a block
-tellraw @s [{"text":"[\u270e]","color":"gray","clickEvent":{"action":"suggest_command","value":"/gamerule maxEntityCramming"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Maximum entiys on one block: ","color":"gold","hoverEvent":{"action":"show_text","contents":"How many entities can stand on a block before one gets damaged?"}},{"score":{"name":"$nola.max_entity_cramming ","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"[\u270e]","color":"gray","clickEvent":{"action":"suggest_command","value":"/gamerule maxEntityCramming"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Maximum entiys on one block: ","color":"gold","hoverEvent":{"action":"show_text","contents":"How many entities can stand on a block before one gets damaged?"}},{"score":{"name":"$nola.max_entity_cramming","objective":"nola.data"},"color":"red"}]
 
 tellraw @s {"text":""}
 
@@ -64,6 +62,8 @@ tellraw @s {"text":""}
 
 # Shows key to main menu
 tellraw @s {"text":"<<<< Back","color":"red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_menu"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+
+tellraw @s {"text":""}
 
 #$nola.lag_clear_not_at_night nola.config
 # \u274c : false
