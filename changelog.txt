@@ -1,4 +1,11 @@
 
+Update v2.2.1 (15.2.2021)
+
+Bug fixes:
+- In many places in the datapack entities were used instead of entitys
+
+----------------------------------------------------------------
+
 Update v2.2.0 (14.2.2021)
 
 This update mainly brings a new method to reduce lag. If too many entitys of the same type are too close to each other, all other entitys of the species will be deleted. In short: No more laggy mass farming!
