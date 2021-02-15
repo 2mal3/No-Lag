@@ -25,7 +25,7 @@ Bug fixes:
 Update v2.1.0 (31.1.2021)
 
 Added:
-- Ability to mass-ignore entities in certain areas
+- Ability to mass-ignore entitys in certain areas
 - Icons in the datapack menu and config
 
 Changed:
@@ -40,7 +40,7 @@ Bug fixes:
 Update v2.0.2 (3.1.2021)
 
 Bug fixes:
-- Entities with names were sometimes deleted during lag clears
+- entitys with names were sometimes deleted during lag clears
 
 ----------------------------------------------------------------
 
@@ -52,7 +52,7 @@ Changed:
 
 Bug fixes:
 - Cats as pets were not ignored
-- When disabling entity freezing, frozen entities were not reactivated
+- When disabling entity freezing, frozen entitys were not reactivated
 - The datapack was not deactivated during uninstallation
 
 ----------------------------------------------------------------

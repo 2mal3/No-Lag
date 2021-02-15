@@ -6,7 +6,7 @@
 tag @s remove nola.ignore_kill
 
 
-# Gives all entities that should be ignored to kill the tag
+# Gives all entitys that should be ignored to kill the tag
 execute if entity @s[name=!] run tag @s add nola.ignore_kill
 
 execute if entity @s[type=#2mal3:nola/breedable] run tag @s add nola.ignore_kill.farm

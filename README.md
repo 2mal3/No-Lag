@@ -14,13 +14,13 @@ Thereby the datapack was designed with performance in mind, so that it has almos
 - Easy testing for new updates
 - Does not create lag itself
 
-By default, all farm animals, bosses, decorative entities, pets, near entities and entities with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
+By default, all farm animals, bosses, decorative entitys, pets, near entitys and entitys with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
 Additionally, all entitys that are within 64 blocks of an armor stand named **ignore** will not be frozen.                       
 
 All settings and actions can be done via the in game gui. To open it you just have to type command `function #2mal3:nola/menu` into the chat (only works with command permissions).
 
 ## Methods to reduce lag:
-- Entities that are too far away from a player are frozen
+- entitys that are too far away from a player are frozen
 - In certain intervals all unimportant entitys are deleted
 - Multiple Xp Orbs are combined
 - Collision of farm animals are deactivated
