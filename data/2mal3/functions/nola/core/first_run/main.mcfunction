@@ -6,8 +6,20 @@
 tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"NoLag","color":"green"},{"text":"/","color":"gray"},{"text":"INFO","color":"green"},{"text":"]: ","color":"gray"},{"text":"Installed datapack.","color":"green"}]
 
 
-# Sends Insatlations message
-tellraw @a [{"text":"No Lag Datapack v2.2.1 by 2mal3 was installed!","color":"blue"}]
+# Add scoreboards
+scoreboard objectives add nola.data dummy
+scoreboard objectives add nola.config dummy
+scoreboard objectives add nola.despawn dummy
+scoreboard objectives add nola.xp dummy
+scoreboard objectives add nola.debug_mode dummy
+
+# Add teams
+team add nola.no_collision
+team modify nola.no_collision collisionRule pushOtherTeams
+
+
+# Set version variable in format xx.xx.xx
+scoreboard players set $nola.version nola.data 020201
 
 
 # Sets the configuration to a start level
@@ -33,6 +45,9 @@ scoreboard players set $nola.entity_limiter.max_hostile nola.config 16
 scoreboard players set $nola.entity_limiter.max_neutral nola.config 16
 scoreboard players set $nola.entity_limiter.max_passive nola.config 16
 
+
+# Sends Insatlations message after 4 sekonds
+schedule function 2mal3:nola/core/first_run/send_message 4s
 
 # Saves that the datapack was installed
 scoreboard players set $nola.first_run nola.data 1
