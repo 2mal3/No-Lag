@@ -1,8 +1,12 @@
 
 Update v2.2.1 (15.2.2021)
 
+Changed:
+- Improved performace during inititialization
+
 Bug fixes:
 - In many places in the datapack entities were used instead of entitys
+- When simply replacing the datapack file after a datapack update resulted in no new things were created 
 
 ----------------------------------------------------------------
 
