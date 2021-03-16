@@ -1,9 +1,9 @@
 {
-	"required":false,
+	"required": false,
 	"values": [
 		"#2mal3:nola/fish",
 		"minecraft:dolphin",
 		"minecraft:squid",
 		"minecraft:turtle"
 	]
-} 
+}

@@ -1,5 +1,5 @@
 {
-	"required":false,
+	"required": false,
 	"values": [
 		"#2mal3:nola/arrows",
 		"minecraft:dragon_fireball",
@@ -15,4 +15,4 @@
 		"minecraft:trident",
 		"minecraft:wither_skull"
 	]
-} 
+}

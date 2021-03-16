@@ -1,8 +1,8 @@
 {
-	"required":false,
+	"required": false,
 	"values": [
 		"minecraft:evoker",
 		"minecraft:piglin_brute",
 		"minecraft:shulker"
 	]
-} 
+}

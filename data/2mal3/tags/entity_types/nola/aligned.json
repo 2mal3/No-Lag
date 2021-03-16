@@ -1,5 +1,5 @@
 {
-	"required":false,
+	"required": false,
 	"values": [
 		"minecraft:piglin_brute",
 		"minecraft:painting",
@@ -8,4 +8,4 @@
 		"minecraft:end_crystal",
 		"minecraft:armor_stand"
 	]
-} 
+}

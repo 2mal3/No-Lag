@@ -1,5 +1,5 @@
 {
-	"required":false,
+	"required": false,
 	"values": [
 		"minecraft:ghast",
 		"minecraft:magma_cube",
@@ -11,4 +11,4 @@
 		"minecraft:hoglin",
 		"minecraft:zoglin"
 	]
-} 
+}

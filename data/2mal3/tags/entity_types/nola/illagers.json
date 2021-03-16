@@ -1,5 +1,5 @@
 {
-	"required":false,
+	"required": false,
 	"values": [
 		"minecraft:illusioner",
 		"minecraft:vindicator",
@@ -7,4 +7,4 @@
 		"minecraft:ravager",
 		"minecraft:pillager"
 	]
-} 
+}

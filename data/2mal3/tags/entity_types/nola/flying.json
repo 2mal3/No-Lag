@@ -1,5 +1,5 @@
 {
-	"required":false,
+	"required": false,
 	"values": [
 		"minecraft:parrot",
 		"minecraft:bat",
@@ -10,4 +10,4 @@
 		"minecraft:vex",
 		"minecraft:blaze"
 	]
-} 
+}

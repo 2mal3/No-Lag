@@ -1,5 +1,5 @@
 {
-	"required":false,
+	"required": false,
 	"values": [
 		"minecraft:minecart",
 		"minecraft:chest_minecart",
@@ -9,4 +9,4 @@
 		"minecraft:command_block_minecart",
 		"minecraft:spawner_minecart"
 	]
-} 
+}

@@ -1,5 +1,5 @@
 {
-	"required":false,
+	"required": false,
 	"values": [
 		"minecraft:bee",
 		"minecraft:dolphin",
@@ -15,4 +15,4 @@
 		"minecraft:piglin",
 		"minecraft:zombified_piglin"
 	]
-} 
+}
