@@ -19,7 +19,7 @@ team modify nola.no_collision collisionRule pushOtherTeams
 
 
 # Set version variable in format xx.xx.xx
-scoreboard players set $nola.version nola.data 020201
+scoreboard players set $nola.version nola.data 020300
 
 
 # Sets the configuration to a start level

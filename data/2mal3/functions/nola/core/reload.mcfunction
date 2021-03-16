@@ -18,6 +18,3 @@ execute if score $nola.first_run nola.data matches 1 unless score $nola.version 
 function 2mal3:nola/core/tick/second
 function 2mal3:nola/core/tick/minute
 function 2mal3:nola/core/tick/day
-
-
-# turtle

@@ -1,5 +1,22 @@
 
+Update v2.3.0 (16.3.2021)
+
+Again, just a minor update. It only fixes a few bugs and adds functions for better error detection.
+
+Added:
+- Automatic detection of incorrect versions
+- Function for easy debugging
+
+Bug fixes:
+- Installing the datapack does not work properly
+- The area ignorer option has led to lag spikes every second
+- When uninstalling the datapck not all entity tags were removed
+
+----------------------------------------------------------------
+
 Update v2.2.1 (15.2.2021)
+
+This is just a small update that mainly fixes the spelling error that entitys were written as entities.
 
 Changed:
 - Improved performace during inititialization
