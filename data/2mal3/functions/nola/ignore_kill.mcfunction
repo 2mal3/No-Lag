@@ -8,8 +8,8 @@ tag @s remove nola.ignore_kill.near
 tag @s remove nola.ignore_kill.farm
 
 
-# Gives all entitys that should be ignored to kill the tag
-execute if entity @s[name=!] run tag @s add nola.ignore_kill
+# Gives all entitys that should be ignored to kill the ignore kill tag
+execute if data entity @s CustomName run tag @s add nola.ignore_kill
 
 execute if entity @s[type=#2mal3:nola/breedable] run tag @s add nola.ignore_kill.farm
 execute if entity @s[type=#2mal3:nola/ignore_kill] run tag @s add nola.ignore_kill
