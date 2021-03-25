@@ -4,6 +4,8 @@
 
 # Remove the ignore kill tag
 tag @s remove nola.ignore_kill
+tag @s remove nola.ignore_kill.near
+tag @s remove nola.ignore_kill.farm
 
 
 # Gives all entitys that should be ignored to kill the tag
