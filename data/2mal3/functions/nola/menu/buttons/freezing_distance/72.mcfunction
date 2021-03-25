@@ -3,7 +3,7 @@
 # Datapack by 2mal3
 
 # Saves the setting
-scoreboard players set $nola.no_ai_distance nola.config 72
+scoreboard players set $no_ai_distance nola.config 72
 
 # Displays the updated config menu
 function 2mal3:nola/menu/display_config/page_1

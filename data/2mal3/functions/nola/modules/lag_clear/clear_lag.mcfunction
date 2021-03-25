@@ -12,4 +12,4 @@ tp @e[tag=!nola.ignore_kill,tag=!nola.ignore_kill.near,tag=!nola.ignore_kill.far
 tellraw @a {"text":"All unneeded entitys were deleted.","color":"gray"}
 
 # Reset lag clear time
-scoreboard players operation $nola.lag_clear_time nola.data = $nola.lag_clear_time nola.config
+scoreboard players operation .lag_clear_time nola.data = $lag_clear_time nola.config

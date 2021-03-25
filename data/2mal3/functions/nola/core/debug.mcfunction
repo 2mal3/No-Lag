@@ -10,13 +10,13 @@ playsound minecraft:ui.button.click master @s
 
 
 # Get variables
-execute store result score $nola.temp_0 nola.data run data get entity @s DataVersion
-execute store result score $nola.temp_1 nola.data run datapack list
-execute store result score $nola.temp_2 nola.data run execute if entity @a
+execute store result score .temp_0 nola.data run data get entity @s DataVersion
+execute store result score .temp_1 nola.data run datapack list
+execute store result score .temp_2 nola.data run execute if entity @a
 
 # nola version; minecraft version; datapack count; player count
 tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
-tellraw @s [{"text":"Debug data: ","color":"gold"},{"score":{"name":"$nola.version","objective":"nola.data"},"color":"red"},{"text":"; ","color":"gold"},{"score":{"name":"$nola.temp_0","objective":"nola.data"},"color":"red"},{"text":"; ","color":"gold"},{"score":{"name":"$nola.temp_1","objective":"nola.data"},"color":"red"},{"text":"; ","color":"gold"},{"score":{"name":"$nola.temp_2","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"Debug data: ","color":"gold"},{"score":{"name":"$version","objective":"nola.data"},"color":"red"},{"text":"; ","color":"gold"},{"score":{"name":".temp_0","objective":"nola.data"},"color":"red"},{"text":"; ","color":"gold"},{"score":{"name":".temp_1","objective":"nola.data"},"color":"red"},{"text":"; ","color":"gold"},{"score":{"name":".temp_2","objective":"nola.data"},"color":"red"}]
 
 # Shows key to main menu
 tellraw @s {"text":""}

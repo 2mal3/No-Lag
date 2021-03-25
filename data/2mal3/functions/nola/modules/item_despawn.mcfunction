@@ -6,4 +6,4 @@
 scoreboard players add @s nola.despawn 1
 
 # kill item if time is over
-execute if score @s nola.despawn >= $nola.item_despawn_time nola.config run kill @s
+execute if score @s nola.despawn >= $item_despawn_time nola.config run kill @s

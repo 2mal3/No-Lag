@@ -23,10 +23,10 @@ tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 
 tellraw @s [{"text":"No Lag Datapack v2.3.0","bold":true,"color":"gold"},{"text":"\n------------------------\n","color":"gold"}]
 
-tellraw @s [{"text":"\u263a Online players: ","color":"gold"},{"score":{"name":"$nola.players","objective":"nola.data"},"color":"red"}]
-tellraw @s [{"text":"\u2666 Entitys in the world: ","color":"gold"},{"score":{"name":"$nola.entitys","objective":"nola.data"},"color":"red"}]
-tellraw @s [{"text":"\u2744 Frozen entitys: ","color":"gold"},{"score":{"name":"$nola.frozen_entitys","objective":"nola.data"},"color":"red"}]
-tellraw @s [{"text":"\u26a1 Unneeded entitys: ","color":"gold"},{"score":{"name":"$nola.unneeded_entitys","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u263a Online players: ","color":"gold"},{"score":{"name":"$players","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u2666 Entitys in the world: ","color":"gold"},{"score":{"name":"$entitys","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u2744 Frozen entitys: ","color":"gold"},{"score":{"name":"$frozen_entitys","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u26a1 Unneeded entitys: ","color":"gold"},{"score":{"name":"$unneeded_entitys","objective":"nola.data"},"color":"red"}]
 
 tellraw @s {"text":""}
 
