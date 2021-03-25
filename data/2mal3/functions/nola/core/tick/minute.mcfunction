@@ -24,4 +24,4 @@ execute if score $nola.entity_limiter nola.config matches 1 as @e[type=!#2mal3:n
 
 
 # call the function next minute
-schedule function 2mal3:nola/core/tick/minute 60s
+schedule function 2mal3:nola/core/tick/minute 60s replace

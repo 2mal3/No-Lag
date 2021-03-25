@@ -17,4 +17,4 @@ execute if score $nola.area_ignorer nola.config matches 1 as @e[type=minecraft:a
 
 
 # call the function next second
-schedule function 2mal3:nola/core/tick/second 1s
+schedule function 2mal3:nola/core/tick/second 1s replace

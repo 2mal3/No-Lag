@@ -16,6 +16,6 @@ execute if score $nola.first_run nola.data matches 1 unless score $nola.version 
 
 
 # datapack loops
-function 2mal3:nola/core/tick/second
-function 2mal3:nola/core/tick/minute
-function 2mal3:nola/core/tick/day
+schedule function 2mal3:nola/core/tick/second 1s replace
+schedule function 2mal3:nola/core/tick/minute 60s replace
+schedule function 2mal3:nola/core/tick/day 1d replace
