@@ -38,9 +38,14 @@ tellraw @s [{"text":"[\u270e]","color":"gray","clickEvent":{"action":"suggest_co
 tellraw @s [{"text":"[\u270e]","color":"gray","clickEvent":{"action":"suggest_command","value":"/scoreboard players set $entity_limiter.max_neutral nola.config "},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Maximum neutral entitys together: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Maximum number of neutral entitys that can stand next to each other."}},{"score":{"name":"$entity_limiter.max_neutral","objective":"nola.config"},"color":"red"}]
 tellraw @s [{"text":"[\u270e]","color":"gray","clickEvent":{"action":"suggest_command","value":"/scoreboard players set $entity_limiter.max_hostile nola.config "},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Maximum hostile entitys together: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Maximum number of hostile entitys that can stand next to each other."}},{"score":{"name":"$entity_limiter.max_hostile","objective":"nola.config"},"color":"red"}]
 
+tellraw @s {"text":""}
+
+# Displays tps test
+execute if score $tps_test nola.config matches 0 run tellraw @s [{"text":"[\u274c]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/tps_test/true"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" TPS test","color":"gold","hoverEvent":{"action":"show_text","contents":"Automatically tests the server tps (tick per second). Works only if the worldboarder is not affected by other datapack."}}]
+execute if score $tps_test nola.config matches 1 run tellraw @s [{"text":"[\u2714]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/tps_test/false"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" TPS test","color":"gold","hoverEvent":{"action":"show_text","contents":"Automatically tests the server tps (tick per second). Works only if the worldboarder is not affected by other datapack."}}]
 
 
-tellraw @s {"text":"\n\n\n\n\n\n\n"}
+tellraw @s {"text":"\n\n\n\n\n"}
 
 # Shows key to main menu
 tellraw @s {"text":"<<<< Back","color":"red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_menu"},"hoverEvent":{"action":"show_text","contents":"*click*"}}

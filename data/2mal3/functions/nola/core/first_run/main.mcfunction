@@ -2,7 +2,7 @@
 # Called from function: 2mal3:nola/core/reload
 # Datapack by 2mal3
 
-# Output debug message in chat, if enabled
+# Output debug message in chat, if enabled (INFO)
 tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"NoLag","color":"green"},{"text":"/","color":"gray"},{"text":"INFO","color":"green"},{"text":"]: ","color":"gray"},{"text":"Installed datapack.","color":"green"}]
 
 
@@ -13,14 +13,11 @@ scoreboard objectives add nola.despawn dummy
 scoreboard objectives add nola.xp dummy
 scoreboard objectives add nola.debug_mode dummy
 
-# Add teams
-team add nola.no_collision
-team modify nola.no_collision collisionRule pushOtherTeams
-
-
 # Set version variable in format xx.xx.xx
 scoreboard players set $version nola.data 020300
 
+# Set variables
+scoreboard players set $300 nola.data 300
 
 # Sets the configuration to a start level
 scoreboard players set $area_ignorer nola.config 1
@@ -44,6 +41,13 @@ scoreboard players set $entity_limiter nola.config 0
 scoreboard players set $entity_limiter.max_hostile nola.config 16
 scoreboard players set $entity_limiter.max_neutral nola.config 16
 scoreboard players set $entity_limiter.max_passive nola.config 16
+
+scoreboard players set $tps_test nola.config 0
+
+
+# Add teams
+team add nola.no_collision
+team modify nola.no_collision collisionRule pushOtherTeams
 
 
 # Sends Insatlations message after 4 sekonds
