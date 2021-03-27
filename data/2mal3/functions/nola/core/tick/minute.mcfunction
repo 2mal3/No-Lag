@@ -2,9 +2,6 @@
 # Called from function: 2mal3:nola/core/reload, 2mal3:nola/core/tick/minute
 # Datapack by 2mal3
 
-# Get variables
-function 2mal3:nola/get_variables
-
 # Remembers entitys that should not be considered.
 execute as @e at @s run function 2mal3:nola/ignore_kill
 
