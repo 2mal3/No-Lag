@@ -50,21 +50,6 @@ team add nola.no_collision
 team modify nola.no_collision collisionRule pushOtherTeams
 
 
-# Start datapack loops
-schedule function 2mal3:nola/core/tick/second 5t replace
-schedule function 2mal3:nola/modules/no_ai/loop 10t replace
-schedule function 2mal3:nola/modules/xp_merge/loop 15t replace
-#schedule function 2mal3:nola/modules/tps_test/start 20t replace
-
-schedule function 2mal3:nola/core/tick/minute 12s replace
-schedule function 2mal3:nola/modules/item_despawn/loop 24s replace
-schedule function 2mal3:nola/modules/lag_clear/loop 36s replace
-#schedule function 2mal3:nola/modules/entity_limiter/loop 48s replace
-schedule function 2mal3:nola/modules/no_collision/loop 60s replace
-
-schedule function 2mal3:nola/core/tick/day 1d replace
-
-
 # Sends Insatlations message after 4 sekonds
 schedule function 2mal3:nola/core/first_run/send_message 4s
 
