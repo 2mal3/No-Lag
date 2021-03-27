@@ -1,4 +1,26 @@
 
+Update v2.4.0 (27.3.2021)
+
+For some time now a somewhat larger update with new features.
+Besides a few improvements and bug fixes this update brings an automatic TPS test. This monitors the TPS all the time in the background, so you always know how much it lags.
+In addition, the number of deleted entitys is now also written in the message of a lag clear.
+
+Due to some internal code changes, all settings are unfortunately reset to the beginning. 
+
+Added:
+- Optional auto tps test
+- The number of deleted entities is written into the message when a lag clear is executed
+
+Changed:
+- Stability improved
+- Internal code variable changes
+
+Bug fixes:
+- Entities that were once classified as too close to kill were never killed for distance after that
+- Entities without names were classified as not to be deleted
+
+----------------------------------------------------------------
+
 Update v2.3.0 (16.3.2021)
 
 Again, just a minor update. It only fixes a few bugs and adds functions for better error detection.

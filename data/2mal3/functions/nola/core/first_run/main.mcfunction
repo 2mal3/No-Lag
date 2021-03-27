@@ -14,7 +14,7 @@ scoreboard objectives add nola.xp dummy
 scoreboard objectives add nola.debug_mode dummy
 
 # Set version variable in format xx.xx.xx
-scoreboard players set $version nola.data 020300
+scoreboard players set $version nola.data 020400
 
 # Set variables
 scoreboard players set $300 nola.data 300
@@ -54,4 +54,4 @@ team modify nola.no_collision collisionRule pushOtherTeams
 schedule function 2mal3:nola/core/first_run/send_message 4s
 
 # Saves that the datapack was installed
-scoreboard players set .first_run nola.data 1
+scoreboard players set $nola.first_run nola.data 1
