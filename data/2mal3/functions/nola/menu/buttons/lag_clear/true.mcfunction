@@ -4,6 +4,8 @@
 
 # Saves the setting
 scoreboard players set $lag_clear nola.config 1
+# Starts the loop
+schedule function 2mal3:nola/modules/lag_clear/loop 60s replace
 
 # Reset lag clear time
 scoreboard players operation .lag_clear_time nola.data = $lag_clear_time nola.config

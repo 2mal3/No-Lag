@@ -4,6 +4,8 @@
 
 # Saves the setting
 scoreboard players set $item_despawn nola.config 1
+# Starts the loop
+schedule function 2mal3:nola/modules/item_despawn/loop 60s replace
 
 # Displays the updated config menu
 function 2mal3:nola/menu/display_config/page_1

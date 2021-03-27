@@ -14,7 +14,6 @@ scoreboard objectives remove nola.debug_mode
 
 # Activates for all entitys the ai
 execute as @e[tag=nola.no_ai] run function 2mal3:nola/modules/no_ai/disable
-
 # Remove all teams
 team remove nola.no_collision
 
@@ -27,9 +26,19 @@ tag @e[tag=nola.ignore_kill.near] remove nola.ignore_kill.near
 # Resets the gamerules
 gamerule maxEntityCramming 24
 
-# Stops the datapack loops
+
+# Stops all the datapack loops
 schedule clear 2mal3:nola/core/tick/second
+schedule clear 2mal3:nola/modules/no_ai/loop
+schedule clear 2mal3:nola/modules/xp_merge/loop
+schedule clear 2mal3:nola/modules/tps_test/start
+
 schedule clear 2mal3:nola/core/tick/minute
+schedule clear 2mal3:nola/modules/item_despawn/loop
+schedule clear 2mal3:nola/modules/lag_clear/loop
+schedule clear 2mal3:nola/modules/entity_limiter/loop
+schedule clear 2mal3:nola/modules/no_collision/loop
+
 schedule clear 2mal3:nola/core/tick/day
 
 
