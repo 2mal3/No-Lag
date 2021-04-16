@@ -1,5 +1,6 @@
 # Description: Automatically deletes new entitys if there are too many of the same type nearby
-# Called from function: 2mal3:nola/core/tick/second
+# AS: @e[type=!#2mal3:nola/ignore,type=!#2mal3:nola/ignore_kill,tag=!nola.ignore_kill,tag=!nola.entity_limiter.processed], AT: @s
+# Called from function: 2mal3:nola/core/tick/minute
 # Datapack by 2mal3
 
 # Tests the number of the same entity group in the near

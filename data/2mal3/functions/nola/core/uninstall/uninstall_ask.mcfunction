@@ -1,4 +1,5 @@
 # Description: Ask if you want to uninstall
+# AS: player, AT: player
 # Called from tag: 2mal3:nola/uninstall
 # Datapack by 2mal3
 

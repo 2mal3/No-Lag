@@ -1,4 +1,5 @@
 # Description: Clear lag loop
+# AS: server, AT: server
 # Called from function: 2mal3:nola/core/tick/second
 # Datapack by 2mal3
 

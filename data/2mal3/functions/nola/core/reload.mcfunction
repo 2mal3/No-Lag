@@ -1,4 +1,5 @@
 # Description: Init datapack
+# AS: server, AT: server
 # Called from tag: minecraft:reaload
 # Datapack by 2mal3
 

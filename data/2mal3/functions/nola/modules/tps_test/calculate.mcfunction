@@ -1,5 +1,6 @@
 # Description: Calculates the tps from the counted ticks and the time of the worldboarder and saves it. Then everything starts again from the beginning
-# As: server; At: server; From function: 2mal3:nola/modules/tps_test/loop
+# AS: server, AT: server
+# Called from function: 2mal3:nola/modules/tps_test/loop
 # Datapack by 2mal3
 
 # Calculates the tps in the last 5 minutes (couted ticks / 300 sekonds (5 minutes) = ticks per second (tps))

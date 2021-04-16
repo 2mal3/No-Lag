@@ -1,4 +1,5 @@
 # Description: Tick commands every minute
+# AS: server, AT: server
 # Called from function: 2mal3:nola/core/reload, 2mal3:nola/core/tick/minute
 # Datapack by 2mal3
 

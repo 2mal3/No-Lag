@@ -1,4 +1,5 @@
 # Description: Adds new things at the first start of a new datapack version
+# AS: server, AT: server
 # Called from function: 2mal3:nola/core/reload
 # Datapack by 2mal3
 

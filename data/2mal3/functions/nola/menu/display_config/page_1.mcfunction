@@ -1,4 +1,5 @@
 # Description: Displays the datapack config
+# AS: player, AT: player
 # Called from message: 2mal3:nola/menu/display
 # Datapack by 2mal3
 

@@ -1,4 +1,5 @@
 # Description: No AI
+# AS: server, AT: server
 # Called from function: 2mal3:nola/core/second
 # Datapack by 2mal3
 

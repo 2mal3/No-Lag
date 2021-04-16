@@ -1,4 +1,5 @@
 # Description: Deletes the entity if there are too many entitys of the same type nearby
+# AS: @e[type=!#2mal3:nola/ignore,type=!#2mal3:nola/ignore_kill,tag=!nola.ignore_kill,tag=!nola.entity_limiter.processed], AT: @s
 # Called from function: 2mal3:nola/modules/entity_limiter/main
 # Datapack by 2mal3
 

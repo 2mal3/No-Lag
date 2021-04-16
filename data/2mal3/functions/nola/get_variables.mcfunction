@@ -1,5 +1,6 @@
 # Description: Stores several statistics about the world
-# Called from function: -
+# AS: server, AT: server
+# Called from: -
 # Datapack by 2mal3
 
 # Number of players

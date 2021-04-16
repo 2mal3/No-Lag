@@ -1,4 +1,5 @@
 # Description: Custom Item Despawn Time
+# AS: @e[type=minecraft:item,tag=!global.ignore.kill], AT: server
 # Called from function: 2mal3:nola/core/tick/minute
 # Datapack by 2mal3
 

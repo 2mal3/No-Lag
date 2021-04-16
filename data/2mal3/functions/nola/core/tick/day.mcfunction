@@ -1,4 +1,5 @@
 # Description: Tick commands every day
+# AS: server, AT: server
 # Called from function: 2mal3:nola/core/reload, 2mal3:nola/core/tick/day
 # Datapack by 2mal3
 

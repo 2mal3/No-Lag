@@ -1,5 +1,6 @@
 # Description: Merges xp
-# Called from function: 2mal3:nola/core/tick/tick
+# AS: server, AT: server
+# Called from function: 2mal3:nola/core/tick/second
 # Datapack by 2mal3
 
 execute as @e[type=minecraft:experience_orb] at @s if entity @e[type=minecraft:experience_orb,distance=..2,limit=1] store result score @s nola.xp run data get entity @s Value

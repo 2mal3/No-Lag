@@ -1,5 +1,6 @@
 # Description: Counts the ticks until the worldboarder has shrunk by one block in 5 minutes and then calls the calculation function
-# As: server; At: server; From function: 2mal3:nola/modules/tps_test/start
+# AS: server, AT: server
+# Called from function: 2mal3:nola/modules/tps_test/start
 # Datapack by 2mal3
 
 # Counts a tick

@@ -1,4 +1,5 @@
 # Description: Tests all new players to see if the minecraft or server version is wrong and tells them so
+# AS: player, AT: player
 # Called from tag: 2mal3:nola/debug
 # Datapack by 2mal3
 

@@ -1,4 +1,5 @@
 # Description: Merges xp
+# AS: @e[type=minecraft:experience_orb,sort=random,limit=1,tag=!nola.processed], AT: @s
 # Called from function: 2mal3:nola/modules/xp_merge/select
 # Datapack by 2mal3
 

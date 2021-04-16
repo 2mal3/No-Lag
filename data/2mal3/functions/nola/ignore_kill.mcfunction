@@ -1,4 +1,5 @@
 # Description: Ignoring entity
+# AS: @e, AT: @s
 # Called from function: 2mal3:nola/core/tick/minute
 # Datapack by 2mal3
 

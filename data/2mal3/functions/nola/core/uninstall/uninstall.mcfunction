@@ -1,4 +1,5 @@
 # Description: Uninstall the datapack
+# AS: player, AT: player
 # Called from function: 2mal3:nola/core/uninstall/uninstall_ask
 # Datapack by 2mal3
 

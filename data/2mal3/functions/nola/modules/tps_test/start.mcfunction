@@ -1,5 +1,6 @@
 # Description: Starts the tps test
-# As: server; At: server; From function: 2mal3:nola/-
+# AS: server, AT: server
+# Called from function: 2mal3:nola/-
 # Datapack by 2mal3
 
 # Resets the tick counter

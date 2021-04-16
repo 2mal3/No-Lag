@@ -1,4 +1,5 @@
 # Description: Deletes manually all unused entitys
+# AS: player, AT: player
 # Called from function: 2mal3:nola/menu/display_menu
 # Datapack by 2mal3
 

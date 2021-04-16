@@ -1,4 +1,5 @@
 # Description: Removes all unused entitys
+# AS: server, AT: server
 # Called from function: 2mal3:nola/modules/lag_clear/main
 # Datapack by 2mal3
 

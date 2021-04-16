@@ -1,4 +1,5 @@
 # Description: Enables / disables all entitys in a radius of 64 blocks
+# AS: server, AT: server
 # Called from function: 2mal3:nola/modules/no_ai/main
 # Datapack by 2mal3
 

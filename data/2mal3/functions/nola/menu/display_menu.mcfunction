@@ -1,4 +1,5 @@
 # Description: Displays the datapack menu
+# AS: player, AT: player
 # Called from tag: 2mal3:nola/menu
 # Datapack by 2mal3
 
