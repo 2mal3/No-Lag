@@ -6,7 +6,7 @@ To achieve this, this datapack uses over 6 different and efficient methods, unli
 These can be easily configured via the in game GUI, which provides additional information and special actions.                          
 Thereby the datapack was designed with performance in mind, so that it has almost no effect on the game performance itself.             
 
-## Features:
+## 📖 Features:
 - Over 6 different methods to reduce lag
 - Simple in-game gui with many settings
 - Does not affect important entitys
@@ -20,7 +20,7 @@ Additionally, all entitys that are within 64 blocks of an armor stand named **ig
 
 All settings and actions can be done via the in game gui. To open it you just have to type command `function #2mal3:nola/menu` into the chat (only works with command permissions).
 
-## Methods to reduce lag:
+## 📝 Methods to reduce lag:
 - Entitys that are too far away from a player are frozen
 - In certain intervals all unimportant entitys are deleted
 - Multiple Xp Orbs are combined
@@ -54,7 +54,7 @@ To help me better, it would also be handy if you debug the datapack. You can do 
 | ❔   | Spigot       |
 | ❔   | PaperSpigot  |
 
-## ⚡ Performance:
+## 🚀 Performance:
 The datapack should not cause lags under any conditions. Due to the strong anti lag methods in the datapack the opposite is the case.
 
 ## ✅ Compatibility with other datapacks:
