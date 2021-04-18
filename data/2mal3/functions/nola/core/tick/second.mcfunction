@@ -9,6 +9,7 @@ execute if score $area_ignorer nola.config matches 1 as @e[type=minecraft:armor_
 
 # Disable entity ai if the entity is to far away from the player, if activated
 execute if score $no_ai nola.config matches 1 run function 2mal3:nola/modules/no_ai/main
+execute if score $no_ai nola.config matches 0 as @e[type=!#2mal3:nola/ignore,tag=nola.no_ai] run function 2mal3:nola/modules/no_ai/disable
 
 # Merge nearby xp orbs, if activated
 execute if score $xp_merge nola.config matches 1 run function 2mal3:nola/modules/xp_merge/main
