@@ -13,13 +13,18 @@ scoreboard objectives remove nola.despawn
 scoreboard objectives remove nola.xp
 scoreboard objectives remove nola.debug_mode
 
-# Activates for all entitys the ai
+# Unfreezes all loaded and frozen entitys
 execute as @e[tag=nola.no_ai] run function 2mal3:nola/modules/no_ai/disable
+# Placed somewhere in the world loaded command blocks that unfreeze frozen entities even when the datapack was removed
+forceload add 4304753 9403631
+setblock 4304753 1 9403631 repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run data modify entity @s NoAI set value 0"}
+setblock 4304753 2 9403631 repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run data modify entity @s Invulnerable set value 0"}
+setblock 4304753 3 9403631 repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run tag @s remove nola.no_ai"}
 
 # Remove all teams
 team remove nola.no_collision
 
-# Remove all tags from all entitys
+# Remove all datapack tags from all entitys
 tag @e[tag=nola.ignore] remove nola.ignore
 tag @e[tag=nola.ignore_kill] remove nola.ignore_kill
 tag @e[tag=nola.ignore_kill.farm] remove nola.ignore_kill.farm
