@@ -1,4 +1,17 @@
 
+Update v2.4.1 (18.4.2021)
+
+This update only fixes a few bugs in the datapack. However, i would recommend everyone to install the update.
+
+Bug fixes:
+- Due to a bug in Minecraft, the inventory of villagers was duplicated when they were frozen or unfrozen. Unfortunately, this bug fix means that villagers will no longer be frozen.
+- When freezing of entities was disabled, no frozen entities were unfrozen.
+- When entity freezing was enabled, entitys were not unfrozen under certain conditions.
+- When uninstalling the datapack, only loaded and frozen entities were unfrozen.
+- A wrong warn message was sent with a wrong server software.
+
+----------------------------------------------------------------
+
 Update v2.4.0 (27.3.2021)
 
 For some time now a somewhat larger update with new features.

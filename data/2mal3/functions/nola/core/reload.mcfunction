@@ -12,7 +12,7 @@ scoreboard objectives add nola.data dummy
 
 # Initializes the datapack at the first startup or new version
 execute unless score $nola.first_run nola.data matches 1 run function 2mal3:nola/core/first_run/main
-execute if score $nola.first_run nola.data matches 1 unless score $version nola.data matches 020400 run function 2mal3:nola/core/first_run/update
+execute if score $nola.first_run nola.data matches 1 unless score $version nola.data matches 020401 run function 2mal3:nola/core/first_run/update
 
 
 # Start datapack loops

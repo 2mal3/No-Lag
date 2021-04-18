@@ -8,11 +8,4 @@ tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"N
 
 
 # Set version variable in format xx.xx.xx
-scoreboard players set $version nola.data 020400
-
-# Remove old scoreboards
-scoreboard objectives remove nola.data
-scoreboard objectives remove nola.config
-
-# Reinstall the datapack
-function 2mal3:nola/core/first_run/main
+scoreboard players set $version nola.data 020401
