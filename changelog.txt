@@ -1,4 +1,17 @@
 
+Update v2.4.2 (22.5.2021)
+
+This update does not bring any big changes, but now the datapack should be compatible with the new minecraft version. 
+
+Added:
+- Armor stands and item frames without items are now also deleted from lag clears.
+
+Bug fixes:
+- The Tps test did not work properly.
+- The tps test was not stopped during uninstallation.
+
+----------------------------------------------------------------
+
 Update v2.4.1 (18.4.2021)
 
 This update only fixes a few bugs in the datapack. However, i would recommend everyone to install the update.
