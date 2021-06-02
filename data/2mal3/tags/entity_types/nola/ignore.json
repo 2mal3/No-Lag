@@ -5,6 +5,7 @@
     "#2mal3:nola/aligned",
     "minecraft:player",
     "minecraft:area_effect_cloud",
-    "minecraft:command_block_minecart"
+    "minecraft:command_block_minecart",
+    "minecraft:marker"
   ]
 }
