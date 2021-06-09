@@ -9,11 +9,12 @@ tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"N
 
 # Add basic scoreboards
 scoreboard objectives add nola.data dummy
-
 # Initializes the datapack at the first startup or new version
 execute unless score $nola.first_run nola.data matches 1 run function 2mal3:nola/core/first_run/main
 execute if score $nola.first_run nola.data matches 1 unless score $version nola.data matches 020402 run function 2mal3:nola/core/first_run/update
 
+# Saves that the datapack was started
+scoreboard players set nola load.status 1
 
 # Start datapack loops
 schedule function 2mal3:nola/core/tick/second 1s replace
