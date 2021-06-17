@@ -1,9 +1,9 @@
 # No-Lag-Datapack
 ![release](https://img.shields.io/github/v/release/2mal3/No-Lag-Datapack?style=flat-square) ![license](https://img.shields.io/github/license/2mal3/No-Lag-Datapack?style=flat-square) ![downloads](https://img.shields.io/github/downloads/2mal3/No-Lag-Datapack/total?style=flat-square)
 
-This datapack is designed to minimize the lag in the Minecraft world efficiently to ensure a good gaming experience.             
-To achieve this, this datapack uses over 6 different and efficient methods, unlike similar datapacks that use only a few methods.       
-These can be easily configured via the in game GUI, which provides additional information and special actions.                          
+This datapack improves and optimizes the performance of the minecraft world to ensure a good gaming experience.             
+To achieve this, this datapack uses over 6 efficient methods, more than similar datapacks that use only a few methods.       
+These methods can be easily configured via the in game GUI, which provides additional information and special actions.                          
 Thereby the datapack was designed with performance in mind, so that it has almost no effect on the game performance itself.             
 
 ## 📖 Features:
