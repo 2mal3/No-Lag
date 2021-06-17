@@ -4,7 +4,7 @@
 # Datapack by 2mal3
 
 # Send remove message
-tellraw @a [{"text":"No Lag Datapack v2.4.2 by 2mal3 was successfully uninstalled."}]
+tellraw @a [{"text":"No Lag Datapack v2.4.3 by 2mal3 was successfully uninstalled."}]
 
 # Remove all scoreboards
 scoreboard objectives remove nola.data
@@ -39,5 +39,5 @@ schedule clear 2mal3:nola/core/tick/day
 
 
 # Disable the datapack
-datapack disable "file/No-Lag-Datapack-v2.4.2"
-datapack disable "file/No-Lag-Datapack-v2.4.2.zip"
+datapack disable "file/No-Lag-Datapack-v2.4.3"
+datapack disable "file/No-Lag-Datapack-v2.4.3.zip"

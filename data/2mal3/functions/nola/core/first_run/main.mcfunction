@@ -15,7 +15,7 @@ scoreboard objectives add nola.xp dummy
 scoreboard objectives add nola.debug_mode dummy
 
 # Set version variable in format xx.xx.xx
-scoreboard players set $version nola.data 020401
+scoreboard players set $version nola.data 020403
 
 # Set variables
 scoreboard players set $300 nola.data 300

@@ -1,4 +1,23 @@
 
+Update v2.4.3 (17.6.2021)
+
+Just a small update that only improves and fixes a few things and adds an option to disable lag clear messages.
+
+Added:
+- Option to disable lag clear messages
+- Good reviews from other users
+
+Changed:
+- Datapack description improved
+- Datapack performance improved
+- [Internal] Lantern Load library updated
+
+Bug fixes:
+- Datapack was not fully ready for 1.17 yet
+- Bees were deleted at lag clears
+
+----------------------------------------------------------------
+
 Update v2.4.2 (22.5.2021)
 
 This update does not bring any big changes, but now the datapack should be compatible with the new minecraft version. 

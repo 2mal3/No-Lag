@@ -8,6 +8,6 @@ tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"N
 
 
 # Set version variable in format xx.xx.xx
-scoreboard players set $version nola.data 020402
+scoreboard players set $version nola.data 020403
 # Set new config
 scoreboard players set $lag_clear_messages nola.config 1
