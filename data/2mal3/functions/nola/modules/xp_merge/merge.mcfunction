@@ -1,12 +1,15 @@
-# Description: Merges xp
-# AS: @e[type=minecraft:experience_orb,sort=random,limit=1,tag=!nola.processed], AT: @s
-# Called from function: 2mal3:nola/modules/xp_merge/select
+# Description: Merges one xp orb with another xp
+# AS: xp that was not merged into another xp yet with a other xp in range 2, AT: @s
+# Called from function: 2mal3:nola/modules/xp_merge/test
 # Datapack by 2mal3
 
-tag @s add nola.this
-tag @e[type=minecraft:experience_orb,sort=nearest,limit=1,distance=..2,tag=!nola.this] add nola.merge
-scoreboard players operation @s nola.xp += @e[type=minecraft:experience_orb,tag=nola.merge] nola.xp
-kill @e[type=minecraft:experience_orb,tag=nola.merge]
-tag @s remove nola.this
+# Select other xp
+tag @e[type=minecraft:experience_orb,tag=!nola.processed,distance=0.001..2,sort=nearest,limit=1] add nola.merge
 
+# Merge
+scoreboard players operation @s nola.xp += @e[type=minecraft:experience_orb,tag=nola.merge] nola.xp
 execute store result entity @s Value double 1 run scoreboard players get @s nola.xp
+
+# Remove other xp
+tag @e[type=minecraft:experience_orb,tag=nola.merge] add nola.processed
+kill @e[type=minecraft:experience_orb,tag=nola.merge]

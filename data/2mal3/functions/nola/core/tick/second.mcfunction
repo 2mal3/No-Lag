@@ -4,7 +4,9 @@
 # Datapack by 2mal3
 
 # Remembers entitys that should not be considered
-execute as @e at @s run function 2mal3:nola/ignore
+tag @e[tag=nola.ignore] remove nola.ignore
+tag @e[type=#2mal3:nola/ignore] add nola.ignore
+tag @e[name="ignore"] add nola.ignore
 execute if score $area_ignorer nola.config matches 1 as @e[type=minecraft:armor_stand,name="ignore"] at @s as @e[distance=..64,tag=!nola.ignore] run tag @s add nola.ignore
 
 # Disable entity ai if the entity is to far away from the player, if activated
