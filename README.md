@@ -29,6 +29,19 @@ All settings and actions can be done via the in game gui. To open it you just ha
 - Les entitys can stand together on one block
 - If too many entitys of the same type are too close to each other, all other entitys of the species will be deleted.
 
+## Nice things others have said about the datapack:
+- _"Highly Recommended."_: Volt_Lightwave
+- _"You just saved my server. God bless you sir"_: armadilloman
+- _"Thank you so much, I thought this wasn't real because it was bad at first, but it changed me from 28 fps to 50+! tysm <3"_: jbombbay
+- _"i thought that this will be fake but when i got it in my world i got not 50fps i god 84 this is acctually working **DAMN!!!**"_: mr-pancace
+- _"all aternos servers need this!!!"_: Hoponopono
+- _"I immediatly noticed a difference! GREAT job!"_: Birdycrafter
+- _"dude your datapack is a godsend, thank you so much. my game was lagging like it was the end of the world before but now it runs pretty smoothly! thanks a bunch!"_: sushiyae
+- _"Best"_: User3132306G
+- _"Dude Thanks You, It Recuded The Lag So Much, Though It's Still Like 90 ms, But It's Good And Fine, Thank You."_: GOROITAX
+- _"Oh my thank you, this works so well!!!!!!"_: Moih
+- _"that's a cool datapack i've ever seen ngl"_: DavidMinecraftYEET
+
 ## Limitations:
 This datapack reduces the lag percentage. This means that it is most effective when you already have heavy lag. If there are only few lag, the datapack is less useful and you should consider if you need it at all.                                                       
 In general this datapack is only suitable for survival worlds and only improves the performance of world / server. It does not improve the performance of mods, shaders, datapacks and FPS.                                                                                 
