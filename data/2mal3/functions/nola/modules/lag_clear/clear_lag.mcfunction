@@ -21,7 +21,7 @@ scoreboard players operation .temp_0 nola.data += .temp_1 nola.data
 scoreboard players operation .temp_0 nola.data += .temp_2 nola.data
 
 # Print chat massage
-tellraw @a [{"score":{"name":".temp_0","objective":"nola.data","color":"gray"}},{"text":" unneeded entitys were deleted.","color":"gray"}]
+execute if score $lag_clear_messages nola.config matches 1 run tellraw @a [{"score":{"name":".temp_0","objective":"nola.data","color":"gray"}},{"text":" unneeded entitys were deleted.","color":"gray"}]
 
 # Reset lag clear time
 scoreboard players operation .lag_clear_time nola.data = $lag_clear_time nola.config

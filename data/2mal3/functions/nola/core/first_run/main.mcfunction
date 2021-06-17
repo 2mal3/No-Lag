@@ -35,6 +35,7 @@ scoreboard players set $xp_merge nola.config 1
 
 scoreboard players set $lag_clear nola.config 1
 scoreboard players set $lag_clear_time nola.config 10
+scoreboard players set $lag_clear_messages nola.config 1
 scoreboard players set $lag_clear_not_at_night nola.config 0
 scoreboard players set .lag_clear_time nola.data 10
 

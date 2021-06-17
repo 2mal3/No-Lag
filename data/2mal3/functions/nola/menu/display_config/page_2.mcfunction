@@ -24,6 +24,10 @@ tellraw @s [{"text":"<","color":"gold","clickEvent":{"action":"run_command","val
 
 tellraw @s {"text":""}
 
+# Displays Config for maximum entitys on a block
+tellraw @s [{"text":"[\u270e]","color":"gray","clickEvent":{"action":"suggest_command","value":"/gamerule maxEntityCramming"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Maximum entiys on one block: ","color":"gold","hoverEvent":{"action":"show_text","contents":"How many entitys can stand on a block before one gets damaged?"}},{"score":{"name":"$max_entity_cramming","objective":"nola.data"},"color":"red"}]
+
+tellraw @s {"text":""}
 
 # Displays area ignorer
 execute if score $area_ignorer nola.config matches 0 run tellraw @s [{"text":"[\u274c]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/area_ignorer/true"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Area ignorer","color":"gold","hoverEvent":{"action":"show_text","contents":"Armor stands renamed to ignore block the freezing of all entitys near them."}}]
@@ -46,7 +50,7 @@ execute if score $tps_test nola.config matches 0 run tellraw @s [{"text":"[\u274
 execute if score $tps_test nola.config matches 1 run tellraw @s [{"text":"[\u2714]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/tps_test/false"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" TPS test","color":"gold","hoverEvent":{"action":"show_text","contents":"Automatically tests the server tps (tick per second). Works only if the worldboarder is not affected by other datapack."}}]
 
 
-tellraw @s {"text":"\n\n\n\n\n"}
+tellraw @s {"text":"\n\n\n"}
 
 # Shows key to main menu
 tellraw @s {"text":"<<<< Back","color":"red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_menu"},"hoverEvent":{"action":"show_text","contents":"*click*"}}

@@ -25,12 +25,6 @@ tellraw @s [{"text":"< -------- ","color":"yellow","hoverEvent":{"action":"show_
 
 tellraw @s {"text":""}
 
-
-# Displays Config for maximum entitys on a block
-tellraw @s [{"text":"[\u270e]","color":"gray","clickEvent":{"action":"suggest_command","value":"/gamerule maxEntityCramming"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Maximum entiys on one block: ","color":"gold","hoverEvent":{"action":"show_text","contents":"How many entitys can stand on a block before one gets damaged?"}},{"score":{"name":"$max_entity_cramming","objective":"nola.data"},"color":"red"}]
-
-tellraw @s {"text":""}
-
 # Displays config for custom item despan
 execute if score $item_despawn nola.config matches 0 run tellraw @s [{"text":"[\u274c]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/item_despawn/true"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items are deleted after a specified time."}}]
 execute if score $item_despawn nola.config matches 1 run tellraw @s [{"text":"[\u2714]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/item_despawn/false"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items are deleted after a specified time."}}]
@@ -59,10 +53,12 @@ tellraw @s {"text":""}
 execute if score $lag_clear nola.config matches 0 run tellraw @s [{"text":"[\u274c]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/lag_clear/true"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entitys in set time intervals."}}]
 execute if score $lag_clear nola.config matches 1 run tellraw @s [{"text":"[\u2714]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/lag_clear/false"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entitys in set time intervals."}}]
 tellraw @s [{"text":"[\u270e]","color":"gray","clickEvent":{"action":"suggest_command","value":"/scoreboard players set $lag_clear_time nola.config "},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time interval in which a lag clear is executed (in minutes)."}},{"score":{"name":"$lag_clear_time","objective":"nola.config"},"color":"red"}]
+execute if score $lag_clear_messages nola.config matches 0 run tellraw @s [{"text":"[\u274c]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/lag_clear_messages/true"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear messages","color":"gold","hoverEvent":{"action":"show_text","contents":"Messages are sent to all players when a lag clear is about to be executed or has been executed."}}]
+execute if score $lag_clear_messages nola.config matches 1 run tellraw @s [{"text":"[\u2714]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/lag_clear_messages/false"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear messages","color":"gold","hoverEvent":{"action":"show_text","contents":"Messages are sent to all players when a lag clear is about to be executed or has been executed."}}]
 execute if score $lag_clear_not_at_night nola.config matches 0 run tellraw @s [{"text":"[\u274c]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/lag_clear_not_at_night/true"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear not at night","color":"gold","hoverEvent":{"action":"show_text","contents":"The Lag Clear is deactivated overnight."}}]
 execute if score $lag_clear_not_at_night nola.config matches 1 run tellraw @s [{"text":"[\u2714]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/lag_clear_not_at_night/false"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear not at night","color":"gold","hoverEvent":{"action":"show_text","contents":"The Lag Clear is deactivated overnight."}}]
 
-tellraw @s {"text":""}
+tellraw @s {"text":"\n"}
 
 # Shows key to main menu
 tellraw @s {"text":"<<<< Back","color":"red","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_menu"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
