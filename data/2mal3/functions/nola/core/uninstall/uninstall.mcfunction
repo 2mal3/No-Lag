@@ -26,12 +26,14 @@ execute if score $tps_test nola.config matches 1 run function 2mal3:nola/menu/bu
 
 # Unfreezes all loaded and frozen entitys
 execute as @e[tag=nola.no_ai] run function 2mal3:nola/modules/no_ai/disable
-# Placed somewhere in the world loaded command blocks that unfreeze frozen entities even when the datapack was removed
-forceload add 4304753 9403631
-setblock 4304753 1 9403631 repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run data modify entity @s NoAI set value 0"}
-setblock 4304753 2 9403631 repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run data modify entity @s Invulnerable set value 0"}
-setblock 4304753 3 9403631 repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run tag @s remove nola.no_ai"}
+# Test if command blocks are enabled on the server and notify the player if not
+
+# Set at the worldspawn in the undergrund command blocks that unfreeze frozen entities even when the datapack is removed
 gamerule commandBlockOutput false
+execute at 6605427f-f242-4b1a-a37a-c2b86a3d8ac5 run setblock ~ 1 ~ repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run data modify entity @s NoAI set value 0"}
+execute at 6605427f-f242-4b1a-a37a-c2b86a3d8ac5 run setblock ~ 2 ~ repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run data modify entity @s Invulnerable set value 0"}
+execute at 6605427f-f242-4b1a-a37a-c2b86a3d8ac5 run setblock ~ 3 ~ repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run tag @s remove nola.no_ai"}
+kill 6605427f-f242-4b1a-a37a-c2b86a3d8ac5
 
 # Stops the datapack loops
 schedule clear 2mal3:nola/core/tick/second

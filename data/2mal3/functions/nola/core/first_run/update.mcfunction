@@ -9,5 +9,5 @@ tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"N
 
 # Set version variable in format xx.xx.xx
 scoreboard players set $version nola.data 020403
-# Set new config
-scoreboard players set $lag_clear_messages nola.config 1
+# Summon new marker entity at worldspawn
+summon minecraft:marker ~ ~ ~ {UUID: [I; 1711620735, -230536422, -1552235848, 1782418117]}

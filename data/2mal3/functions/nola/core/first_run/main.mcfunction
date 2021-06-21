@@ -52,6 +52,11 @@ team add nola.no_collision
 team modify nola.no_collision collisionRule pushOtherTeams
 
 
+# Set anchor entity at the worldspawn
+# 6605427f-f242-4b1a-a37a-c2b86a3d8ac5
+summon minecraft:marker ~ ~ ~ {UUID: [I; 1711620735, -230536422, -1552235848, 1782418117]}
+
+
 # Sends Insatlations message after 4 sekonds
 schedule function 2mal3:nola/core/first_run/send_message 4s
 
