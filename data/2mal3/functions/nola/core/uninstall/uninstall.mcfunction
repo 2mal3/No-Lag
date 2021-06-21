@@ -31,6 +31,7 @@ forceload add 4304753 9403631
 setblock 4304753 1 9403631 repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run data modify entity @s NoAI set value 0"}
 setblock 4304753 2 9403631 repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run data modify entity @s Invulnerable set value 0"}
 setblock 4304753 3 9403631 repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.no_ai] run tag @s remove nola.no_ai"}
+gamerule commandBlockOutput false
 
 # Stops the datapack loops
 schedule clear 2mal3:nola/core/tick/second
