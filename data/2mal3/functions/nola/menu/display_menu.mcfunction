@@ -26,14 +26,14 @@ tellraw @s [{"text":"No Lag Datapack v2.4.3","bold":true,"color":"gold"},{"text"
 
 execute if score $tps_test nola.config matches 1 run tellraw @s [{"text":"\u26a1 TPS last 5m, 10m, 15m: ","color":"gold"},{"score":{"name":".tps_0","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_1","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_2","objective":"nola.data"},"color":"red"}]
 tellraw @s [{"text":"\u263a Online players: ","color":"gold"},{"score":{"name":"$players","objective":"nola.data"},"color":"red"}]
-tellraw @s [{"text":"\u2666 Entitys in the world: ","color":"gold"},{"score":{"name":"$entitys","objective":"nola.data"},"color":"red"}]
-tellraw @s [{"text":"\u2744 Frozen entitys: ","color":"gold"},{"score":{"name":"$frozen_entitys","objective":"nola.data"},"color":"red"}]
-tellraw @s [{"text":"\u2620 Unneeded entitys: ","color":"gold"},{"score":{"name":"$unneeded_entitys","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u2666 Entities in the world: ","color":"gold"},{"score":{"name":"$entitys","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u2744 Frozen entities: ","color":"gold"},{"score":{"name":"$frozen_entitys","objective":"nola.data"},"color":"red"}]
+tellraw @s [{"text":"\u2620 Unneeded entities: ","color":"gold"},{"score":{"name":"$unneeded_entitys","objective":"nola.data"},"color":"red"}]
 
 tellraw @s {"text":""}
 
 tellraw @s {"text":"\u2699 Configure the datapack \u25b6","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_config/page_1"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
-tellraw @s {"text":"\u26a1 Delete all unused entitys \u25b6","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/manual_lag_clear"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+tellraw @s {"text":"\u26a1 Delete all unused entities \u25b6","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/manual_lag_clear"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
 tellraw @s {"text":"\u231a Check for updates","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/core/wiki/No-Lag-Update-Check-v2.4.3"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
 tellraw @s {"text":"\u303d Debug Datapack \u25b6","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/core/debug"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
 

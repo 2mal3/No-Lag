@@ -9,25 +9,25 @@ Thereby the datapack was designed with performance in mind, so that it has almos
 ## 📖 Features:
 - Over 6 different methods to reduce lag
 - Simple in-game gui with many settings
-- Does not affect important entitys
+- Does not affect important entities
 - Is actively developed
 - Additional information about the world
 - Easy testing for new updates
 - Does not create lag itself
 
-By default, all farm animals, bosses, decorative entitys, pets, near entitys and entitys with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
-Additionally, all entitys that are within 64 blocks of an armor stand named **ignore** will not be frozen.                       
+By default, all farm animals, bosses, decorative entities, pets, near entities and entities with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
+Additionally, all entities that are within 64 blocks of an armor stand named **ignore** will not be frozen.                       
 
 All settings and actions can be done via the in game gui. To open it you just have to type command `function #2mal3:nola/menu` into the chat (only works with command permissions).
 
 ## 📝 Methods to reduce lag:
-- Entitys that are too far away from a player are frozen
-- In certain intervals all unimportant entitys are deleted
+- Entities that are too far away from a player are frozen
+- In certain intervals all unimportant entities are deleted
 - Multiple Xp Orbs are combined
 - Collision of farm animals are deactivated
 - Items despawn earlier
-- Les entitys can stand together on one block
-- If too many entitys of the same type are too close to each other, all other entitys of the species will be deleted.
+- Les entities can stand together on one block
+- If too many entities of the same type are too close to each other, all other entities of the species will be deleted.
 
 ## Nice things others have said about the datapack:
 - _"Highly Recommended."_: Volt_Lightwave

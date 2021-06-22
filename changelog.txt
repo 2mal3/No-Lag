@@ -38,7 +38,7 @@ This update only fixes a few bugs in the datapack. However, i would recommend ev
 Bug fixes:
 - Due to a bug in Minecraft, the inventory of villagers was duplicated when they were frozen or unfrozen. Unfortunately, this bug fix means that villagers will no longer be frozen.
 - When freezing of entities was disabled, no frozen entities were unfrozen.
-- When entity freezing was enabled, entitys were not unfrozen under certain conditions.
+- When entity freezing was enabled, entities were not unfrozen under certain conditions.
 - When uninstalling the datapack, only loaded and frozen entities were unfrozen.
 - A wrong warn message was sent with a wrong server software.
 
@@ -48,7 +48,7 @@ Update v2.4.0 (27.3.2021)
 
 For some time now a somewhat larger update with new features.
 Besides a few improvements and bug fixes this update brings an automatic TPS test. This monitors the TPS all the time in the background, so you always know how much it lags.
-In addition, the number of deleted entitys is now also written in the message of a lag clear.
+In addition, the number of deleted entities is now also written in the message of a lag clear.
 
 Due to some internal code changes, all settings are unfortunately reset to the beginning. 
 
@@ -83,20 +83,20 @@ Bug fixes:
 
 Update v2.2.1 (15.2.2021)
 
-This is just a small update that mainly fixes the spelling error that entitys were written as entities.
+This is just a small update that mainly fixes the spelling error that entities were written as entities.
 
 Changed:
 - Improved performace during inititialization
 
 Bug fixes:
-- In many places in the datapack entities were used instead of entitys
+- In many places in the datapack entities were used instead of entities
 - When simply replacing the datapack file after a datapack update resulted in no new things were created 
 
 ----------------------------------------------------------------
 
 Update v2.2.0 (14.2.2021)
 
-This update mainly brings a new method to reduce lag. If too many entitys of the same type are too close to each other, all other entitys of the species will be deleted. In short: No more laggy mass farming!
+This update mainly brings a new method to reduce lag. If too many entities of the same type are too close to each other, all other entities of the species will be deleted. In short: No more laggy mass farming!
 Also the datapack menu with the config has been improved and more options for the range of entity freezing have been added.
 
 Added:
@@ -120,7 +120,7 @@ Bug fixes:
 Update v2.1.0 (31.1.2021)
 
 Added:
-- Ability to mass-ignore entitys in certain areas
+- Ability to mass-ignore entities in certain areas
 - Icons in the datapack menu and config
 
 Changed:
@@ -128,14 +128,14 @@ Changed:
 
 Bug fixes:
 - Items with the global.ignore.kill were killed
-- Entitys ignored by the datapack were frozen
+- entities ignored by the datapack were frozen
 
 ----------------------------------------------------------------
 
 Update v2.0.2 (3.1.2021)
 
 Bug fixes:
-- entitys with names were sometimes deleted during lag clears
+- entities with names were sometimes deleted during lag clears
 
 ----------------------------------------------------------------
 
@@ -147,7 +147,7 @@ Changed:
 
 Bug fixes:
 - Cats as pets were not ignored
-- When disabling entity freezing, frozen entitys were not reactivated
+- When disabling entity freezing, frozen entities were not reactivated
 - The datapack was not deactivated during uninstallation
 
 ----------------------------------------------------------------
@@ -158,7 +158,7 @@ Added:
 - In-game gui
     > Information about the world / server
     > Easy configuration of the datapack
-- Ignore important entitys
+- Ignore important entities
 - Update check (in the in-game gui)
 - Setting that the lag clear is automatically turned off overnight
 - Experimental debug mode
