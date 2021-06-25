@@ -12,7 +12,6 @@ Thereby the datapack was designed with performance in mind, so that it has almos
 - Does not affect important entities
 - Is actively developed
 - Additional information about the world
-- Easy testing for new updates
 - Does not create lag itself
 
 By default, all farm animals, bosses, decorative entities, pets, near entities and entities with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
