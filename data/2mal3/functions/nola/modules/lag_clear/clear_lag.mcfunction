@@ -3,8 +3,7 @@
 # Called from function: 2mal3:nola/modules/lag_clear/main
 # Datapack by 2mal3
 
-# Output debug message in chat, if enabled
-tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"NoLag","color":"green"},{"text":"/","color":"gray"},{"text":"INFO","color":"green"},{"text":"]: ","color":"gray"},{"text":"Cleared lag.","color":"green"}]
+tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"NoLag","color":"green"},{"text":"/","color":"gray"},{"text":"INFO","color":"green"},{"text": "/","color": "gray"},{"text":"Server", "color": "green"},{"text":"]: ","color":"gray"},{"text":"Cleared lag","color":"green"}]
 
 # Reset variables
 scoreboard players set .temp_0 nola.data 0

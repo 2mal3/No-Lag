@@ -3,9 +3,7 @@
 # Called from tag: minecraft:reaload
 # Datapack by 2mal3
 
-# Output debug message in chat, if enabled
-tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"NoLag","color":"green"},{"text":"/","color":"gray"},{"text":"INFO","color":"green"},{"text":"]: ","color":"gray"},{"text":"Reloaded datapack.","color":"green"}]
-
+tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"NoLag","color":"green"},{"text":"/","color":"gray"},{"text":"INFO","color":"green"},{"text": "/","color": "gray"},{"text":"Server", "color": "green"},{"text":"]: ","color":"gray"},{"text":"Reloaded datapack","color":"green"}]
 
 # Add basic scoreboards
 scoreboard objectives add nola.data dummy

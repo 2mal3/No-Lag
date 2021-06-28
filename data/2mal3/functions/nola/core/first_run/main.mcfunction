@@ -3,9 +3,7 @@
 # Called from function: 2mal3:nola/core/reload
 # Datapack by 2mal3
 
-# Output debug message in chat, if enabled (INFO)
-tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"NoLag","color":"green"},{"text":"/","color":"gray"},{"text":"INFO","color":"green"},{"text":"]: ","color":"gray"},{"text":"Installed datapack.","color":"green"}]
-
+tellraw @a[scores={nola.debug_mode=3..}] [{"text":"[","color":"gray"},{"text":"NoLag","color":"green"},{"text":"/","color":"gray"},{"text":"INFO","color":"green"},{"text": "/","color": "gray"},{"text":"Server", "color": "green"},{"text":"]: ","color":"gray"},{"text":"Installed datapack","color":"green"}]
 
 # Add scoreboards
 scoreboard objectives add nola.data dummy
