@@ -7,6 +7,7 @@
     "minecraft:giant",
     "minecraft:zombie_horse",
     "minecraft:skeleton_horse",
-    "minecraft:villager"
+    "minecraft:villager",
+    "minecraft:item"
   ]
 }
