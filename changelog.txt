@@ -1,4 +1,27 @@
 
+Update v2.4.4 (2.7.2021)
+
+Again an update without new features, but many small improvements and bug fixes.
+With the update, many bugs when uninstalling were finally fixed and also the performance of the entity freeze improved again. In addition, hopefully all spelling errors regarding entities have been fixed and items have been excluded from lag clear. I also decided to remove the update check from the datapack, because it was not used according to the statistics and it makes me too much work.
+
+Added:
+- Test if command blocks are enabled on the server when uninstalling
+
+Changend:
+- Performance of the entity freezing module improved
+- Items are no longer deleted from lag clears
+- Spelling mistake fixed
+- [Internal] Debug messages improved
+
+Bugs fixed:
+- After uninstalling, the unfreeze command blocks spam the chat full.
+- After uninstalling and restarting the world, frozen entities were no longer unfrozen.
+
+Removed:
+- Update check, because of very low usage
+
+----------------------------------------------------------------
+
 Update v2.4.3 (17.6.2021)
 
 Just a small update that only improves and fixes a few things and adds an option to disable lag clear messages.

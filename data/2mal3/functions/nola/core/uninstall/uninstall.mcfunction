@@ -4,7 +4,7 @@
 # Datapack by 2mal3
 
 # Send remove message
-tellraw @a [{"text":"No Lag Datapack v2.4.3 by 2mal3 was successfully uninstalled."}]
+tellraw @a [{"text":"No Lag Datapack v2.4.4 by 2mal3 was successfully uninstalled."}]
 
 # Remove most
 scoreboard objectives remove nola.config
