@@ -1,11 +1,15 @@
 {
-  "replace": false,
+  "required": false,
   "values": [
     "#2mal3:nola/bosses",
-    "#2mal3:nola/aligned",
+    "#2mal3:nola/mini_bosses",
     "minecraft:player",
     "minecraft:area_effect_cloud",
+    "minecraft:marker",
     "minecraft:command_block_minecart",
-    "minecraft:marker"
+    "minecraft:armor_stand",
+    "minecraft:painting",
+    "minecraft:leash_knot",
+    "minecraft:end_crystal"
   ]
 }

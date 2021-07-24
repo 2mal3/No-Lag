@@ -13,7 +13,6 @@
 		"minecraft:llama",
 		"minecraft:pufferfish",
 		"minecraft:piglin",
-		"minecraft:zombified_piglin",
-		"minecraft:axolotl"
+		"minecraft:zombified_piglin"
 	]
 }

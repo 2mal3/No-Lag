@@ -100,7 +100,7 @@ Added:
 Bug fixes:
 - Installing the datapack does not work properly
 - The area ignorer option has led to lag spikes every second
-- When uninstalling the datapck not all entity tags were removed
+- When uninstalling the Datapack not all entity tags were removed
 
 ----------------------------------------------------------------
 

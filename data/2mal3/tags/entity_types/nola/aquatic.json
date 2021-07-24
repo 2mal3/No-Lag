@@ -3,6 +3,9 @@
 	"values": [
 		"#2mal3:nola/fish",
 		"minecraft:dolphin",
+		"minecraft:guardian",
+		"minecraft:elder_guardian",
+		"minecraft:drowned",
 		"minecraft:squid",
 		"minecraft:glow_squid",
 		"minecraft:axolotl",

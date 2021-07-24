@@ -8,6 +8,8 @@
     "minecraft:zombie_horse",
     "minecraft:skeleton_horse",
     "minecraft:villager",
-    "minecraft:item"
+    "minecraft:item",
+    "minecraft:item_frame",
+    "minecraft:glow_item_frame"
   ]
 }

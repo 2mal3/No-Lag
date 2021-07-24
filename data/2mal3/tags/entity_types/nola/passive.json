@@ -1,12 +1,14 @@
 {
 	"required": false,
 	"values": [
+		"minecraft:axolotl",
 		"minecraft:bat",
 		"minecraft:cat",
 		"minecraft:chicken",
 		"minecraft:cod",
 		"minecraft:cow",
 		"minecraft:donkey",
+		"minecraft:glow_squid",
 		"minecraft:horse",
 		"minecraft:mooshroom",
 		"minecraft:mule",
@@ -23,7 +25,6 @@
 		"minecraft:tropical_fish",
 		"minecraft:villager",
 		"minecraft:strider",
-		"minecraft:wandering_trader",
-		"minecraft:glow_squid"
+		"minecraft:wandering_trader"
 	]
 }
