@@ -1,6 +1,5 @@
 # Description: Sends a debug message with information about the datapack and the world to the executing player
 # AS: player, AT: player
-# Called from: -
 # Datapack by 2mal3
 
 # Disables command fedback for a short time, so that no disturbing message is displayed

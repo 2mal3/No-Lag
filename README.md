@@ -7,17 +7,17 @@ These methods can be easily configured via the in game GUI, which provides addit
 Thereby the datapack was designed with performance in mind, so that it has almost no effect on the game performance itself.             
 
 ## 📖 Features:
-- Over 6 different methods to reduce lag
+- Over 6 different methods to reduce lag that actually work
 - Simple in-game gui with many settings
 - Does not affect important entities
-- Is actively developed
+- Is (semi-)actively developed
 - Additional information about the world
 - Does not create lag itself
 
 By default, all farm animals, bosses, decorative entities, pets, near entities and entities with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
 Additionally, all entities that are within 64 blocks of an armor stand named **ignore** will not be frozen.                       
 
-All settings and actions can be done via the in game gui. To open it you just have to type command `function #2mal3:nola/menu` into the chat (only works with command permissions).
+All settings and actions can be done via the in game gui. To open it you just have to type command `/function #2mal3:nola/menu` into the chat (only works with command permissions).
 
 ## 📝 Methods to reduce lag:
 - Entities that are too far away from a player are frozen
@@ -29,6 +29,8 @@ All settings and actions can be done via the in game gui. To open it you just ha
 - If too many entities of the same type are too close to each other, all other entities of the species will be deleted.
 
 ## Nice things others have said about the datapack:
+- _"Hi! I've been using this datapack for a couple of months on a aternos server (with paper), and it works perfectly well !"_: Expert MinerBenBepBob
+- _"dam it works fuking good, you saved me and my friends in our moded survival"_: SticksS_
 - _"Highly Recommended."_: Volt_Lightwave
 - _"You just saved my server. God bless you sir"_: armadilloman
 - _"Thank you so much, I thought this wasn't real because it was bad at first, but it changed me from 28 fps to 50+! tysm <3"_: jbombbay
@@ -54,7 +56,7 @@ You can do this either on the [Planet Minecraft](https://www.planetminecraft.com
 To help me better, it would also be handy if you debug the datapack. You can do this by simply clicking on Debug datapack in the datapack menu and write the displayed message into the bug report.
 
 ## 💾 Versions:
-| ✅   | 1.16+        |
+| ✅   | 1.17+        |
 | --- | ------------ |
 | ✅   | Singleplayer |
 | ✅   | Multiplayer  |
@@ -80,7 +82,7 @@ The datapack is under continuous development, but it takes time before a new ver
 That's why there is this beta version, which contains the newest but still unfinished and maybe buggy function. So use it at your own risk.
 
 ### Installation:
-- Go to [this](http://bit.ly/NoLagDatapackBeta) webiste
+- Go to [this](https://rebrand.ly/NoLagDatapackBeta) webiste
 - Click on **Code** and then on **Download ZIP**
 - Extract the folder in the .zip file from it
 - Continue with the folder like the normal datapack 
@@ -94,5 +96,3 @@ Just replace the old datapack file with the new one and reload the world. The re
 - Click in the datapack menu on **Uninstall this datapack**
 - Delete the datapack file from the datapack folder of the world
 - Reload the world
-
-***
