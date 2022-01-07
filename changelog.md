@@ -1,5 +1,16 @@
 
-Update v2.4.4 (2.7.2021)
+## Update v2.4.5 (7.1.2022)
+
+Only a very small update with few changes but finally safely tested for 1.18. 
+In addition, the 1.16 and 1.17 versions are no longer supported.
+
+### Changend:
+- Update to 1.18.1
+- Default time for a lag clear extended to 30 minutes
+- [Internal] Entity lists updated 
+
+----------------------------------------------------------------
+
 ## Update v2.4.4 (2.7.2021)
 
 Again an update without new features, but many small improvements and bug fixes.

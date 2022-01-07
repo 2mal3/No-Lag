@@ -10,7 +10,6 @@ Thereby the datapack was designed with performance in mind, so that it has almos
 - Over 6 different methods to reduce lag that actually work
 - Simple in-game gui with many settings
 - Does not affect important entities
-- Is (semi-)actively developed
 - Additional information about the world
 - Does not create lag itself
 

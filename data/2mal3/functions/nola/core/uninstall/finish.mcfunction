@@ -8,5 +8,5 @@ kill 6605427f-f242-4b1a-a37a-c2b86a3d8ac5
 # Remove last scoreboards
 scoreboard objectives remove nola.data
 # Disable the datapack
-datapack disable "file/No-Lag-Datapack-v2.4.4"
-datapack disable "file/No-Lag-Datapack-v2.4.4.zip"
+datapack disable "file/No-Lag-Datapack-v2.4.5"
+datapack disable "file/No-Lag-Datapack-v2.4.5.zip"
