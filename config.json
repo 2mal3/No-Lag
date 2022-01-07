@@ -1,0 +1,12 @@
+{
+  "global": {
+    "onBuildSuccess": null
+  },
+  "mc": {
+    "dev": true,
+    "header": "# Datapack by 2mal3 (https://github.com/2mal3)\n# Built using mc-build (https://github.com/mc-build/mc-build) ",
+    "internalScoreboard": "nola.data",
+    "generatedDirectory": "__generated__",
+    "rootNamespace": null
+  }
+}
