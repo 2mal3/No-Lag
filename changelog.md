@@ -1,5 +1,6 @@
 
 Update v2.4.4 (2.7.2021)
+## Update v2.4.4 (2.7.2021)
 
 Again an update without new features, but many small improvements and bug fixes.
 With the update, many bugs when uninstalling were finally fixed and also the performance of the entity freeze improved again. In addition, hopefully all spelling errors regarding entities have been fixed and items have been excluded from lag clear. I also decided to remove the update check from the datapack, because it was not used according to the statistics and it makes me too much work.
