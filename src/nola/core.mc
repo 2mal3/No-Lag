@@ -1,5 +1,17 @@
 import ../../macros/log.mcm
 
+## Loops
+dir loop {
+  clock 1s {
+    name second
+
+    execute as @e[tag=!global.ignore] run {
+      # Xp merging
+      execute if entity @s[type=minecraft:experience_orb] run function nola:modues/xp_merge/main
+    }
+  }
+}
+
 
 ## Loading, installing and updating
 function load {
