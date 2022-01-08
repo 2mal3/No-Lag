@@ -3,14 +3,14 @@ import ../../macros/log.mcm
 
 ## Loading, installing and updating
 function load {
-  log nola info server <Datapack reloaded>
+  log NoLag info server <Datapack reloaded>
 
   scoreboard objectives add nola.data dummy
 
   # scoreboard players set %installed nola.data 0
   # Initializes the datapack at the first startup or new version
   execute unless score %installed nola.data matches 1 run {
-    log nola info server <Datapack installed>
+    log NoLag info server <Datapack installed>
     scoreboard players set %installed nola.data 1
 
     scoreboard objectives add nola.data dummy
@@ -77,7 +77,7 @@ advancement nola {
 
 ## Datapack uninstalling
 function uninstall {
-  log nola info server <Datapack uninstalled>
+  log NoLag info server <Datapack uninstalled>
 
   # Deletes the scoreboards
   scoreboard objectives remove nola.data
