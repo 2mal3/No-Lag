@@ -22,8 +22,8 @@ function load {
       tellraw @a [{"text":"No Lag Datapack v3.0.0 by 2mal3 was installed!","color":"blue"}]
     }
   }
-  execute if score %installed nola.data matches 1 unless score $version nola.data matches 010300 run {
-    log nola info server <Updated datapack>
+  execute if score %installed nola.data matches 1 unless score $version nola.data matches 030000 run {
+    log NoLag info server <Updated datapack>
     scoreboard players set $version nola.data 030000
   }
 }
