@@ -7,7 +7,7 @@ dir loop {
 
     execute as @e[tag=!global.ignore] run {
       # Xp merging
-      execute if entity @s[type=minecraft:experience_orb] run function nola:modues/xp_merge/main
+      execute if entity @s[type=minecraft:experience_orb] run function nola:modules/xp_merge/main
     }
   }
 
@@ -15,7 +15,8 @@ dir loop {
     name minute
 
     execute as @e[tag=!global.ignore] run {
-      execute if entity @s[type=minecraft:item] run function nola:modues/item_despawn/main
+      # Faster item despawn
+      execute if entity @s[type=minecraft:item] run function nola:modules/item_despawn/main
     }
   }
 }
