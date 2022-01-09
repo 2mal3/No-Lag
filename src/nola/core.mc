@@ -1,5 +1,6 @@
 import ../../macros/log.mcm
 
+
 ## Loops
 dir loop {
   clock 1s {
@@ -17,6 +18,8 @@ dir loop {
     execute as @e[tag=!global.ignore] run {
       # Faster item despawn
       execute if entity @s[type=minecraft:item] run function nola:modules/item_despawn/main
+      # Farm animales no collision
+      execute if entity @s[type=#nola:modules/no_collision/farm_animales,tag=!nola.processed] run function nola:modules/no_collision/main
     }
   }
 }
@@ -37,6 +40,9 @@ function load {
     scoreboard objectives add nola.data dummy
     scoreboard objectives add 2mal3.debugMode dummy
     scoreboard objectives add nola.itemDespawnTime dummy
+    # Teams
+    team add nola.noCollision
+    team modify nola.noCollision collisionRule pushOtherTeams
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data 030000
 
