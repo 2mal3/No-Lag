@@ -10,6 +10,7 @@
     "minecraft:villager",
     "minecraft:item",
     "minecraft:item_frame",
-    "minecraft:glow_item_frame"
+    "minecraft:glow_item_frame",
+    "minecraft:trident"
   ]
 }
