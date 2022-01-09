@@ -10,6 +10,14 @@ dir loop {
       execute if entity @s[type=minecraft:experience_orb] run function nola:modues/xp_merge/main
     }
   }
+
+  clock 60s {
+    name minute
+
+    execute as @e[tag=!global.ignore] run {
+      execute if entity @s[type=minecraft:item] run function nola:modues/item_despawn/main
+    }
+  }
 }
 
 
@@ -19,7 +27,7 @@ function load {
 
   scoreboard objectives add nola.data dummy
 
-  # scoreboard players set %installed nola.data 0
+  scoreboard players set %installed nola.data 0
   # Initializes the datapack at the first startup or new version
   execute unless score %installed nola.data matches 1 run {
     log NoLag info server <Datapack installed>
@@ -27,6 +35,7 @@ function load {
 
     scoreboard objectives add nola.data dummy
     scoreboard objectives add 2mal3.debugMode dummy
+    scoreboard objectives add nola.itemDespawnTime dummy
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data 030000
 
@@ -93,6 +102,7 @@ function uninstall {
 
   # Deletes the scoreboards
   scoreboard objectives remove nola.data
+  scoreboard objectives remove nola.itemDespawnTime
 
   # Sends an uninstallation message to all players
   tellraw @a [{"text":"2mal3's Tweaks v3.0.0 by 2mal3 was successfully uninstalled."}]
