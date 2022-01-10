@@ -9,6 +9,8 @@ dir loop {
     execute as @e[tag=!global.ignore] run {
       # Xp merging
       execute if entity @s[type=minecraft:experience_orb] run function nola:modules/xp_merge/main
+      # Anti tnt spam
+      execute if entity @s[type=minecraft:tnt,tag=!nola.processed] at @s run function nola:modules/anti_tnt_spam/main
     }
   }
 
