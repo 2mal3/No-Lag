@@ -23,6 +23,8 @@ dir loop {
       # Farm animales no collision
       execute if entity @s[type=#nola:modules/no_collision/farm_animales,tag=!nola.processed] run function nola:modules/no_collision/main
     }
+    # Lag clear
+    function nola:modules/lag_clear/main
   }
 }
 
