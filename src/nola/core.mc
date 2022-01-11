@@ -48,6 +48,8 @@ function load {
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data 030000
 
+    gamerule maxEntityCramming 6
+
     schedule 4s replace {
       tellraw @a [{"text":"No Lag Datapack v3.0.0 by 2mal3 was installed!","color":"blue"}]
     }
@@ -112,6 +114,9 @@ function uninstall {
   # Deletes the scoreboards
   scoreboard objectives remove nola.data
   scoreboard objectives remove nola.itemDespawnTime
+
+  # Reset gamerules
+  gamerule maxEntityCramming 24
 
   # Sends an uninstallation message to all players
   tellraw @a [{"text":"2mal3's Tweaks v3.0.0 by 2mal3 was successfully uninstalled."}]
