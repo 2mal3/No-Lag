@@ -57,7 +57,6 @@ entities ignore {
   minecraft:command_block_minecart
   minecraft:cow
   minecraft:elder_guardian
-  minecraft:elder_guardian
   minecraft:end_crystal
   minecraft:ender_dragon
   minecraft:evoker
