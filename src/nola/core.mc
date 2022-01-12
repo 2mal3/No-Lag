@@ -6,11 +6,21 @@ dir loop {
   clock 1s {
     name second
 
+    # Ignore entitys near named armor sands
+    execute as @e[type=minecraft:armor_stand,name="ignore"] at @s run {
+      tag @e[distance=..64] add nola.noAI.ignore
+      particle minecraft:happy_villager ~ ~ ~ 0.2 1 0.2 1 5
+    }
+
+    # Main entity loops
     execute as @e[tag=!global.ignore] run {
       # Xp merging
       execute if entity @s[type=minecraft:experience_orb] run function nola:modules/xp_merge/main
       # Anti tnt spam
       execute if entity @s[type=minecraft:tnt,tag=!nola.processed] at @s run function nola:modules/anti_tnt_spam/main
+      # No ai
+      execute if entity @s[type=!minecraft:villager,type=!#nola:modules/no_ai/ignore,team=!thisTeamDoesNotExist,name=!"ignore",tag=!nola.noAI.ignore] at @s run function nola:modules/no_ai/distance
+      tag @s remove nola.noAI.ignore
     }
   }
 
