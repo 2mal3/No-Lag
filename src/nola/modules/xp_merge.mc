@@ -4,7 +4,7 @@ function main {
     execute store result score .xp nola.data run data get entity @s Value
 
     tag @s add nola.this
-    execute at @s as @e[type=minecraft:experience_orb,distance=..2,tag=!nola.this] run {
+    execute at @s as @e[type=minecraft:experience_orb,distance=..2.5,tag=!nola.this] run {
       execute store result score .temp0 nola.data run data get entity @s Value
       scoreboard players operation .xp nola.data += .temp0 nola.data
       tag @s add nola.dead
