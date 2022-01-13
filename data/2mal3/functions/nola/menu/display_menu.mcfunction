@@ -33,7 +33,8 @@ tellraw @s [{"text":"\u2620 Unneeded entities: ","color":"gold"},{"score":{"name
 tellraw @s {"text":""}
 
 tellraw @s {"text":"\u2699 Configure the datapack \u25b6","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/display_config/page_1"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
-tellraw @s {"text":"\u26a1 Delete all unused entities \u25b6","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/manual_lag_clear"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+tellraw @s {"text":"\u26a1 Delete all unused entities ","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/manual_lag_clear"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+tellraw @s {"text":"\u26a1 Delete all items ","color":"gold","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/menu/buttons/clear_items"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
 tellraw @s {"text":"\u303d Debug Datapack \u25b6","clickEvent":{"action":"run_command","value":"/function 2mal3:nola/core/debug"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
 
 tellraw @s {"text":""}
