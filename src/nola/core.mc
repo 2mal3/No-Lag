@@ -60,7 +60,7 @@ function load {
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data 030000
 
-    gamerule maxEntityCramming 6
+    gamerule maxEntityCramming 4
 
     schedule 4s replace {
       tellraw @a [{"text":"No Lag Datapack v3.0.0 by 2mal3 was installed!","color":"blue"}]
