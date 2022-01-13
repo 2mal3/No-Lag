@@ -8,7 +8,7 @@ function main {
   execute if score %lagClearTime nola.data matches 0 run {
     name clear
     log NoLag info server <Execute lag clear>
-    scoreboard players set %lagClearTime nola.data 30
+    scoreboard players operation %lagClearTime nola.data = $lagClearTime nola.config
 
     # Count how many unneded entities got deleted
     scoreboard players set .temp0 nola.data 0

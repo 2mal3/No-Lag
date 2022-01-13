@@ -2,9 +2,17 @@ import ../../../macros/log.mcm
 
 
 function distance {
-  execute run {
+  execute if score $noAIDistance nola.config matches 42 run {
     execute unless entity @p[gamemode=!spectator,distance=..42] if entity @s[tag=!nola.noAI] run function nola:modules/no_ai/enable
     execute if entity @p[gamemode=!spectator,distance=..42] if entity @s[tag=nola.noAI] run function nola:modules/no_ai/disable
+  }
+  execute if score $noAIDistance nola.config matches 64 run {
+    execute unless entity @p[gamemode=!spectator,distance=..64] if entity @s[tag=!nola.noAI] run function nola:modules/no_ai/enable
+    execute if entity @p[gamemode=!spectator,distance=..64] if entity @s[tag=nola.noAI] run function nola:modules/no_ai/disable
+  }
+  execute if score $noAIDistance nola.config matches 86 run {
+    execute unless entity @p[gamemode=!spectator,distance=..86] if entity @s[tag=!nola.noAI] run function nola:modules/no_ai/enable
+    execute if entity @p[gamemode=!spectator,distance=..86] if entity @s[tag=nola.noAI] run function nola:modules/no_ai/disable
   }
 }
 

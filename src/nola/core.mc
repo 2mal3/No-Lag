@@ -7,7 +7,7 @@ dir loop {
     name second
 
     # Ignore entitys near named armor sands
-    execute as @e[type=minecraft:armor_stand,name="ignore"] at @s run {
+    execute if score $noAIAreaIgnorer nola.config matches 1 as @e[type=minecraft:armor_stand,name="ignore"] at @s run {
       tag @e[distance=..64] add nola.noAI.ignore
       particle minecraft:happy_villager ~ ~ ~ 0.2 1 0.2 1 5
     }
@@ -15,11 +15,11 @@ dir loop {
     # Main entity loops
     execute as @e[tag=!global.ignore] run {
       # Xp merging
-      execute if entity @s[type=minecraft:experience_orb] run function nola:modules/xp_merge/main
+      execute if score $xpMerge nola.config matches 1 if entity @s[type=minecraft:experience_orb] run function nola:modules/xp_merge/main
       # Anti tnt spam
-      execute if entity @s[type=minecraft:tnt,tag=!nola.processed] at @s run function nola:modules/anti_tnt_spam/main
+      execute if score $antiTNTSpam nola.config matches 1 if entity @s[type=minecraft:tnt,tag=!nola.processed] at @s run function nola:modules/anti_tnt_spam/main
       # No ai
-      execute if entity @s[type=!minecraft:villager,type=!#nola:modules/no_ai/ignore,team=!thisTeamDoesNotExist,name=!"ignore",tag=!nola.noAI.ignore] at @s run function nola:modules/no_ai/distance
+      execute if score $noAI nola.config matches 1 if entity @s[type=!minecraft:villager,type=!#nola:modules/no_ai/ignore,team=!thisTeamDoesNotExist,name=!"ignore",tag=!nola.noAI.ignore] at @s run function nola:modules/no_ai/distance
       tag @s remove nola.noAI.ignore
     }
   }
@@ -29,12 +29,12 @@ dir loop {
 
     execute as @e[tag=!global.ignore] run {
       # Faster item despawn
-      execute if entity @s[type=minecraft:item] run function nola:modules/item_despawn/main
+      execute if score $itemDespawn nola.config matches 1 if entity @s[type=minecraft:item] run function nola:modules/item_despawn/main
       # Farm animales no collision
-      execute if entity @s[type=#nola:modules/no_collision/farm_animales,tag=!nola.processed] run function nola:modules/no_collision/main
+      execute if score $noCollision nola.config matches 1 if entity @s[type=#nola:modules/no_collision/farm_animales,tag=!nola.processed] run function nola:modules/no_collision/main
     }
     # Lag clear
-    function nola:modules/lag_clear/main
+    execute if score $lagClear nola.config matches 1 run function nola:modules/lag_clear/main
   }
 }
 
@@ -52,6 +52,7 @@ function load {
     scoreboard players set %installed nola.data 1
 
     scoreboard objectives add nola.data dummy
+    scoreboard objectives add nola.config dummy
     scoreboard objectives add 2mal3.debugMode dummy
     scoreboard objectives add nola.itemDespawnTime dummy
     # Teams
@@ -60,7 +61,19 @@ function load {
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data 030000
 
+    # Set config
     gamerule maxEntityCramming 4
+    scoreboard players set $antiTNTSpam nola.config 0
+    scoreboard players set $itemDespawn nola.config 1
+    scoreboard players set $itemDespawnTime nola.config 3
+    scoreboard players set $lagClear nola.config 1
+    scoreboard players set $lagClearTime nola.config 30
+    scoreboard players set %lagClearTime nola.data 30
+    scoreboard players set $noAI nola.config 1
+    scoreboard players set $noAIDistance nola.config 42
+    scoreboard players set $noAIAreaIgnorer nola.config 1
+    scoreboard players set $noCollision nola.config 1
+    scoreboard players set $xpMerge nola.config 1
 
     schedule 4s replace {
       tellraw @a [{"text":"No Lag Datapack v3.0.0 by 2mal3 was installed!","color":"blue"}]
@@ -125,6 +138,7 @@ function uninstall {
 
   # Deletes the scoreboards
   scoreboard objectives remove nola.data
+  scoreboard objectives remove nola.config
   scoreboard objectives remove nola.itemDespawnTime
 
   # Reset gamerules
