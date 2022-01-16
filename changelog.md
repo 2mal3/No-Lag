@@ -1,4 +1,16 @@
 
+## Update v2.4.6 (16.1.2022)
+
+### Added:
+- Button to delete all items
+
+### Fixed:
+- Tridents could be deleted during a lag clear
+- The datapack was shown as incompatible in the latest Minecraft version
+- Datapack could sometimes not be uninstalled
+
+***
+
 ## Update v2.4.5 (7.1.2022)
 
 Only a very small update with few changes but finally safely tested for 1.18. 
@@ -9,7 +21,7 @@ In addition, the 1.16 and 1.17 versions are no longer supported.
 - Default time for a lag clear extended to 30 minutes
 - [Internal] Entity lists updated 
 
-----------------------------------------------------------------
+***
 
 ## Update v2.4.4 (2.7.2021)
 
@@ -32,7 +44,7 @@ With the update, many bugs when uninstalling were finally fixed and also the per
 ### Removed:
 - Update check, because of very low usage
 
-----------------------------------------------------------------
+***
 
 ## Update v2.4.3 (17.6.2021)
 
@@ -51,7 +63,7 @@ Just a small update that only improves and fixes a few things and adds an option
 - Datapack was not fully ready for 1.17 yet
 - Bees were deleted at lag clears
 
-----------------------------------------------------------------
+***
 
 ## Update v2.4.2 (22.5.2021)
 
@@ -64,7 +76,7 @@ This update does not bring any big changes, but now the datapack should be compa
 - The Tps test did not work properly.
 - The tps test was not stopped during uninstallation.
 
-----------------------------------------------------------------
+***
 
 ## Update v2.4.1 (18.4.2021)
 
@@ -77,7 +89,7 @@ This update only fixes a few bugs in the datapack. However, i would recommend ev
 - When uninstalling the datapack, only loaded and frozen entities were unfrozen.
 - A wrong warn message was sent with a wrong server software.
 
-----------------------------------------------------------------
+***
 
 ## Update v2.4.0 (27.3.2021)
 
@@ -99,7 +111,7 @@ Due to some internal code changes, all settings are unfortunately reset to the b
 - Entities that were once classified as too close to kill were never killed for distance after that
 - Entities without names were classified as not to be deleted
 
-----------------------------------------------------------------
+***
 
 ## Update v2.3.0 (16.3.2021)
 
@@ -114,7 +126,7 @@ Again, just a minor update. It only fixes a few bugs and adds functions for bett
 - The area ignorer option has led to lag spikes every second
 - When uninstalling the Datapack not all entity tags were removed
 
-----------------------------------------------------------------
+***
 
 ## Update v2.2.1 (15.2.2021)
 
@@ -127,7 +139,7 @@ This is just a small update that mainly fixes the spelling error that entities w
 - In many places in the datapack entities were used instead of entities
 - When simply replacing the datapack file after a datapack update resulted in no new things were created 
 
-----------------------------------------------------------------
+***
 
 ## Update v2.2.0 (14.2.2021)
 
@@ -150,7 +162,7 @@ Also the datapack menu with the config has been improved and more options for th
 - In the datapack config the current value of the max entity craming was not displayed
 - At the setting to distance of entity freezing could be set only 64
 
-----------------------------------------------------------------
+***
 
 ## Update v2.1.0 (31.1.2021)
 
@@ -165,14 +177,14 @@ Also the datapack menu with the config has been improved and more options for th
 - Items with the global.ignore.kill were killed
 - entities ignored by the datapack were frozen
 
-----------------------------------------------------------------
+***
 
 ## Update v2.0.2 (3.1.2021)
 
 ### Bug fixes:
 - Entities with names were sometimes deleted during lag clears
 
-----------------------------------------------------------------
+***
 
 ## Update v2.0.1 (15.12.2020)
 
@@ -185,7 +197,7 @@ Also the datapack menu with the config has been improved and more options for th
 - When disabling entity freezing, frozen entities were not reactivated
 - The datapack was not deactivated during uninstallation
 
-----------------------------------------------------------------
+***
 
 ## Update v2.0.0 (5.12.2020)
 
@@ -209,4 +221,4 @@ Also the datapack menu with the config has been improved and more options for th
 - Limitation for ignited tnts 
 - Language pack
 
-----------------------------------------------------------------
+***
