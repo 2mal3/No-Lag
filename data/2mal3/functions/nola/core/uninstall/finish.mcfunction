@@ -10,3 +10,4 @@ scoreboard objectives remove nola.data
 # Disable the datapack
 datapack disable "file/No-Lag-Datapack-v2.4.5"
 datapack disable "file/No-Lag-Datapack-v2.4.5.zip"
+datapack disable "file/No-Lag-Datapack"
