@@ -11,7 +11,7 @@ scoreboard players set .temp_1 nola.data 0
 scoreboard players set .temp_2 nola.data 0
 
 # Remove the entitys
-execute store result score .temp_0 nola.data run tp @e[tag=!nola.ignore_kill,tag=!nola.ignore_kill.near,tag=!nola.ignore_kill.farm] ~ -100 ~
+execute store result score .temp_0 nola.data run tp @e[tag=!nola.ignore_kill,tag=!nola.ignore_kill.near,tag=!nola.ignore_kill.farm] ~ -1000 ~
 execute store result score .temp_1 nola.data run kill @e[type=minecraft:item_frame,predicate=!2mal3:nola/have_item,tag=!nola.ignore,tag=!global.ignore,tag=!global.ignore.kill]
 execute as @e[type=minecraft:armor_stand,predicate=!2mal3:nola/used,name=!"ignore",tag=!global.ignore,tag=!global.ignore.kill] unless data entity @s ArmorItems.[0].id unless data entity @s ArmorItems.[1].id unless data entity @s ArmorItems.[2].id unless data entity @s ArmorItems.[3].id run execute store result score .temp_2 nola.data run kill @s
 
