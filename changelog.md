@@ -6,6 +6,7 @@
 
 ### Fixed:
 - Tridents could be deleted during a lag clear
+- At Lag clear, entities were not killed immediately
 - The datapack was shown as incompatible in the latest Minecraft version
 - Datapack could sometimes not be uninstalled
 
