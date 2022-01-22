@@ -4,7 +4,7 @@
 # Datapack by 2mal3
 
 # Select other xp
-tag @e[type=minecraft:experience_orb,tag=!nola.processed,distance=0.001..2,sort=nearest,limit=1] add nola.merge
+tag @e[type=minecraft:experience_orb,tag=!nola.processed,distance=0.001..2,sort=nearest,limit=1,tag=!global.ignore,tag=!global.ignore.kill] add nola.merge
 
 # Merge
 scoreboard players operation @s nola.xp += @e[type=minecraft:experience_orb,tag=nola.merge] nola.xp

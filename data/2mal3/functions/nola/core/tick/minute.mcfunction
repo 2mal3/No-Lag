@@ -8,10 +8,10 @@ execute as @e at @s run function 2mal3:nola/ignore_kill
 
 
 # Item despawn
-execute if score $item_despawn nola.config matches 1 as @e[type=minecraft:item,tag=!global.ignore.kill] run function 2mal3:nola/modules/item_despawn
+execute if score $item_despawn nola.config matches 1 as @e[type=minecraft:item,tag=!global.ignore.kill,tag=!global.ignore] run function 2mal3:nola/modules/item_despawn
 
 # No collision
-team join nola.no_collision @e[type=#2mal3:nola/breedable]
+team join nola.no_collision @e[type=#2mal3:nola/breedable,tag=!global.ignore]
 
 # Deletes all par minutes all unused entitys, if activated
 execute if score $lag_clear nola.config matches 1 if score $lag_clear_not_at_night nola.config matches 0 run function 2mal3:nola/modules/lag_clear/main
