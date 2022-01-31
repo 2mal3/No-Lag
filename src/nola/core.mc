@@ -89,15 +89,9 @@ function load {
 ## First join
 function first_join {
   ## Warns the player if he uses a not supportet server software or minecraft version
-  scoreboard players set .temp0 nola.data 0
-  scoreboard players set .temp1 nola.data 0
-  execute store result score .temp0 nola.data run data get entity @s DataVersion
-  execute store success score .temp1 nola.data run data get entity @r "Bukkit.updateLevel"
-  execute store success score .temp1 nola.data run data get entity @r "Spigot.ticksLived"
-  execute store success score .temp1 nola.data run data get entity @r "Paper.SpawnReason"
-
-  execute unless score .temp0 nola.data matches 2860.. run tellraw @s [{"text":"[","color":"gray"},{"text":"nola","color":"gold"},{"text":"/","color":"gray"},{"text":"WARN","color":"gold"},{"text": "/","color": "gray"},{"text": "Server","color": "gold"},{"text":"]: ","color":"gray"},{"text":"This Minecraft version is not supported by the datapack. Please use a version the Minecraft version 1.18.x.","color":"gold"}]
-  execute if score .temp1 nola.data matches 1.. run tellraw @s [{"text":"[","color":"gray"},{"text":"nola","color":"gold"},{"text":"/","color":"gray"},{"text":"WARN","color":"gold"},{"text": "/","color": "gray"},{"text": "Server","color": "gold"},{"text":"]: ","color":"gray"},{"text":"This server software is not supported by the datapack, so errors may occur. Please use another server software for better stability.","color":"gold"}]
+  execute unless score $version 2mal3.data matches 18 run tellraw @s [{"text":"[","color":"gray"},{"text":"nola","color":"gold"},{"text":"/","color":"gray"},{"text":"WARN","color":"gold"},{"text": "/","color": "gray"},{"text": "Server","color": "gold"},{"text":"]: ","color":"gray"},{"text":"This Minecraft version is not supported by the datapack. Please use the 1.18.x to prevent errors.","color":"gold"}]
+  execute if score $server 2mal3.data matches 1 run tellraw @s [{"text":"[","color":"gray"},{"text":"nola","color":"gold"},{"text":"/","color":"gray"},{"text":"WARN","color":"gold"},{"text": "/","color": "gray"},{"text": "Server","color": "gold"},{"text":"]: ","color":"gray"},{"text":"Bukkit, Spigot or PaperSpigot are not supported by the datapack. Please use a vanilla or fabric server to prevent errors.","color":"gold"}]
+  execute if score $moded 2mal3.data matches 1 run tellraw @s [{"text":"[","color":"gray"},{"text":"nola","color":"gold"},{"text":"/","color":"gray"},{"text":"WARN","color":"gold"},{"text": "/","color": "gray"},{"text": "Server","color": "gold"},{"text":"]: ","color":"gray"},{"text":"Forge is not supported by the datapack. Please use vanilla or fabric to prevent errors.","color":"gold"}]
 }
 
 advancement first_join {
