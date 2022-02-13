@@ -25,7 +25,7 @@ function main {
       # Delete entities
       execute if score @s nola.data matches 2 run {
         scoreboard players add .temp0 nola.data 1
-        tp @s ~ -100 ~
+        tp @s ~ -1000 ~
         kill @s
       }
 
