@@ -29,6 +29,7 @@ All settings and actions can be done via the in game gui. To open it you just ha
 - If too many entities of the same type are too close to each other, all other entities of the species will be deleted.
 
 ## Nice things others have said about the datapack:
+- _"cool ty dude"_: zBestguy
 - _"Hi! I've been using this datapack for a couple of months on a aternos server (with paper), and it works perfectly well !"_: Expert MinerBenBepBob
 - _"dam it works fuking good, you saved me and my friends in our moded survival"_: SticksS_
 - _"Highly Recommended."_: Volt_Lightwave
