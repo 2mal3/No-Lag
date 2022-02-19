@@ -36,47 +36,6 @@ function config {
   tellraw @s {"text": "-------------------------", "color": "yellow"}
   tellraw @s {"text": ""}
 
-  # antiTNTSpam
-  execute if score $antiTNTSpam nola.config matches 0 run { 
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/anti_tnt_spam/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Anti TNT spam","color":"gold","hoverEvent":{"action":"show_text","contents":"Prevents ignition of large chunks tnt."}}]
-  }
-  execute if score $antiTNTSpam nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/anti_tnt_spam/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Anti TNT spam","color":"gold","hoverEvent":{"action":"show_text","contents":"Prevents ignition of large chunks tnt."}}]
-  }
-
-  # itemDespawn
-  execute if score $itemDespawn nola.config matches 0 run { 
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/item_despawn/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items despawn after a specified time."}}]
-  }
-  execute if score $itemDespawn nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/item_despawn/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items despawn after a specified time."}}]
-  }
-  # itemDespawnTime
-  execute if score $itemDespawnTime nola.config matches 0 run {
-    tellraw @s [{"text":"Item despawn time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time after items are deleted in minutes."}},{"text":"[ - ] ","color":"gray","hoverEvent":{"action":"show_text","contents":""}},{"score":{"name":"$itemDespawnTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/item_despawn_time/add"}}]
-  }
-  execute if score $itemDespawnTime nola.config matches 1..3 run {
-    tellraw @s [{"text":"Item despawn time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time after items are deleted in minutes."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/item_despawn_time/remove"}},{"score":{"name":"$itemDespawnTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/item_despawn_time/add"}}]
-  }
-  execute if score $itemDespawnTime nola.config matches 4 run {
-    tellraw @s [{"text":"Item despawn time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time after items are deleted in minutes."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/item_despawn_time/remove"}},{"score":{"name":"$itemDespawnTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"gray","hoverEvent":{"action":"show_text","contents":""}}]
-  }
-
-  # lagClear
-  execute if score $lagClear nola.config matches 0 run { 
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entities in set time intervals."}}]
-  }
-  execute if score $lagClear nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entities in set time intervals."}}]
-  }
-  # lagClearTime
-  execute if score $lagClearTime nola.config matches 2 run {
-    tellraw @s [{"text":"Lag clear time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time interval in which a lag clear is executed (in minutes)."}},{"text":"[ - ] ","color":"gray","hoverEvent":{"action":"show_text","contents":""}},{"score":{"name":"$lagClearTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/lag_clear_time/add"}}]
-  }
-  execute if score $lagClearTime nola.config matches 3.. run {
-    tellraw @s [{"text":"Lag clear time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time interval in which a lag clear is executed (in minutes)."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/lag_clear_time/remove"}},{"score":{"name":"$lagClearTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/lag_clear_time/add"}}]
-  }
-
   # noAI
   execute if score $noAI nola.config matches 0 run { 
     tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Entity freezing","color":"gold","hoverEvent":{"action":"show_text","contents":"Freezes entities if they are outside a certain distance."}}]
@@ -102,12 +61,19 @@ function config {
     tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai_area_ignorer/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Area ignorer","color":"gold","hoverEvent":{"action":"show_text","contents":"Armor stands renamed to ignore block the freezing of all entities near them."}}]
   }
 
-  # noCollision
-  execute if score $noCollision nola.config matches 0 run { 
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_collision/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Disabled animal collision","color":"gold","hoverEvent":{"action":"show_text","contents":"Disables the collision of farm animals."}}]
+  # lagClear
+  execute if score $lagClear nola.config matches 0 run { 
+    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entities in set time intervals."}}]
   }
-  execute if score $noCollision nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_collision/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Disabled animal collision","color":"gold","hoverEvent":{"action":"show_text","contents":"Disables the collision of farm animals."}}]
+  execute if score $lagClear nola.config matches 1 run {
+    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entities in set time intervals."}}]
+  }
+  # lagClearTime
+  execute if score $lagClearTime nola.config matches 2 run {
+    tellraw @s [{"text":"Lag clear time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time interval in which a lag clear is executed (in minutes)."}},{"text":"[ - ] ","color":"gray","hoverEvent":{"action":"show_text","contents":""}},{"score":{"name":"$lagClearTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/lag_clear_time/add"}}]
+  }
+  execute if score $lagClearTime nola.config matches 3.. run {
+    tellraw @s [{"text":"Lag clear time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time interval in which a lag clear is executed (in minutes)."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/lag_clear_time/remove"}},{"score":{"name":"$lagClearTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/lag_clear_time/add"}}]
   }
 
   # xpMerge
@@ -118,9 +84,35 @@ function config {
     tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/xp_merge/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Merge xp orbs","color":"gold","hoverEvent":{"action":"show_text","contents":"Near xp orbs will be combined. (may affect Mendig enchantment)"}}]
   }
 
+  # itemDespawn
+  execute if score $itemDespawn nola.config matches 0 run { 
+    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/item_despawn/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items despawn after a specified time."}}]
+  }
+  execute if score $itemDespawn nola.config matches 1 run {
+    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/item_despawn/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items despawn after a specified time."}}]
+  }
+  # itemDespawnTime
+  execute if score $itemDespawnTime nola.config matches 0 run {
+    tellraw @s [{"text":"Item despawn time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time after items are deleted in minutes."}},{"text":"[ - ] ","color":"gray","hoverEvent":{"action":"show_text","contents":""}},{"score":{"name":"$itemDespawnTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/item_despawn_time/add"}}]
+  }
+  execute if score $itemDespawnTime nola.config matches 1..3 run {
+    tellraw @s [{"text":"Item despawn time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time after items are deleted in minutes."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/item_despawn_time/remove"}},{"score":{"name":"$itemDespawnTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/item_despawn_time/add"}}]
+  }
+  execute if score $itemDespawnTime nola.config matches 4 run {
+    tellraw @s [{"text":"Item despawn time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time after items are deleted in minutes."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/item_despawn_time/remove"}},{"score":{"name":"$itemDespawnTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"gray","hoverEvent":{"action":"show_text","contents":""}}]
+  }
+
+  # antiTNTSpam
+  execute if score $antiTNTSpam nola.config matches 0 run { 
+    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/anti_tnt_spam/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Anti TNT spam","color":"gold","hoverEvent":{"action":"show_text","contents":"Prevents ignition of large chunks tnt."}}]
+  }
+  execute if score $antiTNTSpam nola.config matches 1 run {
+    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/anti_tnt_spam/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Anti TNT spam","color":"gold","hoverEvent":{"action":"show_text","contents":"Prevents ignition of large chunks tnt."}}]
+  }
+
   # maxEntityCramming
   execute store result score .temp0 nola.data run gamerule maxEntityCramming
-  execute if score .temp0 nola.data matches 1 run {
+  execute if score .temp0 nola.data matches 0 run {
     tellraw @s [{"text":"Maximum entiys on one block: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Maximum number of entities that can stand together on one block without taking damage."}},{"text":"[ - ] ","color":"gray","hoverEvent":{"action":"show_text","contents":""}},{"score":{"name":".temp0","objective":"nola.data"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/max_entity_cramming/add"}}]
   }
   execute if score .temp0 nola.data matches 2..23 run {
@@ -128,6 +120,14 @@ function config {
   }
   execute if score .temp0 nola.data matches 24 run {
     tellraw @s [{"text":"Maximum entiys on one block: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Maximum number of entities that can stand together on one block without taking damage."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/max_entity_cramming/remove"}},{"score":{"name":".temp0","objective":"nola.data"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"gray","hoverEvent":{"action":"show_text","contents":""}}]
+  }
+
+  # noCollision
+  execute if score $noCollision nola.config matches 0 run { 
+    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_collision/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Disabled animal collision","color":"gold","hoverEvent":{"action":"show_text","contents":"Disables the collision of farm animals."}}]
+  }
+  execute if score $noCollision nola.config matches 1 run {
+    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_collision/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Disabled animal collision","color":"gold","hoverEvent":{"action":"show_text","contents":"Disables the collision of farm animals."}}]
   }
   
   # Button to main menu
