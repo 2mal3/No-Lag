@@ -17,7 +17,6 @@ function menu {
   tellraw @s {"text":"\u2699 Configure the datapack \u25b6","clickEvent":{"action":"run_command","value":"/function nola:menu/config"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
   tellraw @s {"text":"\u26a1 Delete all unused entities ","color":"gold","clickEvent":{"action":"run_command","value":"/function nola:modules/lag_clear/clear"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
   tellraw @s {"text":"\u26a1 Delete all items ","color":"gold","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/clear_items"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
-  tellraw @s {"text":"\u303d Debug Datapack \u25b6","clickEvent":{"action":"run_command","value":"/function nola:menu/debug"},"hoverEvent":{"action":"show_text","value":"*click*"},"color":"gold"}
 
   tellraw @s {"text":""}
   tellraw @s {"text":"\u2b24 Planet Minecraft Website","color":"aqua","clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/data-pack/no-lag-datapack/"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
@@ -295,26 +294,6 @@ dir buttons {
     execute store result score .temp0 nola.data run kill @e[type=minecraft:item,tag=!global.ignore]
     tellraw @a[tag=!global.ignore] [{"text":"Deleted ","color":"gold"},{"score":{"name":".temp0","objective":"nola.data"},"color":"red"},{"text":" items","color":"gold"}]
   }
-}
-
-
-
-function debug {
-  function nola:menu/click
-
-  # Get variables
-  execute store result score .temp0 nola.data run data get entity @s DataVersion
-  execute store result score .temp1 nola.data run datapack list
-  execute store result score .temp2 nola.data run execute if entity @a
-  execute store result score .temp3 nola.data run time query gametime
-
-  # nola version; minecraft version; datapack count; player count; gametime
-  tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
-  tellraw @s [{"text":"Debug data: ","color":"gold"},{"score":{"name":"$version","objective":"nola.data"},"color":"red"},{"text":"; ","color":"gold"},{"score":{"name":".temp0","objective":"nola.data"},"color":"red"},{"text":"; ","color":"gold"},{"score":{"name":".temp1","objective":"nola.data"},"color":"red"},{"text":"; ","color":"gold"},{"score":{"name":".temp2","objective":"nola.data"},"color":"red"},{"text":"; ","color":"gold"},{"score":{"name":".temp3","objective":"nola.data"},"color":"red"}]
-
-  # Shows key to main menu
-  tellraw @s {"text":""}
-  tellraw @s {"text":"\u25c0 Back","color":"red","clickEvent":{"action":"run_command","value":"/function nola:menu/menu"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
 }
 
 
