@@ -51,6 +51,7 @@ function load {
     log NoLag info server <Datapack installed>
     scoreboard players set %installed nola.data 1
 
+    # Scoreboards
     scoreboard objectives add nola.data dummy
     scoreboard objectives add nola.config dummy
     scoreboard objectives add 2mal3.debugMode dummy
@@ -60,6 +61,12 @@ function load {
     team modify nola.noCollision collisionRule pushOtherTeams
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data 030000
+
+    # Set a forceload, helpful for uninstalling
+    forceload add -30000000 1600
+    schedule 4s replace {
+      fill -30000000 60 1601 -30000000 58 1601 minecraft:stone
+    }
 
     # Set config
     gamerule maxEntityCramming 4
@@ -126,22 +133,41 @@ advancement nola {
 
 
 ## Datapack uninstalling
-function uninstall {
-  log NoLag info server <Datapack uninstalled>
+dir uninstall {
+  # Tests if command blocks are enabled to avoid errors
+  function check {
+    tellraw @a [{"text":"Uninstalling datapack ..."}]
 
-  # Deletes the scoreboards
-  scoreboard objectives remove nola.data
-  scoreboard objectives remove nola.config
-  scoreboard objectives remove nola.itemDespawnTime
+    execute in minecraft:overworld run sequence {
+      setblock -30000000 58 1601 minecraft:repeating_command_block{auto: 1b, Command: "/scoreboard players set %commandBlock nola.data 1"}
+      delay 2t
+      execute if score %commandBlock nola.data matches 0 run log NoLag error server <The uninstallation of the datapack was aborted because command blocks are disabled. Please enable command blocks in the server propeties and try again.>
+      execute if score %commandBlock nola.data matches 1 run function nola:core/uninstall/uninstall
+    }
+  }
 
-  # Reset gamerules
-  gamerule maxEntityCramming 24
+  # Uninstalls the datapack
+  function uninstall {
+    # Deletes the scoreboards
+    scoreboard objectives remove nola.data
+    scoreboard objectives remove nola.config
+    scoreboard objectives remove nola.itemDespawnTime
+    # Deletes team
+    team remove nola.noCollision
+    # Reset gamerules
+    gamerule maxEntityCramming 24
 
-  # Sends an uninstallation message to all players
-  tellraw @a [{"text":"2mal3's Tweaks v3.0.0 by 2mal3 was successfully uninstalled."}]
+    # Places command blocks that can unfreeze entitys even after the datapack is uninstalled
+    gamerule commandBlockOutput false
+    setblock -30000000 60 1601 minecraft:repeating_command_block{auto: 1b, Command:"/execute as @e[tag=nola.noAI] run data merge entity @s {NoAI: 0b, Invulnerable: 0b}"}
+    setblock -30000000 59 1601 minecraft:repeating_command_block{auto: 1b, Command:"/tag @e[tag=nola.noAI] remove nola.noAI"}
 
-  # Disables the datapack
-  datapack disable "file/No-Lag-Datapack"
-  datapack disable "file/No-Lag-Datapack-v3.0.0"
-  datapack disable "file/No-Lag-Datapack-v3.0.0.zip"
+    # Sends an uninstallation message to all players
+    tellraw @a [{"text":"2mal3's Tweaks v3.0.0 by 2mal3 was successfully uninstalled."}]
+
+    # Disables the datapack
+    datapack disable "file/No-Lag-Datapack"
+    datapack disable "file/No-Lag-Datapack-v3.0.0"
+    datapack disable "file/No-Lag-Datapack-v3.0.0.zip"
+  }
 }
