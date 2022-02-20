@@ -23,7 +23,8 @@ function menu {
   tellraw @s {"text":"\u2709 GitHub Website","color":"aqua","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/No-Lag-Datapack"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
 
   tellraw @s {"text":""}
-  tellraw @s {"text":"\u267b Uninstall the datapack \u25b6","color":"dark_red","clickEvent":{"action":"run_command","value":"/function #2mal3:nola/uninstall"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+  tellraw @s {"text":"\u26a0 Uninstall the datapack \u25b6","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/uninstall"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+  tellraw @s {"text":""}
 }
 
 
@@ -296,6 +297,13 @@ dir buttons {
   }
 }
 
+function uninstall {
+  function nola:menu/click
+
+  tellraw @s {"text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
+  tellraw @s [{"text":"Do you really want to deinstall the No Lag Datapack?\n","color":"red"},{"text":"[ No ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/menu"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":"  [ Yes ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:core/uninstall/check"},"hoverEvent":{"action":"show_text","contents":"*click*"}}]
+  tellraw @s {"text":""}
+}
 
 function command_feedback_true {
   gamerule sendCommandFeedback true
