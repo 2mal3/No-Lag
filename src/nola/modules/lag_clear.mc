@@ -4,7 +4,7 @@ import ../../../macros/log.mcm
 function main {
   scoreboard players remove %lagClearTime nola.data 1
 
-  execute if score %lagClearTime nola.data matches 1 run tellraw @a[tag=!global.ignore] [{"text":"In ","color":"gray"},{"text":"1 minute","color":"white"},{"text":" all unneeded entities will be deleted.","color":"gray"}]
+  execute if score %lagClearTime nola.data matches 1 if score $lagClearMessages nola.data matches 1 run tellraw @a[tag=!global.ignore] [{"text":"In ","color":"gray"},{"text":"1 minute","color":"white"},{"text":" all unneeded entities will be deleted.","color":"gray"}]
   execute if score %lagClearTime nola.data matches 0 run {
     name clear
     log NoLag info server <Execute lag clear>
@@ -32,7 +32,7 @@ function main {
       scoreboard players reset @s nola.data
     }
 
-    tellraw @a[tag=!global.ignore] [{"score":{"name":".temp0","objective":"nola.data","color":"gray"}},{"text":" unneeded entities were deleted.","color":"gray"}]
+    execute if score $lagClearMessages nola.data matches 1 run tellraw @a[tag=!global.ignore] [{"score":{"name":".temp0","objective":"nola.data","color":"gray"}},{"text":" unneeded entities were deleted.","color":"gray"}]
   }
 }
 

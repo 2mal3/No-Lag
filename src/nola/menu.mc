@@ -76,6 +76,13 @@ function config {
   execute if score $lagClearTime nola.config matches 3.. run {
     tellraw @s [{"text":"Lag clear time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time interval in which a lag clear is executed (in minutes)."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/lag_clear_time/remove"}},{"score":{"name":"$lagClearTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/lag_clear_time/add"}}]
   }
+  # lagClearMessages
+  execute if score $lagClearMessages nola.config matches 0 run { 
+    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear_messages/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear messages","color":"gold","hoverEvent":{"action":"show_text","contents":"Messages are sent to all players when a lag clear is about to be executed or has been executed."}}]
+  }
+  execute if score $lagClearMessages nola.config matches 1 run {
+    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear_messages/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear messages","color":"gold","hoverEvent":{"action":"show_text","contents":"Messages are sent to all players when a lag clear is about to be executed or has been executed."}}]
+  }
 
   # xpMerge
   execute if score $xpMerge nola.config matches 0 run { 
@@ -139,6 +146,19 @@ function config {
 
 
 dir buttons {
+  dir lag_clear_messages {
+    function on {
+      function nola:menu/click
+      scoreboard players set $lagClearMessages nola.config 1
+      function nola:menu/config
+    }
+    function off {
+      function nola:menu/click
+      scoreboard players set $lagClearMessages nola.config 0
+      function nola:menu/config
+    }
+  }
+
   dir max_entity_cramming {
     function add {
       function nola:menu/click
