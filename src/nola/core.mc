@@ -163,7 +163,7 @@ dir uninstall {
     setblock -30000000 59 1601 minecraft:repeating_command_block{auto: 1b, Command:"/tag @e[tag=nola.noAI] remove nola.noAI"}
 
     # Sends an uninstallation message to all players
-    tellraw @a [{"text":"2mal3's Tweaks v3.0.0 by 2mal3 was successfully uninstalled."}]
+    tellraw @a [{"text":"No Lag Datapack v3.0.0 by 2mal3 was successfully uninstalled."}]
 
     # Disables the datapack
     datapack disable "file/No-Lag-Datapack"
