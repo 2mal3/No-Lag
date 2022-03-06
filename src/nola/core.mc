@@ -19,7 +19,7 @@ dir loop {
       # Anti tnt spam
       execute if score $antiTNTSpam nola.config matches 1 if entity @s[type=minecraft:tnt,tag=!nola.processed] at @s run function nola:modules/anti_tnt_spam/main
       # No ai
-      execute if score $noAI nola.config matches 1 if entity @s[type=!minecraft:villager,type=!#nola:modules/no_ai/ignore,team=!thisTeamDoesNotExist,name=!"ignore",tag=!nola.noAI.ignore] at @s run function nola:modules/no_ai/distance
+      execute if score $noAI nola.config matches 1 if entity @s[type=!minecraft:villager,type=!#nola:modules/no_ai/ignore,team=!thisTeamDoesNotExist,name=!"ignore"] at @s run function nola:modules/no_ai/distance
       execute if score $noAI nola.config matches 0 if entity @s[tag=nola.noAI] run function nola:modules/no_ai/disable
       tag @s remove nola.noAI.ignore
     }
