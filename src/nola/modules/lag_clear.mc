@@ -12,7 +12,7 @@ function main {
 
     # Count how many unneded entities got deleted
     scoreboard players set .temp0 nola.data 0
-    execute as @e[tag=!global.ignore,tag=!global.ignore.kill,type=!#nola:modules/lag_clear/ignore,name=!"ignore"] at @s run {
+    execute as @e[tag=!global.ignore,tag=!global.ignore.kill,tag=!smithed.block,tag=!smithed.strict,tag=!smithed.entity,type=!#nola:modules/lag_clear/ignore,name=!"ignore"] at @s run {
       scoreboard players set @s nola.data 0
 
       # Finds which entities are to be deleted

@@ -13,7 +13,7 @@ dir loop {
     }
 
     # Main entity loops
-    execute as @e[tag=!global.ignore] at @s run {
+    execute as @e[tag=!global.ignore,tag=!smithed.block,tag=!smithed.strict,tag=!smithed.entity] at @s run {
       # Xp merging
       execute if score $xpMerge nola.config matches 1 if entity @s[type=minecraft:experience_orb] run function nola:modules/xp_merge/main
       # Anti tnt spam
@@ -28,7 +28,7 @@ dir loop {
   clock 60s {
     name minute
 
-    execute as @e[tag=!global.ignore] run {
+    execute as @e[tag=!global.ignore,tag=!smithed.block,tag=!smithed.strict,tag=!smithed.entity] run {
       # Faster item despawn
       execute if score $itemDespawn nola.config matches 1 if entity @s[type=minecraft:item] run function nola:modules/item_despawn/main
       # Farm animales no collision
