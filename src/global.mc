@@ -23,7 +23,7 @@ advancement 2mal3 {
     "description": "",
     "icon": {
       "item": "minecraft:player_head",
-      "nbt": "{SkullOwner: '2mal3'}"
+      "nbt": "{SkullOwner: \"2mal3\"}"
     },
     "show_toast": false,
     "announce_to_chat": false
