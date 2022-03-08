@@ -46,9 +46,10 @@ function load {
 
   scoreboard objectives add nola.data dummy
 
-  scoreboard players set %installed nola.data 0
-  # Initializes the datapack at the first startup or new version
+  # scoreboard players set %installed nola.data 0
+  # Initializes the datapack at the first startup
   execute unless score %installed nola.data matches 1 run {
+    name install
     log NoLag info server <Datapack installed>
     scoreboard players set %installed nola.data 1
 
@@ -85,11 +86,12 @@ function load {
     scoreboard players set $xpMerge nola.config 1
 
     schedule 4s replace {
-      tellraw @a [{"text":"No Lag Datapack v3.0.0 by 2mal3 was installed!","color":"blue"}]
+      tellraw @a [{"text":"No Lag Datapack v3.0.0 by 2mal3 was installed!","color":"green"}]
     }
   }
+  # Updates the datapck
   execute if score %installed nola.data matches 1 unless score $version nola.data matches 030000 run {
-    log NoLag info server <Updated datapack>
+    log NoLag info server <Update datapack>
     scoreboard players set $version nola.data 030000
   }
 }
@@ -138,7 +140,7 @@ advancement nola {
 dir uninstall {
   # Tests if command blocks are enabled to avoid errors
   function check {
-    tellraw @a [{"text":"Uninstalling datapack ..."}]
+    tellraw @a {"text":"Uninstalling datapack ...","color": "green"}
 
     execute in minecraft:overworld run sequence {
       setblock -30000000 58 1601 minecraft:repeating_command_block{auto: 1b, Command: "/scoreboard players set %commandBlock nola.data 1"}
@@ -165,7 +167,7 @@ dir uninstall {
     setblock -30000000 59 1601 minecraft:repeating_command_block{auto: 1b, Command:"/tag @e[tag=nola.noAI] remove nola.noAI"}
 
     # Sends an uninstallation message to all players
-    tellraw @a [{"text":"No Lag Datapack v3.0.0 by 2mal3 was successfully uninstalled."}]
+    tellraw @a {"text":"No Lag Datapack v3.0.0 by 2mal3 was successfully uninstalled.","color":"green"}
 
     # Disables the datapack
     datapack disable "file/No-Lag-Datapack"
