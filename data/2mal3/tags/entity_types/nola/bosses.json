@@ -1,8 +1,0 @@
-{
-	"required": false,
-	"values": [
-		"minecraft:ender_dragon",
-		"minecraft:wither",
-		"minecraft:elder_guardian"
-	]
-}

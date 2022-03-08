@@ -1,0 +1,22 @@
+{
+  "languages": [
+    {
+      "name": "lang-mc/stable",
+      "remote": {
+        "type": "github",
+        "owner": "mc-build"
+      }
+    },
+    {
+      "name": "lang-mc-extra/stable",
+      "remote": {
+        "type": "github",
+        "owner": "mc-build"
+      },
+      "load_after": [
+        "lang-mc"
+      ]
+    }
+  ],
+  "libs": []
+}

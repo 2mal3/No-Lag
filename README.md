@@ -16,7 +16,7 @@ Thereby, the datapack was designed with performance in mind, so that it has almo
 By default, all farm animals, bosses, decorative entities, pets, near entities and entities with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
 Additionally, all entities that are within 64 blocks of an armor stand named **ignore** will not be frozen.                       
 
-All settings and actions can be done via the in game GUI. To open it, you just have to type command `/function #2mal3:nola/menu` into the chat (only works with command permissions).
+All settings and actions can be done via the in game GUI. To open it, you just have to type command `/function #nola:menu` into the chat (only works with command permissions).
 
 ## 📝 Methods to reduce lag:
 - Entities that are too far away from a player are frozen
@@ -28,6 +28,7 @@ All settings and actions can be done via the in game GUI. To open it, you just h
 - If too many entities of the same type are too close to each other, all other entities of the species will be deleted.
 
 ## Nice things others have said about the datapack:
+- _"cool ty dude"_: zBestguy
 - _"Hi! I've been using this datapack for a couple of months on a aternos server (with paper), and it works perfectly well !"_: Expert MinerBenBepBob
 - _"dam it works fuking good, you saved me and my friends in our moded survival"_: SticksS_
 - _"Highly Recommended."_: Volt_Lightwave
