@@ -59,7 +59,7 @@ function load {
     scoreboard objectives add nola.itemDespawnTime dummy
     # Teams
     team add nola.noCollision
-    team modify nola.noCollision collisionRule pushOtherTeams
+    team modify nola.noCollision collisionRule pushOwnTeam
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data 030000
 
