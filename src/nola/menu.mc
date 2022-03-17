@@ -7,6 +7,8 @@ function menu {
   tellraw @s [{"text":"No Lag Datapack v3.0.0","bold":true,"color":"gold"},{"text":"\n------------------------\n","color":"gold"}]
 
   # execute if score $tps_test nola.config matches 1 run tellraw @s [{"text":"\u26a1 TPS last 5m, 10m, 15m: ","color":"gold"},{"score":{"name":".tps_0","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_1","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_2","objective":"nola.data"},"color":"red"}]
+  execute store result score .temp0 nola.data run execute if entity @a
+  tellraw @s [{"text":"\u263a Online players: ","color":"gold"},{"score":{"name":".temp0","objective":"nola.data"},"color":"red"}]
   execute store result score .temp0 nola.data run execute if entity @e
   tellraw @s [{"text":"\u2666 Entities in the world: ","color":"gold"},{"score":{"name":".temp0","objective":"nola.data"},"color":"red"}]
   execute store result score .temp0 nola.data run execute if entity @e[tag=nola.noAI]
