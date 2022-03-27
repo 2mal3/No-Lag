@@ -37,6 +37,10 @@ function config {
   tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
   tellraw @s [{"text":"No Lag Datapack Config","bold":true,"color":"gold"}]
   tellraw @s {"text": "-------------------------", "color": "yellow"}
+
+  # Presets
+  tellraw @s [{"text": " §c[§6High Performance§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/high"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text": " §c[§6Default§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/default"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text": " §c[§6Less Impact§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/low"},"hoverEvent":{"action":"show_text","contents":"*click*"}}]
+
   tellraw @s {"text": ""}
 
   # noAI
@@ -148,6 +152,65 @@ function config {
 
 
 dir buttons {
+  dir presets {
+    function high {
+      gamerule maxEntityCramming 4
+      scoreboard players set $antiTNTSpam nola.config 1
+      scoreboard players set $itemDespawn nola.config 1
+      scoreboard players set $itemDespawnTime nola.config 2
+      scoreboard players set $lagClear nola.config 1
+      scoreboard players set $lagClearTime nola.config 20
+      scoreboard players set %lagClearTime nola.data 20
+      scoreboard players set $lagClearMessages nola.data 1
+      scoreboard players set $noAI nola.config 1
+      scoreboard players set $noAIDistance nola.config 42
+      scoreboard players set $noAIAreaIgnorer nola.config 1
+      scoreboard players set $noCollision nola.config 1
+      scoreboard players set $xpMerge nola.config 1
+      scoreboard players set $tpsTest nola.config 0
+
+      function nola:menu/config
+    }
+
+    function default {
+      gamerule maxEntityCramming 4
+      scoreboard players set $antiTNTSpam nola.config 0
+      scoreboard players set $itemDespawn nola.config 1
+      scoreboard players set $itemDespawnTime nola.config 3
+      scoreboard players set $lagClear nola.config 1
+      scoreboard players set $lagClearTime nola.config 30
+      scoreboard players set %lagClearTime nola.data 30
+      scoreboard players set $lagClearMessages nola.data 1
+      scoreboard players set $noAI nola.config 1
+      scoreboard players set $noAIDistance nola.config 42
+      scoreboard players set $noAIAreaIgnorer nola.config 1
+      scoreboard players set $noCollision nola.config 1
+      scoreboard players set $xpMerge nola.config 1
+      scoreboard players set $tpsTest nola.config 0
+
+      function nola:menu/config
+    }
+
+    function low {
+      gamerule maxEntityCramming 8
+      scoreboard players set $antiTNTSpam nola.config 0
+      scoreboard players set $itemDespawn nola.config 1
+      scoreboard players set $itemDespawnTime nola.config 3
+      scoreboard players set $lagClear nola.config 0
+      scoreboard players set $lagClearTime nola.config 30
+      scoreboard players set %lagClearTime nola.data 30
+      scoreboard players set $lagClearMessages nola.data 0
+      scoreboard players set $noAI nola.config 1
+      scoreboard players set $noAIDistance nola.config 64
+      scoreboard players set $noAIAreaIgnorer nola.config 1
+      scoreboard players set $noCollision nola.config 1
+      scoreboard players set $xpMerge nola.config 0
+      scoreboard players set $tpsTest nola.config 0
+
+      function nola:menu/config
+    }
+  }
+
   dir lag_clear_messages {
     function on {
       function nola:menu/click
