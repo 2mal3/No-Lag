@@ -213,12 +213,10 @@ dir buttons {
 
   dir lag_clear_messages {
     function on {
-      function nola:menu/click
       scoreboard players set $lagClearMessages nola.config 1
       function nola:menu/config
     }
     function off {
-      function nola:menu/click
       scoreboard players set $lagClearMessages nola.config 0
       function nola:menu/config
     }
@@ -226,13 +224,11 @@ dir buttons {
 
   dir max_entity_cramming {
     function add {
-      function nola:menu/click
       scoreboard players add .temp0 nola.data 1
       function nola:menu/buttons/max_entity_cramming/set
       function nola:menu/config
     }
     function remove {
-      function nola:menu/click
       scoreboard players remove .temp0 nola.data 1
       function nola:menu/buttons/max_entity_cramming/set
       function nola:menu/config
@@ -246,12 +242,10 @@ dir buttons {
 
   dir xp_merge {
     function on {
-      function nola:menu/click
       scoreboard players set $xpMerge nola.config 1
       function nola:menu/config
     }
     function off {
-      function nola:menu/click
       scoreboard players set $xpMerge nola.config 0
       function nola:menu/config
     }
@@ -259,12 +253,10 @@ dir buttons {
 
   dir no_collision {
     function on {
-      function nola:menu/click
       scoreboard players set $noCollision nola.config 1
       function nola:menu/config
     }
     function off {
-      function nola:menu/click
       scoreboard players set $noCollision nola.config 0
       function nola:menu/config
     }
@@ -272,12 +264,10 @@ dir buttons {
 
   dir no_ai_area_ignorer {
     function on {
-      function nola:menu/click
       scoreboard players set $noAIAreaIgnorer nola.config 1
       function nola:menu/config
     }
     function off {
-      function nola:menu/click
       scoreboard players set $noAIAreaIgnorer nola.config 0
       function nola:menu/config
     }
@@ -285,12 +275,10 @@ dir buttons {
 
   dir no_ai_distance {
     function add {
-      function nola:menu/click
       scoreboard players add $noAIDistance nola.config 22
       function nola:menu/config
     }
     function remove {
-      function nola:menu/click
       scoreboard players remove $noAIDistance nola.config 22
       function nola:menu/config
     }
@@ -298,12 +286,10 @@ dir buttons {
 
   dir no_ai {
     function on {
-      function nola:menu/click
       scoreboard players set $noAI nola.config 1
       function nola:menu/config
     }
     function off {
-      function nola:menu/click
       scoreboard players set $noAI nola.config 0
       function nola:menu/config
     }
@@ -311,12 +297,10 @@ dir buttons {
 
   dir lag_clear_time {
     function add {
-      function nola:menu/click
       scoreboard players add $lagClearTime nola.config 1
       function nola:menu/config
     }
     function remove {
-      function nola:menu/click
       scoreboard players remove $lagClearTime nola.config 1
       function nola:menu/config
     }
@@ -324,12 +308,10 @@ dir buttons {
 
   dir lag_clear {
     function on {
-      function nola:menu/click
       scoreboard players set $lagClear nola.config 1
       function nola:menu/config
     }
     function off {
-      function nola:menu/click
       scoreboard players set $lagClear nola.config 0
       function nola:menu/config
     }
@@ -337,12 +319,10 @@ dir buttons {
 
   dir item_despawn_time {
     function add {
-      function nola:menu/click
       scoreboard players add $itemDespawnTime nola.config 1
       function nola:menu/config
     }
     function remove {
-      function nola:menu/click
       scoreboard players remove $itemDespawnTime nola.config 1
       function nola:menu/config
     }
@@ -350,12 +330,10 @@ dir buttons {
 
   dir anti_tnt_spam {
     function on {
-      function nola:menu/click
       scoreboard players set $antiTNTSpam nola.config 1
       function nola:menu/config
     }
     function off {
-      function nola:menu/click
       scoreboard players set $antiTNTSpam nola.config 0
       function nola:menu/config
     }
@@ -363,12 +341,10 @@ dir buttons {
 
   dir item_despawn {
     function on {
-      function nola:menu/click
       scoreboard players set $itemDespawn nola.config 1
       function nola:menu/config
     }
     function off {
-      function nola:menu/click
       scoreboard players set $itemDespawn nola.config 0
       function nola:menu/config
     }
