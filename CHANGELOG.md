@@ -1,4 +1,16 @@
 
+## Update v3.0.1 (15.4.2022)
+
+### Added:
+ - Config presets
+ - Number of online players in the datapack men
+
+### Fixed:
+ - Player head in the datapack advancement was not displayed correctly
+ - Indicated as compatible with 22w15a
+
+***
+
 ## Update v3.0.0 (8.3.2022)
 
 With this update, the entire datapack has been rewritten in [mc-build](https://github.com/mc-build/mc-build) and almost every module has been upgraded, improved and optimized. In the end, nothing special changes on the surface, but the datapack is now much better optimized, the code has been tidied up and existing features has been improved.

@@ -62,7 +62,7 @@ function load {
     team add nola.noCollision
     team modify nola.noCollision collisionRule pushOwnTeam
     # Set the version in format: xx.xx.xx
-    scoreboard players set $version nola.data 030000
+    scoreboard players set $version nola.data 030001
 
     # Set a forceload, helpful for uninstalling
     forceload add -30000000 1600
@@ -86,13 +86,16 @@ function load {
     scoreboard players set $xpMerge nola.config 1
 
     schedule 4s replace {
-      tellraw @a [{"text":"No Lag Datapack v3.0.0 by 2mal3 was installed!","color":"green"}]
+      tellraw @a [{"text":"No Lag Datapack v3.0.1 by 2mal3 was installed!","color":"green"}]
     }
   }
   # Updates the datapck
-  execute if score %installed nola.data matches 1 unless score $version nola.data matches 030000 run {
-    log NoLag info server <Update datapack>
-    scoreboard players set $version nola.data 030000
+  execute if score %installed nola.data matches 1 unless score $version nola.data matches 030001 run {
+    # v3.0.1
+    execute if score $version nola.data matches 030000 {
+      log NoLag info server <Updated from v3.0.0 to v3.0.1>
+      scoreboard players set $version nola.data 030001
+    }
   }
 }
 
@@ -119,7 +122,7 @@ advancement first_join {
 ## Datapack advancement
 advancement nola {
   "display": {
-    "title": "No Lag v3.0.0",
+    "title": "No Lag v3.0.1",
     "description": "Improves the performance of the world with over 6 different and adjustable methods.",
     "icon": {
       "item": "minecraft:clock"
@@ -167,11 +170,11 @@ dir uninstall {
     setblock -30000000 59 1601 minecraft:repeating_command_block{auto: 1b, Command:"/tag @e[tag=nola.noAI] remove nola.noAI"}
 
     # Sends an uninstallation message to all players
-    tellraw @a {"text":"No Lag Datapack v3.0.0 by 2mal3 was successfully uninstalled.","color":"green"}
+    tellraw @a {"text":"No Lag Datapack v3.0.1 by 2mal3 was successfully uninstalled.","color":"green"}
 
     # Disables the datapack
     datapack disable "file/No-Lag-Datapack"
-    datapack disable "file/No-Lag-Datapack-v3.0.0"
-    datapack disable "file/No-Lag-Datapack-v3.0.0.zip"
+    datapack disable "file/No-Lag-Datapack-v3.0.1"
+    datapack disable "file/No-Lag-Datapack-v3.0.1.zip"
   }
 }

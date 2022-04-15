@@ -4,7 +4,7 @@ function menu {
 
   # Display menu
   tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
-  tellraw @s [{"text":"No Lag Datapack v3.0.0","bold":true,"color":"gold"},{"text":"\n------------------------\n","color":"gold"}]
+  tellraw @s [{"text":"No Lag Datapack v3.0.1","bold":true,"color":"gold"},{"text":"\n------------------------\n","color":"gold"}]
 
   # execute if score $tps_test nola.config matches 1 run tellraw @s [{"text":"\u26a1 TPS last 5m, 10m, 15m: ","color":"gold"},{"score":{"name":".tps_0","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_1","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_2","objective":"nola.data"},"color":"red"}]
   execute store result score .temp0 nola.data run execute if entity @a
@@ -25,7 +25,7 @@ function menu {
   tellraw @s {"text":"\u2709 GitHub Website","color":"aqua","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/No-Lag-Datapack"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
 
   tellraw @s {"text":""}
-  tellraw @s {"text":"\u26a0 Uninstall the datapack \u25b6","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/uninstall"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
+  tellraw @s {"text":"\u26a0 Uninstall datapack \u25b6","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/uninstall"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
   tellraw @s {"text":""}
 }
 
