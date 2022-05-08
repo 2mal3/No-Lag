@@ -32,7 +32,7 @@ function main {
       scoreboard players reset @s nola.data
     }
 
-    execute if score $lagClearMessages nola.data matches 1 run tellraw @a[tag=!global.ignore] [{"score":{"name":".temp0","objective":"nola.data","color":"gray"}},{"text":" unneeded entities were deleted.","color":"gray"}]
+    execute if score $lagClearMessages nola.config matches 1 run tellraw @a[tag=!global.ignore] [{"score":{"name":".temp0","objective":"nola.data","color":"gray"}},{"text":" unneeded entities were deleted.","color":"gray"}]
   }
 }
 

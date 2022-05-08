@@ -78,7 +78,7 @@ function load {
     scoreboard players set $lagClear nola.config 1
     scoreboard players set $lagClearTime nola.config 30
     scoreboard players set %lagClearTime nola.data 30
-    scoreboard players set $lagClearMessages nola.data 1
+    scoreboard players set $lagClearMessages nola.config 1
     scoreboard players set $noAI nola.config 1
     scoreboard players set $noAIDistance nola.config 42
     scoreboard players set $noAIAreaIgnorer nola.config 1
