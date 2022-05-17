@@ -44,9 +44,8 @@ All settings and actions can be done via the in game GUI. To open it, you just h
 - _"that's a cool datapack i've ever seen ngl"_: DavidMinecraftYEET
 
 ## Limitations:
-This datapack reduces the lag percentage. This means that it is most effective when you already have heavy lag. If there are only few lag, the datapack is less useful and you should consider if you need it at all.                                                       
-In general, this datapack is only suitable for survival worlds and only improves the performance of world / server. It does not improve the performance of mods, shaders, datapacks and FPS.                                                                                 
-It is tried to make this datapack compatible with other datapacks, but it cannot be guaranteed that problems can occur in combination with other datapacks.
+The **ONLY** purpose of the datapack is to improve the [TPS](https://minecraft.fandom.com/wiki/Tick), **NOT** the [FPS](https://en.wikipedia.org/wiki/Frame_rate). There may be an FPS improvement in single player mode, but this is more because the computer has to spend less time on other calculations. If you are looking for real FPS improvement, I would recommend [Fabric](https://fabricmc.net/)/[Quilt](https://quiltmc.org/) with  [Sodium](https://modrinth.com/mod/sodium).
+If your server has performance problems, I would also advise you to try [PaperSpigot](https://papermc.io/) or [Fabric](https://fabricmc.net/)/[Quilt](https://quiltmc.org/) with [Lithium](https://modrinth.com/mod/lithium) first, as these are much more powerful than this datapack.
 
 ## Notes:
 - Tested for Fabric and Vanilla in 1.17 and 1.18
