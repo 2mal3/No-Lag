@@ -53,9 +53,11 @@ entities ignore {
   minecraft:area_effect_cloud
   minecraft:axolotl
   minecraft:bee
+  minecraft:chest_minecart
   minecraft:chicken
   minecraft:command_block_minecart
   minecraft:cow
+  minecraft:donkey
   minecraft:elder_guardian
   minecraft:end_crystal
   minecraft:ender_dragon
@@ -66,6 +68,7 @@ entities ignore {
   minecraft:goat
   minecraft:hopper_minecart
   minecraft:horse
+  minecraft:illusioner
   minecraft:iron_golem
   minecraft:item
   minecraft:leash_knot
@@ -75,6 +78,7 @@ entities ignore {
   minecraft:ocelot
   minecraft:painting
   minecraft:panda
+  minecraft:parrot
   minecraft:pig
   minecraft:piglin_brute
   minecraft:player
@@ -84,9 +88,11 @@ entities ignore {
   minecraft:skeleton_horse
   minecraft:snow_golem
   minecraft:tnt_minecart
+  minecraft:trader_llama
   minecraft:trident
   minecraft:turtle
   minecraft:villager
+  minecraft:wandering_trader
   minecraft:wither
   minecraft:wolf
   minecraft:zombie_horse
