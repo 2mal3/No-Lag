@@ -9,14 +9,16 @@ function main {
 }
 
 entities farm_animales {
-  minecraft:cow
-  minecraft:sheep
-  minecraft:mooshroom
-  minecraft:pig
+  minecraft:bee
   minecraft:chicken
-  minecraft:rabbit
-  minecraft:turtle
+  minecraft:donkey
+  minecraft:cow
   minecraft:glow_squid
   minecraft:goat
-  minecraft:bee
+  minecraft:mooshroom
+  minecraft:mule
+  minecraft:pig
+  minecraft:rabbit
+  minecraft:sheep
+  minecraft:turtle
 }
