@@ -1,4 +1,18 @@
 
+## Update v3.0.2 (7.6.2022)
+
+### Changed:
+ - better menu
+ - more detected farm animals
+ - limit version check to 1.18
+
+### Fixes:
+ - missing ignored entities in lag clear
+ - many typos
+ - [Internal] wrong storage location of setting
+
+***
+
 ## Update v3.0.1 (15.4.2022)
 
 ### Added:
