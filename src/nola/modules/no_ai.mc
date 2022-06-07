@@ -47,4 +47,5 @@ entities ignore {
   minecraft:phantom
   minecraft:trader_llama
   minecraft:wandering_trader
+  minecraft:allay
 }
