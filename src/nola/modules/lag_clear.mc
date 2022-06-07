@@ -51,6 +51,7 @@ predicate have_item {
 
 entities ignore {
   minecraft:area_effect_cloud
+  minecraft:allay
   minecraft:axolotl
   minecraft:bee
   minecraft:chest_minecart
@@ -93,6 +94,7 @@ entities ignore {
   minecraft:turtle
   minecraft:villager
   minecraft:wandering_trader
+  minecraft:warden
   minecraft:wither
   minecraft:wolf
   minecraft:zombie_horse
