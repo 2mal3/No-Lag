@@ -17,7 +17,7 @@ With this update, the entire datapack has been rewritten in [mc-build](https://g
 A few things are not yet included, but will be added soon.
 
 ### Added:
- - compatibility with minecarft version 1.18.2
+ - compatibility with minecraft version 1.18.2
  - anti tnt spam module
  - option for disabled collision of farm animals
  - display of the expected performance improvements in the config menu
@@ -170,7 +170,7 @@ Again, just a minor update. It only fixes a few bugs and adds functions for bett
 This is just a small update that mainly fixes the spelling error that entities were written as entities.
 
 ### Changed:
-- Improved performace during inititialization
+- Improved performance during initialization
 
 ### Bug fixes:
 - In many places in the datapack entities were used instead of entities
@@ -196,7 +196,7 @@ Also the datapack menu with the config has been improved and more options for th
 - Small internal code embellishments
 
 ### Bug fixes:
-- In the datapack config the current value of the max entity craming was not displayed
+- In the datapack config the current value of the max entity cramming was not displayed
 - At the setting to distance of entity freezing could be set only 64
 
 ***
@@ -255,7 +255,7 @@ Also the datapack menu with the config has been improved and more options for th
 
 ### Removed:
 - Methods that are triggered by too much lag
-- Limitation for ignited tnts 
+- Limitation for ignited TNTs
 - Language pack
 
 ***

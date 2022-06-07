@@ -372,7 +372,7 @@ function command_feedback_true {
 
 function click {
   playsound minecraft:ui.button.click master @s
-  # Disables command fedback for a short time, so that no disturbing message is displayed
+  # Disables command feedback for a short time, so that no disturbing message is displayed
   gamerule sendCommandFeedback false
   schedule function nola:menu/command_feedback_true 1t replace
 }

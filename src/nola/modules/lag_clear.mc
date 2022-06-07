@@ -10,7 +10,7 @@ function main {
     log NoLag info server <Execute lag clear>
     scoreboard players operation %lagClearTime nola.data = $lagClearTime nola.config
 
-    # Count how many unneded entities got deleted
+    # Count how many unended entities got deleted
     scoreboard players set .temp0 nola.data 0
     execute as @e[tag=!global.ignore,tag=!global.ignore.kill,tag=!smithed.block,tag=!smithed.strict,tag=!smithed.entity,type=!#nola:modules/lag_clear/ignore,name=!"ignore"] at @s run {
       scoreboard players set @s nola.data 0

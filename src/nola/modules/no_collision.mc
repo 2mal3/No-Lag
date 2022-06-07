@@ -8,7 +8,7 @@ function main {
   team join nola.noCollision @s
 }
 
-entities farm_animales {
+entities farm_animals {
   minecraft:bee
   minecraft:chicken
   minecraft:donkey

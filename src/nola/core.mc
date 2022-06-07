@@ -6,7 +6,7 @@ dir loop {
   clock 1s {
     name second
 
-    # Ignore entitys near named armor sands
+    # Ignore entities near named armor sands
     execute if score $noAIAreaIgnorer nola.config matches 1 as @e[type=minecraft:armor_stand,name="ignore"] at @s run {
       tag @e[distance=..64] add nola.noAI.ignore
       particle minecraft:happy_villager ~ ~ ~ 0.2 1 0.2 1 5
@@ -31,8 +31,8 @@ dir loop {
     execute as @e[tag=!global.ignore,tag=!smithed.block,tag=!smithed.strict,tag=!smithed.entity] run {
       # Faster item despawn
       execute if score $itemDespawn nola.config matches 1 if entity @s[type=minecraft:item] run function nola:modules/item_despawn/main
-      # Farm animales no collision
-      execute if score $noCollision nola.config matches 1 if entity @s[type=#nola:modules/no_collision/farm_animales,tag=!nola.processed] run function nola:modules/no_collision/main
+      # Farm animals no collision
+      execute if score $noCollision nola.config matches 1 if entity @s[type=#nola:modules/no_collision/farm_animals,tag=!nola.processed] run function nola:modules/no_collision/main
     }
     # Lag clear
     execute if score $lagClear nola.config matches 1 run function nola:modules/lag_clear/main
@@ -148,7 +148,7 @@ dir uninstall {
     execute in minecraft:overworld run sequence {
       setblock -30000000 58 1601 minecraft:repeating_command_block{auto: 1b, Command: "/scoreboard players set %commandBlock nola.data 1"}
       delay 2t
-      execute if score %commandBlock nola.data matches 0 run log NoLag error server <The uninstallation of the datapack was aborted because command blocks are disabled. Please enable command blocks in the server propeties and try again.>
+      execute if score %commandBlock nola.data matches 0 run log NoLag error server <The uninstallation of the datapack was aborted because command blocks are disabled. Please enable command blocks in the server properties and try again.>
       execute if score %commandBlock nola.data matches 1 run function nola:core/uninstall/uninstall
     }
   }
@@ -164,7 +164,7 @@ dir uninstall {
     # Reset gamerules
     gamerule maxEntityCramming 24
 
-    # Places command blocks that can unfreeze entitys even after the datapack is uninstalled
+    # Places command blocks that can unfreeze entities even after the datapack is uninstalled
     gamerule commandBlockOutput false
     setblock -30000000 60 1601 minecraft:repeating_command_block{auto: 1b, Command:"/execute as @e[tag=nola.noAI] run data merge entity @s {NoAI: 0b, Invulnerable: 0b}"}
     setblock -30000000 59 1601 minecraft:repeating_command_block{auto: 1b, Command:"/tag @e[tag=nola.noAI] remove nola.noAI"}
