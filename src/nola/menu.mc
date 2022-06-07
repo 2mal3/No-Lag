@@ -4,7 +4,8 @@ function menu {
 
   # Display menu
   tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
-  tellraw @s [{"text":"No Lag Datapack v3.0.1","bold":true,"color":"gold"},{"text":"\n------------------------\n","color":"gold"}]
+  tellraw @s [{"text":"   No Lag Datapack v","bold":true,"color":"gold"},{"text": "3","color": "red"},{"text": ".", "color": "gold"},{"text": "0","color": "red"},{"text": ".", "color": "gold"},{"text": "1","color": "red"}]
+  tellraw @s {"text": "                                          ", "strikethrough": true, "color": "yellow"}
 
   # execute if score $tps_test nola.config matches 1 run tellraw @s [{"text":"\u26a1 TPS last 5m, 10m, 15m: ","color":"gold"},{"score":{"name":".tps_0","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_1","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_2","objective":"nola.data"},"color":"red"}]
   execute store result score .temp0 nola.data run execute if entity @a
@@ -35,11 +36,8 @@ function config {
 
   # Display config menu
   tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
-  tellraw @s [{"text":"No Lag Datapack Config","bold":true,"color":"gold"}]
-  tellraw @s {"text": "-------------------------", "color": "yellow"}
-
-  # Presets
-  tellraw @s [{"text": " §c[§6High Performance§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/high"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text": " §c[§6Default§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/default"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text": " §c[§6Less Impact§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/low"},"hoverEvent":{"action":"show_text","contents":"*click*"}}]
+  tellraw @s [{"text":"               No Lag Config","bold":true,"color":"gold"}]
+  tellraw @s {"text": "                                                                ", "strikethrough": true, "color": "yellow"}
 
   tellraw @s {"text": ""}
 
@@ -143,9 +141,14 @@ function config {
   execute if score $noCollision nola.config matches 1 run {
     tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_collision/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Disabled animal collision","color":"gold","hoverEvent":{"action":"show_text","contents":"Disables the collision of farm animals.\n§7Performance Improvement: §6Medium"}}]
   }
+
+  tellraw @s {"text": ""}
+
+  # Presets
+  tellraw @s [{"text": "§c[§6High Performance§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/high"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text": " §c[§6Default§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/default"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text": " §c[§6Less Impact§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/low"},"hoverEvent":{"action":"show_text","contents":"*click*"}}]
   
   # Button to main menu
-  tellraw @s {"text":""}
+  tellraw @s {"text": "                                                                ", "strikethrough": true, "color": "yellow"}
   tellraw @s {"text":"\u25c0 Back","color":"red","clickEvent":{"action":"run_command","value":"/function nola:menu/menu"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
   tellraw @s {"text":""}
 }
