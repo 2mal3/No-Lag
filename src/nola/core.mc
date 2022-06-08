@@ -92,15 +92,18 @@ function load {
   # Updates the datapack
   execute if score %installed nola.data matches 1 unless score $version nola.data matches 030002 run {
     # v3.0.1
-    execute if score $version nola.data matches 030000 {
+    execute if score $version nola.data matches 030000 run {
       log NoLag info server <Updated from v3.0.0 to v3.0.1>
       scoreboard players set $version nola.data 030001
     }
 
     # v3.0.2
-    execute if score $version nola.data matches 030001 {
+    execute if score $version nola.data matches 030001 run {
       log NoLag info server <Updated from v3.0.1 to v3.0.2>
       scoreboard players set $version nola.data 030002
+
+      scoreboard players reset $lagClearMessages nola.data
+      scoreboard players set $lagClearMessages nola.config 1
     }
   }
 }
