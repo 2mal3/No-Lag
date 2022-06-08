@@ -7,7 +7,7 @@
  - limit version check to 1.18
 
 ### Fixes:
- - missing ignored entities in lag clear
+ - missing ignored entities in lag clear (thanks to [@Rob333](https://www.planetminecraft.com/member/rob333/))
  - many typos
  - [Internal] wrong storage location of setting
 
