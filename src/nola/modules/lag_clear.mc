@@ -15,14 +15,21 @@ function main {
     execute as @e[tag=!global.ignore,tag=!global.ignore.kill,tag=!smithed.block,tag=!smithed.strict,tag=!smithed.entity,type=!#nola:modules/lag_clear/ignore,name=!"ignore"] at @s run {
       scoreboard players set @s nola.data 0
 
-      # Finds which entities are to be deleted
+      ## Finds which entities are to be deleted
+      # Prevent deletion if near player
       execute if entity @p[distance=..45] run scoreboard players set @s nola.data 1
+      # Prevent deletion if it has a name
       execute if data entity @s CustomName run scoreboard players set @s nola.data 1
+      # Prevent deletion if its a tamed pet
+      execute if data entity @s Owner run scoreboard players set @s nola.data 1
+
       scoreboard players set @s[scores={nola.data=0},type=!minecraft:armor_stand,type=!minecraft:glow_item_frame,type=!minecraft:item_frame] nola.data 2
+      # Delete item frame if it has no items
       scoreboard players set @s[scores={nola.data=0},type=#nola:modules/lag_clear/item_frame,predicate=!nola:modules/lag_clear/have_item] nola.data 2
+      # Delete armor stand if it has no items
       execute if entity @s[scores={nola.data=0},type=minecraft:armor_stand] unless data entity @s ArmorItems.[0].id unless data entity @s ArmorItems.[1].id unless data entity @s ArmorItems.[2].id unless data entity @s ArmorItems.[3].id run scoreboard players set @s nola.data 2
 
-      # Delete entities
+      # Delete selected entities
       execute if score @s nola.data matches 2 run {
         scoreboard players add .temp0 nola.data 1
         tp @s ~ -1000 ~
