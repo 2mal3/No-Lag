@@ -189,7 +189,6 @@ dir uninstall {
 
     # Disables the datapack
     datapack disable "file/No-Lag-Datapack"
-    datapack disable "file/No-Lag-Datapack-v3.0.3"
-    datapack disable "file/No-Lag-Datapack-v3.0.3.zip"
+    datapack disable "file/No-Lag-Datapack.zip"
   }
 }
