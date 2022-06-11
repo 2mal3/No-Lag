@@ -1,4 +1,17 @@
 
+## Update v3.0.3 (11.6.2022)
+
+### Changed:
+ - support for 1.19 (thanks to [@Rob333](https://www.planetminecraft.com/member/rob333/))
+ - ugly dot removed from lag clear messages
+
+### Fixed:
+ - broken datapack update
+ - pets with owners get deleted by the lag clear
+ - typos
+
+***
+
 ## Update v3.0.2 (7.6.2022)
 
 ### Changed:

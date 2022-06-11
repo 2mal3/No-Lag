@@ -4,7 +4,7 @@ function menu {
 
   # Display menu
   tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
-  tellraw @s [{"text":"   No Lag Datapack v","bold":true,"color":"gold"},{"text": "3","color": "red"},{"text": ".", "color": "gold"},{"text": "0","color": "red"},{"text": ".", "color": "gold"},{"text": "2","color": "red"}]
+  tellraw @s [{"text":"   No Lag Datapack v","bold":true,"color":"gold"},{"text": "3","color": "red"},{"text": ".", "color": "gold"},{"text": "0","color": "red"},{"text": ".", "color": "gold"},{"text": "3","color": "red"}]
   tellraw @s {"text": "                                          ", "strikethrough": true, "color": "yellow"}
 
   # execute if score $tps_test nola.config matches 1 run tellraw @s [{"text":"\u26a1 TPS last 5m, 10m, 15m: ","color":"gold"},{"score":{"name":".tps_0","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_1","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_2","objective":"nola.data"},"color":"red"}]

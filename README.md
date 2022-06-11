@@ -1,5 +1,5 @@
 # No-Lag-Datapack
-![release](https://img.shields.io/github/v/release/2mal3/No-Lag-Datapack?style=flat-square) ![version](https://img.shields.io/badge/Minecraft-1.18-orange?style=flat-square) ![downloads](https://img.shields.io/github/downloads/2mal3/No-Lag-Datapack/total?style=flat-square)
+![release](https://img.shields.io/github/v/release/2mal3/No-Lag-Datapack?style=flat-square) ![version](https://img.shields.io/badge/Minecraft-1.19-orange?style=flat-square) ![downloads](https://img.shields.io/github/downloads/2mal3/No-Lag-Datapack/total?style=flat-square)
 
 This datapack improves and optimizes the performance of the minecraft world to ensure a good gaming experience.             
 To achieve this, this datapack uses over 6 efficient methods, more than similar datapacks that use only a few methods.       
@@ -48,8 +48,9 @@ The **ONLY** purpose of the datapack is to improve the [TPS](https://minecraft.f
 If your server has performance problems, I would also advise you to try [PaperSpigot](https://papermc.io/) or [Fabric](https://fabricmc.net/)/[Quilt](https://quiltmc.org/) with [Lithium](https://modrinth.com/mod/lithium) first, as these are much more powerful than this datapack.
 
 ## Notes:
-- Tested for Fabric and Vanilla in 1.17 and 1.18
+- Tested for Fabric and Vanilla in 1.19
 - Not tested with Forge, Bukkti, Spigot and PaperSpigot but probably don't work
 - To uninstall, simply click in the datapack menu on **Uninstall this datapack** and then remove the datapack from the worlds folder
 - The datapack should be compatible with other datapacks that follow the [datapack conventions](https://mc-datapacks.github.io/en/). With others, problems may occur
+- The datapack was created with [mc-build](https://github.com/mc-build/mc-build).
 - The datapack should not create any lag by itself
