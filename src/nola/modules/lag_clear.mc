@@ -98,6 +98,7 @@ entities ignore {
   minecraft:trident
   minecraft:turtle
   minecraft:villager
+  minecraft:vindicator
   minecraft:wandering_trader
   minecraft:warden
   minecraft:wither
