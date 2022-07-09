@@ -4,7 +4,7 @@ function menu {
 
   # Display menu
   tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
-  tellraw @s [{"text":"   No Lag Datapack v","bold":true,"color":"gold"},{"text": "3","color": "red"},{"text": ".", "color": "gold"},{"text": "0","color": "red"},{"text": ".", "color": "gold"},{"text": "3","color": "red"}]
+  tellraw @s [{"text":"   No Lag Datapack v","bold":true,"color":"gold"},{"text": "3","color": "red"},{"text": ".", "color": "gold"},{"text": "0","color": "red"},{"text": ".", "color": "gold"},{"text": "4","color": "red"}]
   tellraw @s {"text": "                                          ", "strikethrough": true, "color": "yellow"}
 
   # execute if score $tps_test nola.config matches 1 run tellraw @s [{"text":"\u26a1 TPS last 5m, 10m, 15m: ","color":"gold"},{"score":{"name":".tps_0","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_1","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_2","objective":"nola.data"},"color":"red"}]
@@ -42,7 +42,7 @@ function config {
   tellraw @s {"text": ""}
 
   # noAI
-  execute if score $noAI nola.config matches 0 run { 
+  execute if score $noAI nola.config matches 0 run {
     tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Entity freezing","color":"gold","hoverEvent":{"action":"show_text","contents":"Freezes entities if they are outside a certain distance.\n§7Performance Improvement: §2High"}}]
   }
   execute if score $noAI nola.config matches 1 run {
@@ -59,7 +59,7 @@ function config {
     tellraw @s [{"text":"Freezing distance: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Distance from which entities are frozen."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/no_ai_distance/remove"}},{"score":{"name":"$noAIDistance","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"gray","hoverEvent":{"action":"show_text","contents":""}}]
   }
   # noAIAreaIgnorer
-  execute if score $noAIAreaIgnorer nola.config matches 0 run { 
+  execute if score $noAIAreaIgnorer nola.config matches 0 run {
     tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai_area_ignorer/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Area ignorer","color":"gold","hoverEvent":{"action":"show_text","contents":"Armor stands renamed to ignore block the freezing of all entities near them."}}]
   }
   execute if score $noAIAreaIgnorer nola.config matches 1 run {
@@ -67,7 +67,7 @@ function config {
   }
 
   # lagClear
-  execute if score $lagClear nola.config matches 0 run { 
+  execute if score $lagClear nola.config matches 0 run {
     tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entities in set time intervals.\n§7Performance Improvement: §6Medium"}}]
   }
   execute if score $lagClear nola.config matches 1 run {
@@ -81,7 +81,7 @@ function config {
     tellraw @s [{"text":"Lag clear time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time interval in which a lag clear is executed (in minutes)."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/lag_clear_time/remove"}},{"score":{"name":"$lagClearTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/lag_clear_time/add"}}]
   }
   # lagClearMessages
-  execute if score $lagClearMessages nola.config matches 0 run { 
+  execute if score $lagClearMessages nola.config matches 0 run {
     tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear_messages/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear messages","color":"gold","hoverEvent":{"action":"show_text","contents":"Messages are sent to all players when a lag clear is about to be executed or has been executed."}}]
   }
   execute if score $lagClearMessages nola.config matches 1 run {
@@ -89,7 +89,7 @@ function config {
   }
 
   # xpMerge
-  execute if score $xpMerge nola.config matches 0 run { 
+  execute if score $xpMerge nola.config matches 0 run {
     tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/xp_merge/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Merge xp orbs","color":"gold","hoverEvent":{"action":"show_text","contents":"Near xp orbs will be combined. (may affect Mendig enchantment)\n§7Performance Improvement: §6Medium"}}]
   }
   execute if score $xpMerge nola.config matches 1 run {
@@ -97,7 +97,7 @@ function config {
   }
 
   # itemDespawn
-  execute if score $itemDespawn nola.config matches 0 run { 
+  execute if score $itemDespawn nola.config matches 0 run {
     tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/item_despawn/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items despawn after a specified time.\n§7Performance Improvement: §cLow"}}]
   }
   execute if score $itemDespawn nola.config matches 1 run {
@@ -115,7 +115,7 @@ function config {
   }
 
   # antiTNTSpam
-  execute if score $antiTNTSpam nola.config matches 0 run { 
+  execute if score $antiTNTSpam nola.config matches 0 run {
     tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/anti_tnt_spam/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Anti TNT spam","color":"gold","hoverEvent":{"action":"show_text","contents":"Prevents ignition of large chunks tnt.\n§7Performance Improvement: §cLow"}}]
   }
   execute if score $antiTNTSpam nola.config matches 1 run {
@@ -135,7 +135,7 @@ function config {
   }
 
   # noCollision
-  execute if score $noCollision nola.config matches 0 run { 
+  execute if score $noCollision nola.config matches 0 run {
     tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_collision/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Disabled animal collision","color":"gold","hoverEvent":{"action":"show_text","contents":"Disables the collision of farm animals.\n§7Performance Improvement: §6Medium"}}]
   }
   execute if score $noCollision nola.config matches 1 run {
@@ -146,7 +146,7 @@ function config {
 
   # Presets
   tellraw @s [{"text": "§c[§6High Performance§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/high"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text": " §c[§6Default§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/default"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text": " §c[§6Less Impact§c] ","clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/presets/low"},"hoverEvent":{"action":"show_text","contents":"*click*"}}]
-  
+
   # Button to main menu
   tellraw @s {"text": "                                                                ", "strikethrough": true, "color": "yellow"}
   tellraw @s {"text":"\u25c0 Back","color":"red","clickEvent":{"action":"run_command","value":"/function nola:menu/menu"},"hoverEvent":{"action":"show_text","contents":"*click*"}}

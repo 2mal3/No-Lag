@@ -1,4 +1,11 @@
 
+## Update v3.0.4 (9.7.2022)
+
+### Fixed:
+ - vindicators get deleted by lag clear (thanks to [@Rob333](https://www.planetminecraft.com/member/rob333/))
+
+***
+
 ## Update v3.0.3 (11.6.2022)
 
 ### Changed:
@@ -67,7 +74,7 @@ A few things are not yet included, but will be added soon.
  - [Internal] incomplete entity lists
 
 ### Removed:
- - entity limiter module 
+ - entity limiter module
  - tps test module (temporary)
  - some info in the datapack menu
  - debug option in datapack menu
@@ -77,13 +84,13 @@ A few things are not yet included, but will be added soon.
 
 ## Update v2.4.5 (7.1.2022)
 
-Only a very small update with few changes but finally safely tested for 1.18. 
+Only a very small update with few changes but finally safely tested for 1.18.
 In addition, the 1.16 and 1.17 versions are no longer supported.
 
 ### Changed:
 - Update to 1.18.1
 - Default time for a lag clear extended to 30 minutes
-- [Internal] Entity lists updated 
+- [Internal] Entity lists updated
 
 ***
 
@@ -131,7 +138,7 @@ Just a small update that only improves and fixes a few things and adds an option
 
 ## Update v2.4.2 (22.5.2021)
 
-This update does not bring any big changes, but now the datapack should be compatible with the new minecraft version. 
+This update does not bring any big changes, but now the datapack should be compatible with the new minecraft version.
 
 ### Added:
 - Armor stands and item frames without items are now also deleted from lag clears.
@@ -161,7 +168,7 @@ For some time now a somewhat larger update with new features.
 Besides a few improvements and bug fixes this update brings an automatic TPS test. This monitors the TPS all the time in the background, so you always know how much it lags.
 In addition, the number of deleted entities is now also written in the message of a lag clear.
 
-Due to some internal code changes, all settings are unfortunately reset to the beginning. 
+Due to some internal code changes, all settings are unfortunately reset to the beginning.
 
 ### Added:
 - Optional auto tps test
@@ -201,7 +208,7 @@ This is just a small update that mainly fixes the spelling error that entities w
 
 ### Bug fixes:
 - In many places in the datapack entities were used instead of entities
-- When simply replacing the datapack file after a datapack update resulted in no new things were created 
+- When simply replacing the datapack file after a datapack update resulted in no new things were created
 
 ***
 
@@ -276,7 +283,7 @@ Also the datapack menu with the config has been improved and more options for th
 
 ### Changed:
 - Completely new and 20x more efficient code
-- Improved compatibility with other Datapacks 
+- Improved compatibility with other Datapacks
 - Improved Xp combine
 - Less annoying lag clear messages
 
