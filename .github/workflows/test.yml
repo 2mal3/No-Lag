@@ -1,0 +1,13 @@
+name: Check JSON
+
+on:
+  push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: json-lint
+        uses: ocular-d/json-linter@0.0.2
