@@ -20,5 +20,5 @@ jobs:
       - name: Check minecraft commands
         uses: mcbeet/check-commands@v1
         with:
-          source: /home/runner/work/test/test
+          source: /home/runner/work/No-Lag-Datapack/No-Lag-Datapack
           minecraft: "1.19"
