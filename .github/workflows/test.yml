@@ -21,4 +21,4 @@ jobs:
         uses: mcbeet/check-commands@v1
         with:
           source: /home/runner/work/test/test
-          minecraft: "1.19""
+          minecraft: "1.19"
