@@ -27,7 +27,7 @@ function main {
       # Delete item frame if it has no items
       scoreboard players set @s[scores={nola.data=0},type=#nola:modules/lag_clear/item_frame,predicate=!nola:modules/lag_clear/have_item] nola.data 2
       # Delete armor stand if it has no items
-      execute if entity @s[scores={nola.data=0},type=minecraft:armor_stand] unless data entity @s ArmorItems.[0].id unless data entity @s ArmorItems.[1].id unless data entity @s ArmorItems.[2].id unless data entity @s ArmorItems.[3].id run scoreboard players set @s nola.data 2
+      execute if entity @s[scores={nola.data=0},type=minecraft:armor_stand] unless data entity @s ArmorItems[0].id unless data entity @s ArmorItems[1].id unless data entity @s ArmorItems[2].id unless data entity @s ArmorItems[3].id run scoreboard players set @s nola.data 2
 
       # Delete selected entities
       execute if score @s nola.data matches 2 run {
