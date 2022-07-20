@@ -4,7 +4,7 @@ on:
   push
 
 jobs:
-  test:
+  mc-commands:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,3 +22,21 @@ jobs:
         with:
           source: /home/runner/work/No-Lag-Datapack/No-Lag-Datapack
           minecraft: "1.19"
+
+  json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+
+      - name: Install mc-build
+        run: npm i -g mc-build
+      - name: Run mc-build
+        run: mcb -build
+
+      - name: Install jsonlint-cli
+        run: npm install -g jsonlint-cli
+      - name: Lint json files
+        run: find . -name "*.json" | xargs jsonlint-cli
