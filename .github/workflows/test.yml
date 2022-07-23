@@ -1,7 +1,9 @@
 name: Test
 
 on:
-  push
+  push:
+    paths:
+      - "**.mc"
 
 jobs:
   mc-commands:
