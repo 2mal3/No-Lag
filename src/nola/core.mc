@@ -63,6 +63,8 @@ function load {
     team modify nola.noCollision collisionRule pushOwnTeam
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data 030004
+    # Set variables
+    scoreboard players set $300 nola.data 300
 
     # Set a forceload, helpful for uninstalling
     forceload add -30000000 1600
@@ -84,6 +86,7 @@ function load {
     scoreboard players set $noAIAreaIgnorer nola.config 1
     scoreboard players set $noCollision nola.config 1
     scoreboard players set $xpMerge nola.config 1
+    scoreboard players set $tpsTest nola.config 0
 
     schedule 4s replace {
       tellraw @a [{"text":"No Lag Datapack v3.0.4 by 2mal3 was installed!","color":"green"}]

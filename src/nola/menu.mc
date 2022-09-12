@@ -7,7 +7,7 @@ function menu {
   tellraw @s [{"text":"   No Lag Datapack v","bold":true,"color":"gold"},{"text": "3","color": "red"},{"text": ".", "color": "gold"},{"text": "0","color": "red"},{"text": ".", "color": "gold"},{"text": "4","color": "red"}]
   tellraw @s {"text": "                                          ", "strikethrough": true, "color": "yellow"}
 
-  # execute if score $tps_test nola.config matches 1 run tellraw @s [{"text":"\u26a1 TPS last 5m, 10m, 15m: ","color":"gold"},{"score":{"name":".tps_0","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_1","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":".tps_2","objective":"nola.data"},"color":"red"}]
+  execute if score $tpsTest nola.config matches 1 run tellraw @s [{"text":"\u26a1 TPS last 5m, 10m, 15m: ","color":"gold"},{"score":{"name":"%tps0","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":"%tps1","objective":"nola.data"},"color":"red"},{"text":" "},{"score":{"name":"%tps2","objective":"nola.data"},"color":"red"}]
   execute store result score .temp0 nola.data run execute if entity @a
   tellraw @s [{"text":"\u263a Online players: ","color":"gold"},{"score":{"name":".temp0","objective":"nola.data"},"color":"red"}]
   execute store result score .temp0 nola.data run execute if entity @e
@@ -114,6 +114,14 @@ function config {
     tellraw @s [{"text":"Item despawn time: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Time after items are deleted in minutes."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/item_despawn_time/remove"}},{"score":{"name":"$itemDespawnTime","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"gray","hoverEvent":{"action":"show_text","contents":""}}]
   }
 
+  # tps test
+  execute if score $tpsTest nola.config matches 0 run {
+    tellraw @s [{"text":"[ ❌ ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/tps_test/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Tps Test","color":"gold","hoverEvent":{"action":"show_text","contents":"Monitors the server tps and displays it on the dashboard."}}]
+  }
+  execute if score $tpsTest nola.config matches 1 run {
+    tellraw @s [{"text":"[ ✔ ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/tps_test/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Tps Test","color":"gold","hoverEvent":{"action":"show_text","contents":"Monitors the server tps and displays it on the dashboard."}}]
+  }
+
   # antiTNTSpam
   execute if score $antiTNTSpam nola.config matches 0 run {
     tellraw @s [{"text":"[ ❌ ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/anti_tnt_spam/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Anti TNT spam","color":"gold","hoverEvent":{"action":"show_text","contents":"Prevents ignition of large chunks tnt.\n§7Performance Improvement: §cLow"}}]
@@ -150,7 +158,6 @@ function config {
   # Button to main menu
   tellraw @s {"text": "                                                                ", "strikethrough": true, "color": "yellow"}
   tellraw @s {"text":"\u25c0 Back","color":"red","clickEvent":{"action":"run_command","value":"/function nola:menu/menu"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
-  tellraw @s {"text":""}
 }
 
 
@@ -210,6 +217,19 @@ dir buttons {
       scoreboard players set $xpMerge nola.config 0
       scoreboard players set $tpsTest nola.config 0
 
+      function nola:menu/config
+    }
+  }
+
+  dir tps_test {
+    function on {
+      scoreboard players set $tpsTest nola.config 1
+      function nola:modules/tps_test/start
+      function nola:menu/config
+    }
+    function off {
+      scoreboard players set $tpsTest nola.config 0
+      schedule clear nola:modules/tps_test/clock
       function nola:menu/config
     }
   }
