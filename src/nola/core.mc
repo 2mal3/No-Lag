@@ -123,7 +123,7 @@ function load {
 
 ## First join
 function first_join {
-  ## Warns the player if he uses a not supported server software or minecraft version
+  # Warns the player if he uses a not supported server software or minecraft version
   execute store result score .temp0 nola.data run data get entity @s DataVersion
   execute unless score .temp0 nola.data matches 3105.. run tellraw @s [{"text":"[","color":"gray"},{"text":"NoLag","color":"gold"},{"text":"/","color":"gray"},{"text":"WARN","color":"gold"},{"text": "/","color": "gray"},{"text": "Server","color": "gold"},{"text":"]: ","color":"gray"},{"text":"This Minecraft version is not supported by the datapack. Please use the 1.19.x to prevent errors.","color":"gold"}]
 }
