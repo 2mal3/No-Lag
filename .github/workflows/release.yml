@@ -25,7 +25,7 @@ jobs:
         with:
           filename: "Natural-Disaster-Datapack.zip"
           type: "zip"
-          exclusions: "*.git* /*macros/* /*src/* /*.mcproject/* config.json .gitignore"
+          path: "data  pack.mcmeta pack.png LICENSE.txt README.md CHANGELOG.md"
 
       - name: Create release
         uses: softprops/action-gh-release@v1
