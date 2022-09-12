@@ -43,10 +43,10 @@ function config {
 
   # noAI
   execute if score $noAI nola.config matches 0 run {
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Entity freezing","color":"gold","hoverEvent":{"action":"show_text","contents":"Freezes entities if they are outside a certain distance.\n§7Performance Improvement: §2High"}}]
+    tellraw @s [{"text":"[ ❌ ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Entity freezing","color":"gold","hoverEvent":{"action":"show_text","contents":"Freezes entities if they are outside a certain distance.\n§7Performance Improvement: §2High"}}]
   }
   execute if score $noAI nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Entity freezing","color":"gold","hoverEvent":{"action":"show_text","contents":"Freezes entities if they are outside a certain distance.\n§7Performance Improvement: §2High"}}]
+    tellraw @s [{"text":"[ ✔ ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Entity freezing","color":"gold","hoverEvent":{"action":"show_text","contents":"Freezes entities if they are outside a certain distance.\n§7Performance Improvement: §2High"}}]
   }
   # noAIDistance
   execute if score $noAIDistance nola.config matches 42 run {
@@ -60,18 +60,18 @@ function config {
   }
   # noAIAreaIgnorer
   execute if score $noAIAreaIgnorer nola.config matches 0 run {
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai_area_ignorer/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Area ignorer","color":"gold","hoverEvent":{"action":"show_text","contents":"Armor stands renamed to ignore block the freezing of all entities near them."}}]
+    tellraw @s [{"text":"[ ❌ ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai_area_ignorer/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Area ignorer","color":"gold","hoverEvent":{"action":"show_text","contents":"Armor stands renamed to ignore block the freezing of all entities near them."}}]
   }
   execute if score $noAIAreaIgnorer nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai_area_ignorer/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Area ignorer","color":"gold","hoverEvent":{"action":"show_text","contents":"Armor stands renamed to ignore block the freezing of all entities near them."}}]
+    tellraw @s [{"text":"[ ✔ ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_ai_area_ignorer/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Area ignorer","color":"gold","hoverEvent":{"action":"show_text","contents":"Armor stands renamed to ignore block the freezing of all entities near them."}}]
   }
 
   # lagClear
   execute if score $lagClear nola.config matches 0 run {
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entities in set time intervals.\n§7Performance Improvement: §6Medium"}}]
+    tellraw @s [{"text":"[ ❌ ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entities in set time intervals.\n§7Performance Improvement: §6Medium"}}]
   }
   execute if score $lagClear nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entities in set time intervals.\n§7Performance Improvement: §6Medium"}}]
+    tellraw @s [{"text":"[ ✔ ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear","color":"gold","hoverEvent":{"action":"show_text","contents":"Deletes all unused entities in set time intervals.\n§7Performance Improvement: §6Medium"}}]
   }
   # lagClearTime
   execute if score $lagClearTime nola.config matches 2 run {
@@ -82,26 +82,26 @@ function config {
   }
   # lagClearMessages
   execute if score $lagClearMessages nola.config matches 0 run {
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear_messages/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear messages","color":"gold","hoverEvent":{"action":"show_text","contents":"Messages are sent to all players when a lag clear is about to be executed or has been executed."}}]
+    tellraw @s [{"text":"[ ❌ ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear_messages/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear messages","color":"gold","hoverEvent":{"action":"show_text","contents":"Messages are sent to all players when a lag clear is about to be executed or has been executed."}}]
   }
   execute if score $lagClearMessages nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear_messages/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear messages","color":"gold","hoverEvent":{"action":"show_text","contents":"Messages are sent to all players when a lag clear is about to be executed or has been executed."}}]
+    tellraw @s [{"text":"[ ✔ ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/lag_clear_messages/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Lag clear messages","color":"gold","hoverEvent":{"action":"show_text","contents":"Messages are sent to all players when a lag clear is about to be executed or has been executed."}}]
   }
 
   # xpMerge
   execute if score $xpMerge nola.config matches 0 run {
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/xp_merge/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Merge xp orbs","color":"gold","hoverEvent":{"action":"show_text","contents":"Near xp orbs will be combined. (may affect Mendig enchantment)\n§7Performance Improvement: §6Medium"}}]
+    tellraw @s [{"text":"[ ❌ ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/xp_merge/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Merge xp orbs","color":"gold","hoverEvent":{"action":"show_text","contents":"Near xp orbs will be combined. (may affect Mendig enchantment)\n§7Performance Improvement: §6Medium"}}]
   }
   execute if score $xpMerge nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/xp_merge/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Merge xp orbs","color":"gold","hoverEvent":{"action":"show_text","contents":"Near xp orbs will be combined. (may affect Mendig enchantment)\n§7Performance Improvement: §6Medium"}}]
+    tellraw @s [{"text":"[ ✔ ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/xp_merge/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Merge xp orbs","color":"gold","hoverEvent":{"action":"show_text","contents":"Near xp orbs will be combined. (may affect Mendig enchantment)\n§7Performance Improvement: §6Medium"}}]
   }
 
   # itemDespawn
   execute if score $itemDespawn nola.config matches 0 run {
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/item_despawn/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items despawn after a specified time.\n§7Performance Improvement: §cLow"}}]
+    tellraw @s [{"text":"[ ❌ ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/item_despawn/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items despawn after a specified time.\n§7Performance Improvement: §cLow"}}]
   }
   execute if score $itemDespawn nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/item_despawn/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items despawn after a specified time.\n§7Performance Improvement: §cLow"}}]
+    tellraw @s [{"text":"[ ✔ ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/item_despawn/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Custom item despawn","color":"gold","hoverEvent":{"action":"show_text","contents":"Items despawn after a specified time.\n§7Performance Improvement: §cLow"}}]
   }
   # itemDespawnTime
   execute if score $itemDespawnTime nola.config matches 0 run {
@@ -116,10 +116,10 @@ function config {
 
   # antiTNTSpam
   execute if score $antiTNTSpam nola.config matches 0 run {
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/anti_tnt_spam/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Anti TNT spam","color":"gold","hoverEvent":{"action":"show_text","contents":"Prevents ignition of large chunks tnt.\n§7Performance Improvement: §cLow"}}]
+    tellraw @s [{"text":"[ ❌ ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/anti_tnt_spam/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Anti TNT spam","color":"gold","hoverEvent":{"action":"show_text","contents":"Prevents ignition of large chunks tnt.\n§7Performance Improvement: §cLow"}}]
   }
   execute if score $antiTNTSpam nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/anti_tnt_spam/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Anti TNT spam","color":"gold","hoverEvent":{"action":"show_text","contents":"Prevents ignition of large chunks tnt.\n§7Performance Improvement: §cLow"}}]
+    tellraw @s [{"text":"[ ✔ ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/anti_tnt_spam/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Anti TNT spam","color":"gold","hoverEvent":{"action":"show_text","contents":"Prevents ignition of large chunks tnt.\n§7Performance Improvement: §cLow"}}]
   }
 
   # maxEntityCramming
@@ -136,10 +136,10 @@ function config {
 
   # noCollision
   execute if score $noCollision nola.config matches 0 run {
-    tellraw @s [{"text":"[ \u274c ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_collision/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Disabled animal collision","color":"gold","hoverEvent":{"action":"show_text","contents":"Disables the collision of farm animals.\n§7Performance Improvement: §6Medium"}}]
+    tellraw @s [{"text":"[ ❌ ]","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_collision/on"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Disabled animal collision","color":"gold","hoverEvent":{"action":"show_text","contents":"Disables the collision of farm animals.\n§7Performance Improvement: §6Medium"}}]
   }
   execute if score $noCollision nola.config matches 1 run {
-    tellraw @s [{"text":"[ \u2714 ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_collision/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Disabled animal collision","color":"gold","hoverEvent":{"action":"show_text","contents":"Disables the collision of farm animals.\n§7Performance Improvement: §6Medium"}}]
+    tellraw @s [{"text":"[ ✔ ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function nola:menu/buttons/no_collision/off"},"hoverEvent":{"action":"show_text","contents":"*click*"}},{"text":" Disabled animal collision","color":"gold","hoverEvent":{"action":"show_text","contents":"Disables the collision of farm animals.\n§7Performance Improvement: §6Medium"}}]
   }
 
   tellraw @s {"text": ""}
