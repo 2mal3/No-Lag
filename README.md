@@ -1,10 +1,10 @@
 # No-Lag-Datapack
 ![release](https://img.shields.io/github/v/release/2mal3/No-Lag-Datapack?style=flat-square) ![version](https://img.shields.io/badge/Minecraft-1.19-orange?style=flat-square) ![downloads](https://img.shields.io/github/downloads/2mal3/No-Lag-Datapack/total?style=flat-square)
 
-This datapack improves and optimizes the performance of the minecraft world to ensure a good gaming experience.             
-To achieve this, this datapack uses over 6 efficient methods, more than similar datapacks that use only a few methods.       
-These methods can be easily configured via the in game GUI, which provides additional information and special actions.                          
-Thereby, the datapack was designed with performance in mind, so that it has almost no effect on the game performance itself.             
+This datapack improves and optimizes the performance of the minecraft world to ensure a good gaming experience.
+To achieve this, this datapack uses over 6 efficient methods, more than similar datapacks that use only a few methods.
+These methods can be easily configured via the in game GUI, which provides additional information and special actions.
+Thereby, the datapack was designed with performance in mind, so that it has almost no effect on the game performance itself.
 
 ## 📖 Features:
 - Over 6 different methods to reduce lag that actually work
@@ -14,7 +14,7 @@ Thereby, the datapack was designed with performance in mind, so that it has almo
 - Does not create lag itself
 
 By default, all farm animals, bosses, decorative entities, pets, near entities and entities with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
-Additionally, all entities that are within 64 blocks of an armor stand named **ignore** will not be frozen.                       
+Additionally, all entities that are within 64 blocks of an armor stand named **ignore** will not be frozen.
 
 All settings and actions can be done via the in game GUI. To open it, you just have to type command `/function #nola:menu` into the chat (only works with command permissions).
 
@@ -51,6 +51,5 @@ If your server has performance problems, I would also advise you to try [PaperSp
 - Tested for Fabric and Vanilla in 1.19
 - Not tested with Forge, Bukkti, Spigot and PaperSpigot but probably don't work
 - To uninstall, simply click in the datapack menu on **Uninstall this datapack** and then remove the datapack from the worlds folder
-- The datapack should be compatible with other datapacks that follow the [datapack conventions](https://mc-datapacks.github.io/en/). With others, problems may occur
 - The datapack was created with [mc-build](https://github.com/mc-build/mc-build).
 - The datapack should not create any lag by itself
