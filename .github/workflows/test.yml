@@ -52,7 +52,7 @@ jobs:
           path: ./
           key: ${{ github.sha }}
 
-      - name: Install jsonlint-cli
-        run: npm install -g jsonlint-cli
+      - name: Install jsonlint
+        run: npm install -g jsonlint
       - name: Lint json files
-        run: find . -name "*.json" | xargs jsonlint-cli
+        run: for file in $(find . -name "*.json"); do jsonlint $file -c -q; done
