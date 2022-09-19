@@ -23,13 +23,13 @@ jobs:
       - name: Zip files
         uses: TheDoctor0/zip-release@0.6.2
         with:
-          filename: "Natural-Disaster-Datapack.zip"
+          filename: "No-Lag-Datapack.zip"
           type: "zip"
           path: "data pack.mcmeta pack.png LICENSE.txt README.md CHANGELOG.md"
 
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          name: Natural Disaster Datapack ${{github.ref_name}}
+          name: No Lag Datapack ${{github.ref_name}}
           body_path: CHANGELOG.md
-          files: Natural-Disaster-Datapack.zip
+          files: No-Lag-Datapack.zip
