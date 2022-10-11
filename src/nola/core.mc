@@ -196,8 +196,8 @@ dir uninstall {
 
     # Places command blocks that can unfreeze entities even after the datapack is uninstalled
     gamerule commandBlockOutput false
-    setblock -30000000 60 1601 minecraft:repeating_command_block{auto: 1b, Command:"/execute as @e[tag=nola.noAI] run data merge entity @s {NoAI: 0b, Invulnerable: 0b}"}
-    setblock -30000000 59 1601 minecraft:repeating_command_block{auto: 1b, Command:"/tag @e[tag=nola.noAI] remove nola.noAI"}
+    setblock -30000000 60 1601 minecraft:repeating_command_block{auto: 1b, Command: "/execute as @e[tag=nola.noAI] run data merge entity @s {NoAI: 0b, Invulnerable: 0b}"}
+    setblock -30000000 59 1601 minecraft:repeating_command_block{auto: 1b, Command: "/tag @e[tag=nola.noAI] remove nola.noAI"}
 
     # Sends an uninstallation message to all players
     tellraw @a {"text":"No Lag Datapack v3.1.0 by 2mal3 was successfully uninstalled.","color":"green"}
