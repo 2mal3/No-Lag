@@ -1,17 +1,20 @@
-name: Test
+name: Lint
 
 on:
   push:
       paths:
         - "**.mc"
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Node.js environment
+      - name: Setup Node.js
         uses: actions/setup-node@v3
 
       - name: Install mc-build
@@ -19,38 +22,47 @@ jobs:
       - name: Run mc-build
         run: mcb -build
 
-      - name: Cache
-        uses: actions/cache@v3.0.7
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
         with:
-          path: ./
-          key: ${{ github.sha }}
+          path: ${{ github.workspace }}
+          name: artifact
 
   mc-commands:
     runs-on: ubuntu-latest
     needs: build
+
     steps:
-      - name: Cache
-        uses: actions/cache@v3.0.7
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Donwload artifact
+        uses: actions/download-artifact@v3
         with:
-          path: ./
-          key: ${{ github.sha }}
+          name: artifact
 
       - name: Check minecraft commands
         uses: mcbeet/check-commands@v1
         with:
-          source: /home/runner/work/No-Lag-Datapack/No-Lag-Datapack
+          version: "0.62.0"
+          source: "."
           minecraft: "1.19"
           stats: true
 
   json:
     runs-on: ubuntu-latest
     needs: build
+
     steps:
-      - name: Cache
-        uses: actions/cache@v3.0.7
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+
+      - name: Download artifact
+        uses: actions/download-artifact@v3
         with:
-          path: ./
-          key: ${{ github.sha }}
+          name: artifact
 
       - name: Install jsonlint
         run: npm install -g jsonlint

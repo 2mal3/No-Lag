@@ -4,15 +4,21 @@ on:
   push:
     tags:
       - "v*.*.*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Node.js environment
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
         uses: actions/setup-node@v3
 
       - name: Install mc-build
@@ -20,16 +26,42 @@ jobs:
       - name: Run mc-build
         run: mcb -build
 
-      - name: Zip files
-        uses: TheDoctor0/zip-release@0.6.2
+      - name: Squash datapack
+        uses: ComunidadAylas/PackSquash-action@v3
         with:
-          filename: "No-Lag-Datapack.zip"
-          type: "zip"
-          path: "data pack.mcmeta pack.png LICENSE.txt README.md CHANGELOG.md"
+          artifact_name: datapack-raw
+          force_include_files: icon.png
+      - name: Donwload datapack-raw
+        uses: actions/download-artifact@v3
+        with:
+          name: datapack-raw
+      - name: Finish datapack
+        run: |
+          mv pack.zip No-Lag.zip
+          zip -u No-Lag.zip LICENSE.txt README.md CHANGELOG.md
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: |
+            CHANGELOG.md
+            No-Lag.zip
+
+  release-github:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Donwload artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: artifact
 
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          name: No Lag Datapack ${{github.ref_name}}
+          name: No Lag ${{github.ref_name}}
           body_path: CHANGELOG.md
-          files: No-Lag-Datapack.zip
+          files: |
+            No-Lag.zip
