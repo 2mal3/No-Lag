@@ -1,4 +1,4 @@
-# No-Lag-Datapack
+# No-Lag
 
 ![release](https://img.shields.io/github/v/release/2mal3/No-Lag-Datapack?style=flat-square) ![version](https://img.shields.io/badge/Minecraft-1.19-orange?style=flat-square) ![downloads](https://img.shields.io/github/downloads/2mal3/No-Lag-Datapack/total?style=flat-square)
 

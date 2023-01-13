@@ -89,7 +89,7 @@ function load {
     scoreboard players set $tpsTest nola.config 0
 
     schedule 4s replace {
-      tellraw @a [{"text":"No Lag Datapack v3.1.0 by 2mal3 was installed!","color":"green"}]
+      tellraw @a [{"text":"No Lag v3.1.0 by 2mal3 was installed!","color":"green"}]
     }
   }
   # Updates the datapack
@@ -200,10 +200,10 @@ dir uninstall {
     setblock -30000000 59 1601 minecraft:repeating_command_block{auto: 1b, Command: "/tag @e[tag=nola.noAI] remove nola.noAI"}
 
     # Sends an uninstallation message to all players
-    tellraw @a {"text":"No Lag Datapack v3.1.0 by 2mal3 was successfully uninstalled.","color":"green"}
+    tellraw @a {"text":"No Lag v3.1.0 by 2mal3 was successfully uninstalled.","color":"green"}
 
     # Disables the datapack
-    datapack disable "file/No-Lag-Datapack"
-    datapack disable "file/No-Lag-Datapack.zip"
+    datapack disable "file/No-Lag"
+    datapack disable "file/No-Lag.zip"
   }
 }
