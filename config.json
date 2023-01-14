@@ -9,8 +9,8 @@
     "generatedDirectory": "__generated__",
     "rootNamespace": null,
     "version": {
-      "str": "v3.0.1",
-      "int": 30001
+      "str": "v3.1.0",
+      "int": 30100
     }
   }
 }
