@@ -65,3 +65,30 @@ jobs:
           body_path: CHANGELOG.md
           files: |
             No-Lag.zip
+
+  release-modrinth:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Donwload artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: artifact
+
+      - name: Publish on Modrinth
+        uses: Kir-Antipov/mc-publish@v3.2
+        with:
+          modrinth-id: f6S8twvO
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          files: No-Lag.zip
+          name: No Lag ${{github.ref_name}}
+          version: ${{github.ref_name}}
+          version-type: release
+          changelog-file: CHANGELOG.md
+          loaders: datapack
+          game-versions: |
+            1.19
+            1.19.1
+            1.19.2
+            1.19.3
