@@ -23,7 +23,7 @@ function menu {
 
   tellraw @s {"text":""}
   tellraw @s {"text":"\u2b24 Planet Minecraft Website","color":"aqua","clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/data-pack/no-lag-datapack/"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
-  tellraw @s {"text":"\u2709 GitHub Website","color":"aqua","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/No-Lag-Datapack"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
+  tellraw @s {"text":"\u2709 GitHub Website","color":"aqua","clickEvent":{"action":"open_url","value":"https://github.com/2mal3/No-Lag"},"hoverEvent":{"action":"show_text","contents":"*open link*"}}
 
   tellraw @s {"text":""}
   tellraw @s {"text":"\u26a0 Uninstall datapack \u25b6","color":"dark_red","clickEvent":{"action":"run_command","value":"/function nola:menu/uninstall"},"hoverEvent":{"action":"show_text","contents":"*click*"}}
