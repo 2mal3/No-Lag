@@ -126,6 +126,12 @@ function load {
       log NoLag info server <Updated from v3.0.4 to v3.1.0>
       scoreboard players set $version nola.data 030100
     }
+
+    # v3.1.1
+    execute if score $version nola.data matches 030101 run {
+      log NoLag info server <Updated from v3.1.0 to v3.1.1>
+      scoreboard players set $version nola.data 030101
+    }
   }
 }
 
