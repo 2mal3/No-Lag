@@ -32,7 +32,8 @@ dir loop {
       # Faster item despawn
       execute if score $itemDespawn nola.config matches 1 if entity @s[type=minecraft:item] run function nola:modules/item_despawn/main
       # Farm animals no collision
-      execute if score $noCollision nola.config matches 1 if entity @s[type=#nola:modules/no_collision/farm_animals,tag=!nola.processed] run function nola:modules/no_collision/main
+      execute if score $noCollision nola.config matches 1 if entity @s[type=#nola:modules/no_collision/farm_animals,tag=!nola.processed] run function nola:modules/no_collision/enable
+      execute if score $noCollision nola.config matches 0 if entity @s[type=#nola:modules/no_collision/farm_animals,tag=nola.processed] run function nola:modules/no_collision/disable
     }
     # Lag clear
     execute if score $lagClear nola.config matches 1 run function nola:modules/lag_clear/main

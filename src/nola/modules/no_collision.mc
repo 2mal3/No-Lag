@@ -1,11 +1,18 @@
 import ../../../macros/log.mcm
 
 
-function main {
+function enable {
   log NoLag debug entity <Disabled collision>
   tag @s add nola.processed
 
   team join nola.noCollision @s
+}
+
+function disable {
+  log NoLag debug entity <Enabled collision>
+  tag @s remove nola.processed
+
+  team leave @s
 }
 
 entities farm_animals {
