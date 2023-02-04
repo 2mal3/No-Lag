@@ -31,7 +31,7 @@ jobs:
         with:
           artifact_name: datapack-raw
           force_include_files: icon.png
-      - name: Donwload datapack-raw
+      - name: Download datapack-raw
         uses: actions/download-artifact@v3
         with:
           name: datapack-raw
@@ -53,7 +53,7 @@ jobs:
     needs: build
 
     steps:
-      - name: Donwload artifact
+      - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: artifact
@@ -71,7 +71,7 @@ jobs:
     needs: build
 
     steps:
-      - name: Donwload artifact
+      - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: artifact

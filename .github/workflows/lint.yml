@@ -35,7 +35,7 @@ jobs:
     needs: build
 
     steps:
-      - name: Donwload artifact
+      - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: artifact
