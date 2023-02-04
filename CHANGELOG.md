@@ -1,7 +1,5 @@
 
-### Changed
+### Fixed
 
-- smaller pack size
-- name from No-Lag-Datapack to No-Lag
-- better readme style
-- [internal] cleaner and less repetitive code
+- farm animal collision was not re-enabled when the setting was turned off (thanks to [@RosyBuilds](https://www.planetminecraft.com/member/rosybuilds/))
+- players' death items could be deleted during a lag clear
