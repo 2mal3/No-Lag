@@ -23,6 +23,9 @@ dir loop {
       execute if score $noAI nola.config matches 0 if entity @s[tag=nola.noAI] run function nola:modules/no_ai/disable
       tag @s remove nola.noAI.ignore
     }
+
+    # Ignore items dropped at the players death
+    execute as @a[scores={nola.deathCount=1..}] at @s run function nola:modules/lag_clear/death
   }
 
   clock 60s {
@@ -59,6 +62,7 @@ function load {
     scoreboard objectives add nola.config dummy
     scoreboard objectives add 2mal3.debugMode dummy
     scoreboard objectives add nola.itemDespawnTime dummy
+    scoreboard objectives add nola.deathCount deathCount
     # Teams
     team add nola.noCollision
     team modify nola.noCollision collisionRule pushOwnTeam
@@ -196,6 +200,7 @@ dir uninstall {
     scoreboard objectives remove nola.data
     scoreboard objectives remove nola.config
     scoreboard objectives remove nola.itemDespawnTime
+    scoreboard objectives remove nola.deathCount
     # Deletes team
     team remove nola.noCollision
     # Reset gamerules

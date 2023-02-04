@@ -43,6 +43,14 @@ function main {
   }
 }
 
+function death {
+  log NoLag debug entity <Executed dropped items>
+
+  tag @e[type=minecraft:item,distance=..5] add global.ignore.kill
+  scoreboard players reset @s nola.deathCount
+}
+
+
 entities item_frame {
   minecraft:item_frame
   minecraft:glow_item_frame
