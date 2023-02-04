@@ -2,23 +2,23 @@
 
 ![release](https://img.shields.io/github/v/release/2mal3/No-Lag?style=flat-square) ![version](https://img.shields.io/badge/Minecraft-1.19-orange?style=flat-square) ![downloads](https://img.shields.io/github/downloads/2mal3/No-Lag/total?style=flat-square)
 
-This datapack improves and optimizes the performance of the minecraft world to ensure a good gaming experience.
+This datapack improves and optimizes the performance of the Minecraft world to ensure a good gaming experience.
 To achieve this, this datapack uses over 6 efficient methods, more than similar datapacks that use only a few methods.
-These methods can be easily configured via the in game GUI, which provides additional information and special actions.
-Thereby, the datapack was designed with performance in mind, so that it has almost no effect on the game performance itself.
+These methods can be easily configured through the in-game GUI, which provides additional information and special actions.
+The datapack has been designed with performance in mind, so that it has almost no impact on the game performance itself.
 
 ## 📖 Features
 
-- Over 6 different methods to reduce lag that actually work
-- Simple in-game gui with many settings
+- 7 different lag reduction methods that actually work
 - Does not affect important entities
+- Simple in-game GUI with lots of settings
 - Additional information about the world
 - Does not create lag itself
 
-By default, all farm animals, bosses, decorative entities, pets, near entities and entities with names are not deleted. However, all are frozen if they are too far away from a player, except if they are an end boss or have the name **ignore**.
+By default, all farm animals, bosses, decorative entities, pets, nearby entities and entities with names are not deleted. However, they will be frozen if they are too far away from the player, unless they are an end boss or have the name **ignore**.
 Additionally, all entities that are within 64 blocks of an armor stand named **ignore** will not be frozen.
 
-All settings and actions can be done via the in game GUI. To open it, you just have to type command `/function #nola:menu` into the chat (only works with command permissions).
+All settings and actions can be done through the in-game GUI. To open it, simply type the command `/function #nola:menu` in the chat (only works with command permissions).
 
 ## 📝 Methods to reduce lag
 
