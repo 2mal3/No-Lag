@@ -30,15 +30,17 @@ jobs:
         uses: ComunidadAylas/PackSquash-action@v3
         with:
           artifact_name: datapack-raw
-          force_include_files: icon.png
+          force_include_files: |
+            icon.png
+            LICENSE.txt
+            README.md
+            CHANGELOG.md
       - name: Download datapack-raw
         uses: actions/download-artifact@v3
         with:
           name: datapack-raw
-      - name: Finish datapack
-        run: |
-          mv pack.zip No-Lag.zip
-          zip -u No-Lag.zip LICENSE.txt README.md CHANGELOG.md
+      - name: Rename datapack
+        run: mv pack.zip No-Lag.zip
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
