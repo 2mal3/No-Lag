@@ -1,6 +1,6 @@
 # No-Lag
 
-![release](https://img.shields.io/github/v/release/2mal3/No-Lag?style=flat-square) ![version](https://img.shields.io/badge/Minecraft-1.19-orange?style=flat-square) ![downloads](https://img.shields.io/github/downloads/2mal3/No-Lag/total?style=flat-square)
+![release](https://img.shields.io/github/v/release/2mal3/No-Lag?style=flat-square) ![version](https://img.shields.io/badge/Minecraft-1.19.4-orange?style=flat-square) ![downloads](https://img.shields.io/github/downloads/2mal3/No-Lag/total?style=flat-square)
 
 This datapack improves and optimizes the performance of the Minecraft world to ensure a good gaming experience.
 To achieve this, this datapack uses over 6 efficient methods, more than similar datapacks that use only a few methods.

@@ -149,6 +149,12 @@ function update {
 
         scoreboard objectives add nola.deathCount deathCount
     }
+
+    # v3.1.3
+    execute if score $version nola.data matches 030102 run {
+        log NoLag info server <Updated from v3.1.2 to v3.1.3>
+        scoreboard players set $version nola.data 030103
+    }
 }
 
 
