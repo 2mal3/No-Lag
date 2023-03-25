@@ -58,7 +58,6 @@ function load {
 }
 
 function install {
-    name install
     log NoLag info server <Datapack installed>
     scoreboard players set %installed nola.data 1
 
