@@ -68,6 +68,7 @@ entities ignore {
     minecraft:area_effect_cloud
     minecraft:allay
     minecraft:bee
+    minecraft:block_display
     minecraft:chest_minecart
     minecraft:chicken
     minecraft:command_block_minecart
@@ -86,6 +87,8 @@ entities ignore {
     minecraft:illusioner
     minecraft:iron_golem
     minecraft:item
+    minecraft:item_display
+    minecraft:interaction
     minecraft:leash_knot
     minecraft:llama
     minecraft:marker
@@ -101,6 +104,7 @@ entities ignore {
     minecraft:shulker
     minecraft:skeleton_horse
     minecraft:snow_golem
+    minecraft:text_display
     minecraft:tnt_minecart
     minecraft:trader_llama
     minecraft:trident
