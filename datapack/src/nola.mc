@@ -2,5 +2,5 @@
 
 # Opens the datapack menu
 functions menu {
-  nola:menu/menu
+    nola:menu/menu
 }

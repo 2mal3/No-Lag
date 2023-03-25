@@ -3,11 +3,15 @@ name: Release
 on:
   push:
     tags:
-      - "v*.*.*"
+      - 'v*.*.*'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+env:
+  NAME: 'No-Lag'
+  MODRINTH_ID: 'f6S8twvO'
 
 jobs:
   build:
@@ -24,23 +28,21 @@ jobs:
       - name: Install mc-build
         run: npm i -g mc-build
       - name: Run mc-build
-        run: mcb -build
+        run: cd datapack && mcb -build
 
       - name: Squash datapack
         uses: ComunidadAylas/PackSquash-action@v3
         with:
+          path: datapack
           artifact_name: datapack-raw
-          force_include_files: |
-            icon.png
-            LICENSE.txt
-            README.md
-            CHANGELOG.md
       - name: Download datapack-raw
         uses: actions/download-artifact@v3
         with:
           name: datapack-raw
-      - name: Rename datapack
-        run: mv pack.zip No-Lag.zip
+      - name: Finish datapack
+        run: |
+          mv pack.zip ${{ env.NAME }}.zip
+          zip -u ${{ env.NAME }}.zip LICENSE.txt README.md CHANGELOG.md
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
@@ -48,7 +50,7 @@ jobs:
           name: artifact
           path: |
             CHANGELOG.md
-            No-Lag.zip
+            ${{ env.NAME }}.zip
 
   release-github:
     runs-on: ubuntu-latest
@@ -63,10 +65,10 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          name: No Lag ${{github.ref_name}}
+          name: ${{ env.NAME }} ${{github.ref_name}}
           body_path: CHANGELOG.md
           files: |
-            No-Lag.zip
+            ${{ env.NAME }}.zip
 
   release-modrinth:
     runs-on: ubuntu-latest
@@ -81,16 +83,13 @@ jobs:
       - name: Publish on Modrinth
         uses: Kir-Antipov/mc-publish@v3.2
         with:
-          modrinth-id: f6S8twvO
+          modrinth-id: ${{ env.MODRINTH_ID }}
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-          files: No-Lag.zip
-          name: No Lag ${{github.ref_name}}
+          name: ${{ env.NAME }} ${{github.ref_name}}
+          files-primary: ${{ env.NAME }}.zip
           version: ${{github.ref_name}}
           version-type: release
           changelog-file: CHANGELOG.md
           loaders: datapack
           game-versions: |
-            1.19
-            1.19.1
-            1.19.2
-            1.19.3
+            1.19.4
