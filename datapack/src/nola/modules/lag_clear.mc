@@ -26,11 +26,15 @@ function check_kill {
     scoreboard players set .temp1 nola.data 0
 
     # Prevent deletion if near player
-    execute if entity @p[distance=..45] run scoreboard players set .temp1 nola.data 1
+    # execute if entity @p[distance=..45] run scoreboard players set .temp1 nola.data 1
     # Prevent deletion if it has a name
     execute if data entity @s CustomName run scoreboard players set .temp1 nola.data 1
     # Prevent deletion if its a tamed pet
     execute if data entity @s Owner run scoreboard players set .temp1 nola.data 1
+    # Prevent deletion of boars / minecarts with passengers
+    execute on passengers run scoreboard players set .temp1 nola.data 1
+    # Prevent deletion if entity is in boat minecart
+    execute on vehicle run scoreboard players set .temp1 nola.data 1
 
     execute if score .temp1 nola.data matches 0 if entity @s[type=!minecraft:armor_stand,type=!minecraft:glow_item_frame,type=!minecraft:item_frame] run scoreboard players set .temp1 nola.data 2
 
