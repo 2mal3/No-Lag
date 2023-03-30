@@ -59,7 +59,7 @@ body:
     attributes:
       label: Additional information
       description: >-
-        Provide a list of any other mods you are using, along with their
+        Provide a list of any other datapacks you are using, along with their
         respective versions. If you have any screenshots, videos, or other
         information that you feel is necessary to explain the issue, feel free
         to attach them here.
