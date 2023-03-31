@@ -10,10 +10,10 @@ The datapack has been designed with performance in mind, so that it has almost n
 ## 📖 Features
 
 - 7 different lag reduction methods that actually work
-- Does not affect important entities
-- Simple in-game GUI with lots of settings
-- Additional information about the world
-- Does not create lag itself
+- does not affect important entities
+- simple in-game GUI with lots of settings
+- additional information about the world
+- does not create lag itself
 
 By default, all farm animals, bosses, decorative entities, pets, nearby entities and entities with names are not deleted. However, they will be frozen if they are too far away from the player, unless they are an end boss or have the name **ignore**.
 Additionally, all entities that are within 64 blocks of an armor stand named **ignore** will not be frozen.
@@ -22,13 +22,13 @@ All settings and actions can be done through the in-game GUI. To open it, simply
 
 ## 📝 Methods to reduce lag
 
-- Entities that are too far away from a player are frozen
-- In certain intervals all unimportant entities are deleted
-- Multiple Xp Orbs are combined
-- Collision of farm animals are deactivated
-- Items despawn earlier
-- Les entities can stand together on one block
-- If too many entities of the same type are too close to each other, all other entities of the species will be deleted.
+- entities that are too far away from a player are frozen
+- in certain intervals all unimportant entities are deleted
+- multiple Xp Orbs are combined
+- collision of farm animals are deactivated
+- items despawn earlier
+- less entities can stand together on one block
+- if too many entities of the same type are too close to each other, all other entities of the species will be deleted
 
 ## Nice things others have said about the datapack
 
@@ -54,11 +54,11 @@ If your server has performance problems, I would also advise you to try [PaperSp
 
 ## Notes
 
-- Tested for Fabric and Vanilla in 1.19.4
-- Not tested with Forge, Bukkti, Spigot and PaperSpigot but probably don't work
+- tested for Fabric and Vanilla in 1.19.4
+- not tested with Forge, Bukkti, Spigot and PaperSpigot but probably don't work
 - bug reports and suggestions are best done on [GitHub](https://github.com/2mal3/No-Lag/issues)
-- To uninstall, simply click in the datapack menu on **Uninstall this datapack** and then remove the datapack from the worlds folder
-- The datapack was created with [mc-build](https://github.com/mc-build/mc-build).
-- The datapack should not create any lag by itself
+- to uninstall, simply click in the datapack menu on **Uninstall this datapack** and then remove the datapack from the worlds folder
+- datapack was created with [mc-build](https://github.com/mc-build/mc-build).
+- should not create any lag by itself
 
 _3.1.0_
