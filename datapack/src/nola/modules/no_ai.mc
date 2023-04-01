@@ -39,6 +39,7 @@ entities ignore {
     minecraft:wither
     minecraft:ender_dragon
     minecraft:elder_guardian
+    minecraft:warden
 
     minecraft:armor_stand
     minecraft:area_effect_cloud
