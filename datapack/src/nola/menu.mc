@@ -52,10 +52,10 @@ function config {
     execute if score $noAIDistance nola.config matches 42 run {
         tellraw @s [{"text":"Freezing distance: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Distance from which entities are frozen."}},{"text":"[ - ] ","color":"gray","hoverEvent":{"action":"show_text","contents":""}},{"score":{"name":"$noAIDistance","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/no_ai_distance/add"}}]
     }
-    execute if score $noAIDistance nola.config matches 64 run {
+    execute if score $noAIDistance nola.config matches 43..129 run {
         tellraw @s [{"text":"Freezing distance: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Distance from which entities are frozen."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/no_ai_distance/remove"}},{"score":{"name":"$noAIDistance","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"dark_green","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/no_ai_distance/add"}}]
     }
-    execute if score $noAIDistance nola.config matches 86 run {
+    execute if score $noAIDistance nola.config matches 130 run {
         tellraw @s [{"text":"Freezing distance: ","color":"gold","hoverEvent":{"action":"show_text","contents":"Distance from which entities are frozen."}},{"text":"[ - ] ","color":"dark_red","hoverEvent":{"action":"show_text","contents":""},"clickEvent": {"action": "run_command", "value": "/function nola:menu/buttons/no_ai_distance/remove"}},{"score":{"name":"$noAIDistance","objective":"nola.config"},"color":"red","hoverEvent":{"action":"show_text","contents":""}},{"text":" [ + ]","color":"gray","hoverEvent":{"action":"show_text","contents":""}}]
     }
     # noAIAreaIgnorer

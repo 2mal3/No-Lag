@@ -14,6 +14,14 @@ function distance {
         execute if entity @s[tag=!nola.noAI,tag=!nola.noAI.ignore] unless entity @p[gamemode=!spectator,distance=..86] run function nola:modules/no_ai/enable
         execute if entity @s[tag=nola.noAI] if entity @p[gamemode=!spectator,distance=..86] run function nola:modules/no_ai/disable
     }
+    execute if score $noAIDistance nola.config matches 108 run {
+        execute if entity @s[tag=!nola.noAI,tag=!nola.noAI.ignore] unless entity @p[gamemode=!spectator,distance=..108] run function nola:modules/no_ai/enable
+        execute if entity @s[tag=nola.noAI] if entity @p[gamemode=!spectator,distance=..108] run function nola:modules/no_ai/disable
+    }
+    execute if score $noAIDistance nola.config matches 130 run {
+        execute if entity @s[tag=!nola.noAI,tag=!nola.noAI.ignore] unless entity @p[gamemode=!spectator,distance=..130] run function nola:modules/no_ai/enable
+        execute if entity @s[tag=nola.noAI] if entity @p[gamemode=!spectator,distance=..130] run function nola:modules/no_ai/disable
+    }
     execute if entity @s[tag=nola.noAI.ignore,tag=nola.noAI] run function nola:modules/no_ai/disable
 }
 
