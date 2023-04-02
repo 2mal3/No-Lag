@@ -56,8 +56,8 @@ If your server has performance problems, I would also advise you to try [PaperSp
 
 - tested for Fabric and Vanilla in 1.19.4
 - not tested with Forge, Bukkti, Spigot and PaperSpigot but probably don't work
-- bug reports and suggestions are best done on [GitHub](https://github.com/2mal3/No-Lag/issues)
 - to uninstall, simply click in the datapack menu on **Uninstall this datapack** and then remove the datapack from the worlds folder
+- bug reports and suggestions are **ONLY** accepted on [GitHub](https://github.com/2mal3/No-Lag/issues)
 - datapack was created with [mc-build](https://github.com/mc-build/mc-build).
 - should not create any lag by itself
 
