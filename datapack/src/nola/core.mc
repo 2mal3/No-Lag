@@ -168,7 +168,7 @@ function update {
 function first_join {
     # Warns the player if he uses a not supported server software or minecraft version
     execute store result score .temp0 nola.data run data get entity @s DataVersion
-    execute unless score .temp0 nola.data matches 3337 run tellraw @s [{"text": "[", "color": "gray"},{"text": "NoLag", "color": "red", "bold": true},{"text": "]: ", "color": "gray"},{"text": "You are using the incorrect Minecraft version. Please check the website.","color": "red","bold": true}]
+    execute unless score .temp0 nola.data matches 3337.. run tellraw @s [{"text": "[", "color": "gray"},{"text": "NoLag", "color": "red", "bold": true},{"text": "]: ", "color": "gray"},{"text": "You are using the incorrect Minecraft version. Please check the website.","color": "red","bold": true}]
 }
 
 advancement first_join {
