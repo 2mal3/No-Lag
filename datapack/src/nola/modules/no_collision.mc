@@ -20,7 +20,6 @@ entities farm_animals {
     minecraft:chicken
     minecraft:donkey
     minecraft:cow
-    minecraft:glow_squid
     minecraft:goat
     minecraft:mooshroom
     minecraft:mule
