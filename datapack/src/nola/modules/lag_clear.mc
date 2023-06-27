@@ -26,7 +26,7 @@ function check_kill {
     scoreboard players set .temp1 nola.data 0
 
     # Prevent deletion if near player
-    # execute if entity @p[distance=..45] run scoreboard players set .temp1 nola.data 1
+    execute if entity @p[distance=..45] run scoreboard players set .temp1 nola.data 1
     # Prevent deletion if it has a name
     execute if data entity @s CustomName run scoreboard players set .temp1 nola.data 1
     # Prevent deletion if its a tamed pet
