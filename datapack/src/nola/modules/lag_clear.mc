@@ -112,6 +112,7 @@ entities ignore {
     minecraft:sheep
     minecraft:shulker
     minecraft:skeleton_horse
+    minecraft:sniffer
     minecraft:snow_golem
     minecraft:text_display
     minecraft:tnt_minecart

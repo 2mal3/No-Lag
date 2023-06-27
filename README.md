@@ -59,4 +59,4 @@ If your server has performance problems, I would also advise you to try [PaperSp
 - datapack was created with [mc-build](https://github.com/mc-build/mc-build).
 - should not create any lag by itself
 
-_3.1.0_
+_3.3.0_
