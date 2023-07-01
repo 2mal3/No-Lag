@@ -2,10 +2,14 @@ name: Lint
 
 on:
   push:
-      paths:
-        - '**.mc'
-        - 'config.json'
+    paths:
+      - "**.mc"
+      - "config.json"
+    branches:
+      - "**"
   pull_request:
+    branches:
+      - "**"
   workflow_dispatch:
 
 env:
