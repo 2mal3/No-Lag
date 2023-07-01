@@ -1,8 +1,9 @@
 ### Changed
 
-- wrong version warnings also for versions above 1.19.4
-- more options for entity freezing distance, now up to 130 blocks (thanks to @HanosThePlacid)
+- updated to Minecraft 1.20
+- removed glow squids from farm animals -> now affected by lag clears
+- improved performance of lag clears
 
 ### Fixed
 
-- Warden was affected by entity freezing, prevented it from disappearing naturally (thanks to @HanosThePlacid)
+- broken automatic updates between v3.0.3 - v3.1.1
