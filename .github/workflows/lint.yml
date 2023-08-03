@@ -3,8 +3,10 @@ name: Lint
 on:
   push:
     paths:
-      - "**.mc"
-      - "config.json"
+      - "**.bolt"
+      - "**.json"
+      - "beet.yaml"
+      - "**.mcfunction"
     branches:
       - "**"
   pull_request:
@@ -13,33 +15,44 @@ on:
   workflow_dispatch:
 
 env:
-  VERSION: '1.20'
+  VERSION: "1.20"
+  NAME: "No-Lag"
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./datapack
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
 
-      - name: Install mc-build
-        run: npm i -g mc-build
-      - name: Run mc-build
-        run: mcb -build
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Install Poetry
+        uses: snok/install-poetry@v1.3.3
+        with:
+          virtualenvs-in-project: true
+      - name: Setup cache
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install
+
+      - name: Build datapack
+        run: poetry run beet
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: artifact
           path: |
-            datapack/data
-            datapack/pack.mcmeta
+            build/${{ env.NAME }}
 
   mc-commands:
     runs-on: ubuntu-latest
@@ -54,8 +67,8 @@ jobs:
       - name: Check minecraft commands
         uses: mcbeet/check-commands@v1
         with:
-          version: '0.69.0'
-          source: .
+          version: "0.73.0"
+          source: "."
           minecraft: ${{ env.VERSION }}
           stats: true
 
@@ -64,15 +77,15 @@ jobs:
     needs: build
 
     steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: artifact
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
-
       - name: Install jsonlint
         run: npm install -g jsonlint
       - name: Lint json files
-        run: for file in $(find . -name '*.json'); do jsonlint $file -c; done
+        run: for file in $(find . -name '*.json'); do jsonlint $file -c -q; done

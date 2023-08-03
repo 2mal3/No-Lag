@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "No-Lag"
+version = "4.0.0"
+description = "Destroys the lag in the minecraft world with over 6 different and adjustable methods. "
+authors = ["2mal3 <56305732+2mal3@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+beet = "^0.89.1"
+mecha = "^0.73.1"
+bolt = "^0.36.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

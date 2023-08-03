@@ -1,0 +1,33 @@
+id: "nola"
+name: "No-Lag"
+description: "Destroys the lag in the minecraft world with over 6 different and adjustable methods. "
+author: "2mal3"
+version: "v4.0.0"
+minecraft: "1.20"
+
+output: "build"
+
+data_pack:
+  name: "No-Lag"
+  description: "v4.0.0"
+  load:
+    - "src"
+    - pack.png: "pack.png"
+
+pipeline:
+  - mecha
+  - plugins.remove_empty_functions
+  - plugins.installation_advancement
+require:
+  - bolt
+
+meta:
+  version: 040000
+
+  bolt:
+    entrypoint:
+      - ""
+
+  installation_advancement:
+    icon:
+      item: "minecraft:cobblestone"
