@@ -10,6 +10,9 @@ function ~/load:
     execute unless score %installed nola.data matches 1 run function ~/install
     execute if score %installed nola.data matches 1 unless score $version nola.data matches ctx.meta.version run function ~/update
 
+    # Clocks
+    schedule function nola:clock/minute 60s replace
+
 
 ## Install
 function ~/load/install:
@@ -18,8 +21,14 @@ function ~/load/install:
     # Add scoreboards
     scoreboard objectives add 2mal3.debug_mode dummy
     scoreboard objectives add nola.data dummy
+    scoreboard objectives add nola.config dummy
+    scoreboard objectives add nola.item_despawn_time dummy
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data ctx.meta.version
+
+    # Set start config
+    scoreboard players add $item_despawn.enabled nola.config 1
+    scoreboard players set $item_despawn.time nola.config 3
 
     # Sent installation message after 4 seconds
     schedule function ~/send_message 4s replace:
@@ -58,6 +67,7 @@ advancement ~/first_join {
 ## Uninstall
 function ~/uninstall:
     scoreboard objectives remove nola.data
+    scoreboard objectives remove nola.config
 
     tellraw @a:
         text: f"Uninstalled {ctx.project_name} {ctx.project_version} from {ctx.project_author}!"
