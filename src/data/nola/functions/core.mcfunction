@@ -1,7 +1,11 @@
+from nola:log import log
+
 
 ## Load
 function ~/load:
     scoreboard objectives add nola.data dummy
+
+    log "info" "server" "Loaded!"
 
     execute unless score %installed nola.data matches 1 run function ~/install
     execute if score %installed nola.data matches 1 unless score $version nola.data matches ctx.meta.version run function ~/update
@@ -12,6 +16,7 @@ function ~/load/install:
     scoreboard players set %installed nola.data 1
 
     # Add scoreboards
+    scoreboard objectives add 2mal3.debug_mode dummy
     scoreboard objectives add nola.data dummy
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data ctx.meta.version

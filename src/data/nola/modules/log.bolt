@@ -1,0 +1,72 @@
+
+# log level scope <text>
+macro log level=brigadier:string{"type":"phrase"} scope=brigadier:string{"type":"phrase"} message=brigadier:string{"type":"phrase"}:
+    LEVELS = {
+        "fatal": {
+            "color": "dark_red",
+            "text": "FATAL"
+        },
+        "error": {
+            "color": "red",
+            "text": "ERROR"
+        },
+        "warn": {
+            "color": "gold",
+            "text": "WARN"
+        },
+        "info": {
+            "color": "green",
+            "text": "INFO"
+        },
+        "debug": {
+            "color": "aqua",
+            "text": "DEBUG"
+        }
+    }
+
+    if level.value not in LEVELS:
+        raise Exception("Invalid log level")
+
+    level_text = LEVELS[level.value]["text"]
+    level_color = LEVELS[level.value]["color"]
+    acronym = ctx.project_id.upper()
+
+
+    if scope.value == "server":
+        tellraw @a[scores={2mal3.debug_mode=3..}]:
+            - ""
+            - text: "["
+              color: "gray"
+            - text: acronym
+              color: level_color
+            - text: "/"
+              color: "gray"
+            - text: level_text
+              color: level_color
+            - text: "/"
+              color: "gray"
+            - text: "Server"
+              color: level_color
+            - text: "]: "
+              color: "gray"
+            - text: message.value
+              color: level_color
+    else:
+        tellraw @a[scores={2mal3.debug_mode=3..}]:
+            - ""
+            - text: "["
+              color: "gray"
+            - text: acronym
+              color: level_color
+            - text: "/"
+              color: "gray"
+            - text: level_text
+              color: level_color
+            - text: "/"
+              color: "gray"
+            - selector: scope.value
+              color: level_color
+            - text: "]: "
+              color: "gray"
+            - text: message.value
+              color: level_color
