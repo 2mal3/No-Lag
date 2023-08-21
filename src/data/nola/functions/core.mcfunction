@@ -12,6 +12,7 @@ function ~/load:
 
     # Clocks
     schedule function nola:clock/minute 60s replace
+    schedule function nola:clock/second 1s replace
 
 
 ## Install
@@ -27,8 +28,9 @@ function ~/load/install:
     scoreboard players set $version nola.data ctx.meta.version
 
     # Set start config
-    scoreboard players add $item_despawn.enabled nola.config 1
+    scoreboard players set $item_despawn.enabled nola.config 1
     scoreboard players set $item_despawn.time nola.config 3
+    scoreboard players set $xp_merge.enabled nola.config 1
 
     # Sent installation message after 4 seconds
     schedule function ~/send_message 4s replace:
