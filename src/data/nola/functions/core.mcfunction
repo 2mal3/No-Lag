@@ -24,6 +24,9 @@ function ~/load/install:
     scoreboard objectives add nola.data dummy
     scoreboard objectives add nola.config dummy
     scoreboard objectives add nola.item_despawn_time dummy
+    # Teams
+    team add nola.no_collision
+    team modify nola.no_collision collisionRule pushOwnTeam
     # Set the version in format: xx.xx.xx
     scoreboard players set $version nola.data ctx.meta.version
 
@@ -31,6 +34,7 @@ function ~/load/install:
     scoreboard players set $item_despawn.enabled nola.config 1
     scoreboard players set $item_despawn.time nola.config 3
     scoreboard players set $xp_merge.enabled nola.config 1
+    scoreboard players set $no_collision.enabled nola.config 1
 
     # Sent installation message after 4 seconds
     schedule function ~/send_message 4s replace:
