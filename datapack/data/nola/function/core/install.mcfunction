@@ -6,10 +6,11 @@ scoreboard objectives add nola.data dummy
 scoreboard objectives add nola.config dummy
 scoreboard objectives add 2mal3.debugMode dummy
 scoreboard objectives add nola.itemDespawnTime dummy
+scoreboard objectives add nola.projectileAge dummy
 scoreboard objectives add nola.deathCount deathCount
 team add nola.noCollision
 team modify nola.noCollision collisionRule pushOwnTeam
-scoreboard players set $version nola.data 30105
+scoreboard players set $version nola.data 30106
 scoreboard players set $300 nola.data 300
 forceload add -30000000 1600
 schedule function nola:core/__generated__/schedule/0 4s replace
@@ -23,10 +24,17 @@ scoreboard players set %lagClearTime nola.data 30
 scoreboard players set $lagClearMessages nola.config 1
 scoreboard players set $noAI nola.config 1
 scoreboard players set $noAIDistance nola.config 42
+scoreboard players set $noAIHostileOnly nola.config 0
+scoreboard players set $projectileCleanup nola.config 0
+scoreboard players set $noAICycle nola.data 0
 scoreboard players set $noAIAreaIgnorer nola.config 1
 scoreboard players set $noCollision nola.config 1
 scoreboard players set $xpMerge nola.config 1
 scoreboard players set $tpsTest nola.config 0
+scoreboard players set $lagClearDeleted nola.data 0
+scoreboard players set $itemDespawns nola.data 0
+scoreboard players set $xpMergedOrbs nola.data 0
+scoreboard players set $projectilesRemoved nola.data 0
 schedule function nola:core/__generated__/schedule/1 4s replace
 
 

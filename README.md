@@ -10,6 +10,8 @@ The datapack has been designed with performance in mind, so that it has almost n
 ## 📖 Features
 
 - 7 different lag reduction methods that actually work
+- on-demand entity diagnostics with high-count warnings and cleanup totals
+- optional stale projectile cleanup and hostile-only entity freezing
 - does not affect important entities
 - simple in-game GUI with lots of settings
 - additional information about the world
@@ -18,7 +20,7 @@ The datapack has been designed with performance in mind, so that it has almost n
 By default, all farm animals, bosses, decorative entities, pets, nearby entities and entities with names are not deleted. However, they will be frozen if they are too far away from the player, unless they are an end boss or have the name **ignore**.
 Additionally, all entities that are within 64 blocks of an armor stand named **ignore** will not be frozen.
 
-All settings and actions can be done through the in-game GUI. To open it, simply type the command `/function #nola:menu` in the chat (only works with command permissions).
+All settings and actions can be done through the in-game GUI. Entity diagnostics are calculated only when opened and report warnings without automatically deleting entities. To open it, simply type the command `/function #nola:menu` in the chat (only works with command permissions).
 
 ## 📝 Methods to reduce lag
 

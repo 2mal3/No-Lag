@@ -9,6 +9,8 @@ scoreboard players set $lagClearTime nola.config 30
 scoreboard players set %lagClearTime nola.data 30
 scoreboard players set $lagClearMessages nola.data 1
 scoreboard players set $noAI nola.config 1
+scoreboard players set $noAIHostileOnly nola.config 0
+scoreboard players set $projectileCleanup nola.config 0
 scoreboard players set $noAIDistance nola.config 42
 scoreboard players set $noAIAreaIgnorer nola.config 1
 scoreboard players set $noCollision nola.config 1

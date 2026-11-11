@@ -12,3 +12,10 @@
 ### Fixed
 
 - broken automatic updates between v3.0.3 - v3.1.1
+
+### v3.1.6
+
+- Added an on-demand entity diagnostics screen with count warnings and cleanup totals. Warnings never trigger automatic removals.
+- Added optional hostile-only entity freezing and optional cleanup for old arrows and tridents.
+- Reduced recurring entity scans by targeting relevant entity types and running the broad freezing scan every five seconds.
+- Added migration support from v3.1.5 to v3.1.6.

@@ -10,5 +10,4 @@ execute if score $version nola.data matches 030101 run function nola:core/__gene
 execute if score $version nola.data matches 030102 run function nola:core/__generated__/execute/21
 execute if score $version nola.data matches 030103 run function nola:core/__generated__/execute/22
 execute if score $version nola.data matches 030104 run function nola:core/__generated__/execute/23
-
-
+execute if score $version nola.data matches 030105 run function nola:core/update/v3_1_6
