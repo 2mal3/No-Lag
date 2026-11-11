@@ -3,8 +3,8 @@ name: Lint
 on:
   push:
     paths:
-      - "**.mc"
-      - "config.json"
+      - "datapack/**"
+      - ".github/workflows/lint.yml"
     branches:
       - "**"
   pull_request:
@@ -12,67 +12,28 @@ on:
       - "**"
   workflow_dispatch:
 
-env:
-  VERSION: '1.20'
-
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./datapack
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
-
-      - name: Install mc-build
-        run: npm i -g mc-build
-      - name: Run mc-build
-        run: mcb -build
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: artifact
-          path: |
-            datapack/data
-            datapack/pack.mcmeta
-
   mc-commands:
     runs-on: ubuntu-latest
-    needs: build
-
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: artifact
-
-      - name: Check minecraft commands
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check Minecraft 26.3 commands
         uses: mcbeet/check-commands@v1
         with:
           version: '0.69.0'
-          source: .
-          minecraft: ${{ env.VERSION }}
+          source: datapack/data
+          minecraft: '26.3'
           stats: true
 
   json:
     runs-on: ubuntu-latest
-    needs: build
-
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: artifact
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
-
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
       - name: Install jsonlint
-        run: npm install -g jsonlint
-      - name: Lint json files
-        run: for file in $(find . -name '*.json'); do jsonlint $file -c; done
+        run: npm install --global jsonlint
+      - name: Lint datapack JSON
+        run: find datapack/data -name '*.json' -print0 | xargs -0 -n1 jsonlint -c

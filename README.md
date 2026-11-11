@@ -1,6 +1,6 @@
 # No-Lag
 
-![release](https://img.shields.io/github/v/release/2mal3/No-Lag?style=flat-square) ![version](https://img.shields.io/badge/Minecraft-1.20-orange?style=flat-square) ![downloads](https://img.shields.io/github/downloads/2mal3/No-Lag/total?style=flat-square)
+![release](https://img.shields.io/github/v/release/2mal3/No-Lag?style=flat-square) ![version](https://img.shields.io/badge/Minecraft-26.3-orange?style=flat-square) ![downloads](https://img.shields.io/github/downloads/2mal3/No-Lag/total?style=flat-square)
 
 This datapack improves and optimizes the performance of the Minecraft world to ensure a good gaming experience.
 To achieve this, this datapack uses over 6 efficient methods, more than similar datapacks that use only a few methods.
@@ -54,9 +54,9 @@ If your server has performance problems, I would also advise you to try [PaperSp
 
 ## Notes
 
-- **ONLY** the latest version of the datapack for Fabric and Vanilla 1.20 is supported
+- **ONLY** Minecraft Java Edition 26.3 is supported
 - bug reports and suggestions are **ONLY** accepted on [GitHub](https://github.com/2mal3/No-Lag/issues)
-- datapack was created with [mc-build](https://github.com/mc-build/mc-build).
+- datapack uses the standard vanilla Java datapack folder structure and data pack version 121 for Minecraft 26.3.
 - should not create any lag by itself
 
 _3.4.0_

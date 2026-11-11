@@ -1,6 +1,7 @@
-    {
-        "pack": {
-            "pack_format": 15,
-            "description": "v3.1.5\nby 2mal3"
-        }
-    }
+{
+  "pack": {
+    "min_format": 121,
+    "max_format": 121,
+    "description": "No Lag v3.1.5 by 2mal3 (Minecraft 26.3)"
+  }
+}

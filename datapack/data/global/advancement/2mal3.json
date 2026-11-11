@@ -1,0 +1,1 @@
+{"display":{"title": "2mal3","description": "","icon":{"id": "minecraft:player_head"},"show_toast": false,"announce_to_chat": false},"parent": "global:root","criteria":{"trigger":{"trigger": "minecraft:tick"}}}

@@ -15,36 +15,26 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Package vanilla datapack
+        uses: ComunidadAylas/PackSquash-action@v4
         with:
-          fetch-depth: 0
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-
-      - name: Install mc-build
-        run: npm i -g mc-build
-      - name: Run mc-build
-        run: cd datapack && mcb -build
-
-      - name: Squash datapack
-        uses: ComunidadAylas/PackSquash-action@v3
-        with:
-          path: datapack
+          packsquash_version: latest
+          options: |
+            pack_directory = 'datapack'
           artifact_name: datapack-raw
-      - name: Download datapack-raw
-        uses: actions/download-artifact@v3
+      - name: Download datapack archive
+        uses: actions/download-artifact@v4
         with:
           name: datapack-raw
-      - name: Finish datapack
+      - name: Finish datapack archive
         run: |
           mv pack.zip ${{ env.NAME }}.zip
           zip -u ${{ env.NAME }}.zip LICENSE.txt README.md CHANGELOG.md
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v4
         with:
           name: artifact
           path: |
@@ -54,31 +44,26 @@ jobs:
   release-github:
     runs-on: ubuntu-latest
     needs: build
-
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: artifact
-
       - name: Create release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           name: ${{ env.NAME }} ${{github.ref_name}}
           body_path: CHANGELOG.md
-          files: |
-            ${{ env.NAME }}.zip
+          files: ${{ env.NAME }}.zip
 
   release-modrinth:
     runs-on: ubuntu-latest
     needs: build
-
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: artifact
-
       - name: Publish on Modrinth
         uses: Kir-Antipov/mc-publish@v3.2
         with:
@@ -91,4 +76,4 @@ jobs:
           changelog-file: CHANGELOG.md
           loaders: datapack
           game-versions: |
-            1.20.1
+            26.3

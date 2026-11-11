@@ -1,0 +1,1 @@
+{"criteria":{"requirement":{"trigger": "minecraft:tick"}},"rewards":{"function": "nola:core/first_join"}}
